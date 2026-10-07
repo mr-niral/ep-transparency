@@ -50,7 +50,7 @@ function ExternalLink({ href }: { href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="ml-1 text-blue-600 hover:text-blue-800 text-xs"
+      className="ml-1 text-[#1F5239] hover:text-[#163d2c] text-xs"
       title="View source document"
     >
       ↗
@@ -60,9 +60,9 @@ function ExternalLink({ href }: { href: string }) {
 
 function EmptyState({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-sm text-blue-900">
+    <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-sm text-green-900">
       <p className="font-semibold mb-2">{title}</p>
-      <div className="text-blue-800 space-y-1">{children}</div>
+      <div className="text-green-800 space-y-1">{children}</div>
     </div>
   )
 }
@@ -81,10 +81,10 @@ function BudgetTab() {
     return (
       <EmptyState title="No budget data yet.">
         <p>
-          Add an entry to <code className="bg-blue-100 px-1 rounded">src/data/budget.json</code> to
-          populate this tab. Each entry should match the <code className="bg-blue-100 px-1 rounded">BudgetYear</code> schema:
+          Add an entry to <code className="bg-green-100 px-1 rounded">src/data/budget.json</code> to
+          populate this tab. Each entry should match the <code className="bg-green-100 px-1 rounded">BudgetYear</code> schema:
         </p>
-        <pre className="mt-2 bg-white border border-blue-200 rounded p-3 text-xs overflow-x-auto">{`{
+        <pre className="mt-2 bg-white border border-green-200 rounded p-3 text-xs overflow-x-auto">{`{
   "year": 2026,
   "totalBudget": 2500000,
   "propertyTaxRevenue": 1800000,
@@ -208,16 +208,16 @@ function SpendingTab() {
     return (
       <EmptyState title="No payment data yet.">
         <p>
-          Add entries to <code className="bg-blue-100 px-1 rounded">src/data/payments.json</code>.
-          Each payment needs at least: <code className="bg-blue-100 px-1 rounded">date</code>,{' '}
-          <code className="bg-blue-100 px-1 rounded">vendor</code>,{' '}
-          <code className="bg-blue-100 px-1 rounded">amount</code>, and{' '}
-          <code className="bg-blue-100 px-1 rounded">category</code>.
+          Add entries to <code className="bg-green-100 px-1 rounded">src/data/payments.json</code>.
+          Each payment needs at least: <code className="bg-green-100 px-1 rounded">date</code>,{' '}
+          <code className="bg-green-100 px-1 rounded">vendor</code>,{' '}
+          <code className="bg-green-100 px-1 rounded">amount</code>, and{' '}
+          <code className="bg-green-100 px-1 rounded">category</code>.
         </p>
         <p>
           Valid categories:{' '}
           {CATEGORY_ORDER.map((c) => (
-            <code key={c} className="bg-blue-100 px-1 rounded mx-0.5">
+            <code key={c} className="bg-green-100 px-1 rounded mx-0.5">
               {c}
             </code>
           ))}
@@ -320,7 +320,7 @@ function VendorsTab() {
     return (
       <EmptyState title="No payment data yet.">
         <p>
-          Add entries to <code className="bg-blue-100 px-1 rounded">src/data/payments.json</code>{' '}
+          Add entries to <code className="bg-green-100 px-1 rounded">src/data/payments.json</code>{' '}
           to see vendors aggregated here.
         </p>
       </EmptyState>
@@ -344,7 +344,7 @@ function VendorsTab() {
               onClick={() => setSortBy(s)}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                 sortBy === s
-                  ? 'bg-[#1e3a5f] text-white'
+                  ? 'bg-[#1F5239] text-white'
                   : 'bg-white border border-gray-300 text-gray-600 hover:bg-gray-100'
               }`}
             >
@@ -422,18 +422,18 @@ function LegalTab() {
       <EmptyState title="No legal spending data yet.">
         <p>
           Add payment entries with a{' '}
-          <code className="bg-blue-100 px-1 rounded">subcategory</code> starting with{' '}
-          <code className="bg-blue-100 px-1 rounded">&quot;Legal:&quot;</code> to populate this tab.
+          <code className="bg-green-100 px-1 rounded">subcategory</code> starting with{' '}
+          <code className="bg-green-100 px-1 rounded">&quot;Legal:&quot;</code> to populate this tab.
         </p>
         <p>Recognized legal categories:</p>
         <ul className="list-disc list-inside mt-1">
           {LEGAL_CATEGORIES.map((c) => (
             <li key={c}>
-              <code className="bg-blue-100 px-1 rounded">Legal: {c}</code>
+              <code className="bg-green-100 px-1 rounded">Legal: {c}</code>
             </li>
           ))}
         </ul>
-        <pre className="mt-2 bg-white border border-blue-200 rounded p-3 text-xs overflow-x-auto">{`{
+        <pre className="mt-2 bg-white border border-green-200 rounded p-3 text-xs overflow-x-auto">{`{
   "date": "2026-08-15",
   "vendor": "Smith & Jones LLP",
   "amount": 4500,
@@ -651,7 +651,7 @@ function ReportsTab() {
                         <button
                           onClick={() => handleExtract(m)}
                           disabled={loading}
-                          className="px-3 py-1 rounded-lg text-xs font-medium bg-[#1e3a5f] text-white hover:bg-[#162d4a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                          className="px-3 py-1 rounded-lg text-xs font-medium bg-[#1F5239] text-white hover:bg-[#163d2c] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                         >
                           {loading ? 'Extracting…' : cached ? 'Re-extract' : 'Extract'}
                         </button>
@@ -793,10 +793,10 @@ export default function FinancesPage() {
   return (
     <div>
       {/* Header */}
-      <header className="bg-[#1e3a5f] text-white py-8 px-4">
+      <header className="bg-[#1F5239] text-white py-8 px-4">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-3xl font-bold">Money &amp; Decisions</h1>
-          <p className="mt-2 text-blue-200 text-sm max-w-xl">
+          <p className="mt-2 text-green-100 text-sm max-w-xl">
             A plain-language view of where library tax dollars go — sourced from FOIA&apos;d bills
             lists and annual budget documents.
           </p>
@@ -812,7 +812,7 @@ export default function FinancesPage() {
               onClick={() => setTab(t.id)}
               className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                 tab === t.id
-                  ? 'border-[#1e3a5f] text-[#1e3a5f]'
+                  ? 'border-[#1F5239] text-[#1F5239]'
                   : 'border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-300'
               }`}
             >

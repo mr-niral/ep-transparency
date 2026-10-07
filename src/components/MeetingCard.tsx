@@ -69,7 +69,7 @@ export default function MeetingCard({ meeting }: Props) {
             href={meeting.agendaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-blue-50 text-blue-700 rounded-full hover:bg-blue-100 transition-colors"
+            className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium bg-green-50 text-green-800 rounded-full hover:bg-green-100 transition-colors"
           >
             📄 Agenda
           </a>
@@ -112,7 +112,7 @@ export default function MeetingCard({ meeting }: Props) {
           <button
             onClick={() => summarize(meeting.agendaUrl!, 'agenda')}
             disabled={summary.loading}
-            className="text-xs px-3 py-1 rounded-full border border-blue-300 text-blue-600 hover:bg-blue-50 disabled:opacity-50 transition-colors"
+            className="text-xs px-3 py-1 rounded-full border border-[#1F5239] text-[#1F5239] hover:bg-green-50 disabled:opacity-50 transition-colors"
           >
             {summary.loading && summary.docType === 'agenda'
               ? '⏳ Summarizing…'
@@ -156,7 +156,7 @@ export default function MeetingCard({ meeting }: Props) {
         </p>
       )}
       {summary.text && !summary.loading && (
-        <div className="mt-3 text-sm text-gray-700 bg-gray-50 rounded-lg p-4 border-l-4 border-blue-300 prose prose-sm max-w-none">
+        <div className="mt-3 text-sm text-gray-700 bg-gray-50 rounded-lg p-4 border-l-4 border-[#AEDCC0] prose prose-sm max-w-none">
           <ReactMarkdown>{summary.text}</ReactMarkdown>
         </div>
       )}

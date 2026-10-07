@@ -42,17 +42,17 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="bg-[#1e3a5f] text-white py-10 px-4">
+      <header className="bg-[#1F5239] text-white py-10 px-4">
         <div className="max-w-4xl mx-auto">
-          <p className="text-blue-300 text-sm font-medium mb-1 uppercase tracking-wide">
+          <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
             Elmwood Park Public Library
           </p>
           <h1 className="text-3xl font-bold mb-2">Board Meeting Transparency</h1>
-          <p className="text-blue-200 text-sm max-w-xl">
+          <p className="text-green-100 text-sm max-w-xl">
             Browse agendas, minutes, and video recordings for every board meeting.
             Click &ldquo;Summarize&rdquo; to get a plain-English explanation powered by AI.
           </p>
-          <p className="mt-3 text-xs text-blue-300">
+          <p className="mt-3 text-xs text-[#AEDCC0]">
             Data sourced live from{' '}
             <a
               href="https://elmwoodparklibrary.org/about-eppl/library-board/agendas-minutes"
@@ -74,14 +74,14 @@ export default function Home() {
             placeholder="Search by date…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-48"
+            className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5239] w-48"
           />
           <div className="flex flex-wrap gap-1.5">
             <button
               onClick={() => setSelectedYear('all')}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 selectedYear === 'all'
-                  ? 'bg-[#1e3a5f] text-white'
+                  ? 'bg-[#1F5239] text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -93,7 +93,7 @@ export default function Home() {
                 onClick={() => setSelectedYear(year)}
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                   selectedYear === year
-                    ? 'bg-[#1e3a5f] text-white'
+                    ? 'bg-[#1F5239] text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >

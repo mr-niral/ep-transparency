@@ -139,13 +139,13 @@ export default function VotesPage() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="bg-[#1e3a5f] text-white py-10 px-4">
+      <header className="bg-[#1F5239] text-white py-10 px-4">
         <div className="max-w-5xl mx-auto">
-          <p className="text-blue-300 text-sm font-medium mb-1 uppercase tracking-wide">
+          <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
             Elmwood Park Public Library
           </p>
           <h1 className="text-3xl font-bold mb-2">Vote Tracker</h1>
-          <p className="text-blue-200 text-sm max-w-xl">
+          <p className="text-green-100 text-sm max-w-xl">
             Extract trustee votes from meeting minutes and track attendance over time.
           </p>
         </div>
@@ -160,7 +160,7 @@ export default function VotesPage() {
               onClick={() => setTab(t)}
               className={`px-5 py-3 text-sm font-medium border-b-2 transition-colors ${
                 tab === t
-                  ? 'border-[#1e3a5f] text-[#1e3a5f]'
+                  ? 'border-[#1F5239] text-[#1F5239]'
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -213,7 +213,7 @@ export default function VotesPage() {
                           {isCached ? (
                             <button
                               onClick={() => setSelectedDate(isSelected ? null : m.parsedDate)}
-                              className="text-sm font-medium text-[#1e3a5f] hover:underline text-left"
+                              className="text-sm font-medium text-[#1F5239] hover:underline text-left"
                             >
                               {m.date}
                             </button>
@@ -233,7 +233,7 @@ export default function VotesPage() {
                           {isCached && (
                             <button
                               onClick={() => setSelectedDate(isSelected ? null : m.parsedDate)}
-                              className="text-xs font-medium px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
+                              className="text-xs font-medium px-3 py-1.5 rounded-lg bg-green-50 text-green-700 hover:bg-green-100 transition-colors"
                             >
                               {isSelected ? 'Hide' : 'View'}
                             </button>
@@ -247,7 +247,7 @@ export default function VotesPage() {
                                   ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                                   : isCached
                                   ? 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                                  : 'bg-[#1e3a5f] text-white hover:bg-[#162d4a]'
+                                  : 'bg-[#1F5239] text-white hover:bg-[#163d2c]'
                               }`}
                             >
                               {isExtracting ? 'Extracting…' : isCached ? 'Re-extract' : 'Extract votes'}
@@ -333,7 +333,7 @@ export default function VotesPage() {
                 <p className="mb-2">No votes extracted yet.</p>
                 <p className="text-sm">
                   Switch to the{' '}
-                  <button onClick={() => setTab('extract')} className="text-[#1e3a5f] underline">
+                  <button onClick={() => setTab('extract')} className="text-[#1F5239] underline">
                     Extract Votes
                   </button>{' '}
                   tab to get started.
