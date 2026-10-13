@@ -39,6 +39,10 @@ function normalizeVideoUrl(href: string): string {
 
 export async function scrapeMeetings(): Promise<Meeting[]> {
   const res = await fetch(SOURCE_URL, {
+    headers: {
+      'User-Agent':
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    },
     next: { revalidate: 300 }, // cache for 5 minutes
   })
   if (!res.ok) throw new Error(`Failed to fetch source page: ${res.status}`)
