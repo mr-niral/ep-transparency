@@ -3,6 +3,7 @@
 import { useEffect, useState, useMemo } from 'react'
 import MeetingCard from '@/components/MeetingCard'
 import type { Meeting } from '@/types'
+import { saveSummary, hasSummary } from '@/lib/summaryStorage'
 
 export default function Home() {
   const [meetings, setMeetings] = useState<Meeting[]>([])
@@ -10,6 +11,29 @@ export default function Home() {
   const [error, setError] = useState('')
   const [selectedYear, setSelectedYear] = useState<number | 'all'>('all')
   const [search, setSearch] = useState('')
+  const [bulkProgress, setBulkProgress] = useState<{ done: number; total: number; running: boolean }>({
+    done: 0, total: 0, running: false,
+  })
+
+  async function summarizeAll2026() {
+    const targets = meetings.filter((m) => m.year === 2026 && !!m.agendaUrl && !hasSummary(m.parsedDate, 'agenda'))
+    if (targets.length === 0) return
+    setBulkProgress({ done: 0, total: targets.length, running: true })
+    let done = 0
+    for (const m of targets) {
+      try {
+        const res = await fetch('/api/summarize', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pdfUrl: m.agendaUrl, docType: 'agenda' }),
+        })
+        const data = await res.json()
+        if (res.ok) saveSummary(m.parsedDate, 'agenda', data.summary)
+      } catch {}
+      done++
+      setBulkProgress({ done, total: targets.length, running: done < targets.length })
+    }
+  }
 
   useEffect(() => {
     fetch('/api/meetings')
@@ -128,9 +152,24 @@ export default function Home() {
 
         {!loading && !error && filtered.length > 0 && (
           <>
-            <p className="text-sm text-gray-500 mb-4">
-              Showing {filtered.length} meeting{filtered.length !== 1 ? 's' : ''}
-            </p>
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-sm text-gray-500">
+                Showing {filtered.length} meeting{filtered.length !== 1 ? 's' : ''}
+              </p>
+              {meetings.some((m) => m.year === 2026 && m.agendaUrl) && (
+                <button
+                  onClick={summarizeAll2026}
+                  disabled={bulkProgress.running}
+                  className="text-xs px-4 py-1.5 rounded-full bg-[#1F5239] text-white hover:bg-[#163d2c] disabled:opacity-60 transition-colors"
+                >
+                  {bulkProgress.running
+                    ? `Summarizing… ${bulkProgress.done}/${bulkProgress.total}`
+                    : bulkProgress.total > 0 && bulkProgress.done === bulkProgress.total
+                    ? '✓ All 2026 agendas summarized'
+                    : '✨ Summarize all 2026 agendas'}
+                </button>
+              )}
+            </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {filtered.map((meeting) => (
                 <MeetingCard key={meeting.parsedDate} meeting={meeting} />
