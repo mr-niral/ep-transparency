@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import * as cheerio from 'cheerio'
 
+export const maxDuration = 60
+
 const client = new Anthropic()
 
 const UNPUBLISHED_PHRASES = [
@@ -68,15 +70,17 @@ export async function POST(req: NextRequest) {
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       htmlText = await res.text()
     } catch (err) {
-      console.error('Failed to fetch Granicus page:', err)
+      console.error('Failed to fetch Granicus page:', pdfUrl, err)
       return NextResponse.json(
-        { error: 'Could not retrieve the document. It may no longer be available.' },
+        { error: 'Step 1 failed: could not retrieve the agenda page.' },
         { status: 502 }
       )
     }
 
     const text = extractGranicusText(htmlText)
     const lowerText = text.toLowerCase()
+
+    console.log(`Granicus text length for ${pdfUrl}: ${text.length}`)
 
     if (
       !text ||
@@ -109,9 +113,10 @@ export async function POST(req: NextRequest) {
       const summary = message.content[0].type === 'text' ? message.content[0].text : ''
       return NextResponse.json({ summary })
     } catch (err) {
-      console.error('Claude API error:', err)
+      console.error('Claude API error (Granicus):', err)
+      const msg = err instanceof Error ? err.message : String(err)
       return NextResponse.json(
-        { error: 'Could not generate summary. Please try again.' },
+        { error: `Step 2 failed: ${msg}` },
         { status: 500 }
       )
     }
