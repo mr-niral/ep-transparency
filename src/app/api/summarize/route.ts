@@ -1,7 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
+import * as cheerio from 'cheerio'
 
 const client = new Anthropic()
+
+const UNPUBLISHED_PHRASES = [
+  'not currently published',
+  'not been published',
+  'please try again later',
+  'contact the publisher',
+]
 
 function isGranicusViewerUrl(url: string): boolean {
   try {
@@ -15,17 +23,10 @@ function isGranicusViewerUrl(url: string): boolean {
   }
 }
 
-function stripHtml(html: string): string {
-  return html
-    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/\s{2,}/g, ' ')
-    .trim()
+function extractGranicusText(html: string): string {
+  const $ = cheerio.load(html)
+  $('script, style, noscript, head').remove()
+  return $('body').text().replace(/\s+/g, ' ').trim()
 }
 
 function resolvedFetchUrl(pdfUrl: string, req: NextRequest): string {
@@ -74,10 +75,16 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const text = stripHtml(htmlText)
-    if (!text || text.length < 100) {
+    const text = extractGranicusText(htmlText)
+    const lowerText = text.toLowerCase()
+
+    if (
+      !text ||
+      text.length < 200 ||
+      UNPUBLISHED_PHRASES.some((p) => lowerText.includes(p))
+    ) {
       return NextResponse.json(
-        { error: 'Minutes have not been published for this meeting yet.' },
+        { error: 'This document has not been published yet.' },
         { status: 404 }
       )
     }
@@ -89,7 +96,12 @@ export async function POST(req: NextRequest) {
         messages: [
           {
             role: 'user',
-            content: `${prompt}\n\n---\n\n${text.slice(0, 12000)}`,
+            content: [
+              {
+                type: 'text',
+                text: `${prompt}\n\n---\n\n${text.slice(0, 12000)}`,
+              },
+            ],
           },
         ],
       })
