@@ -182,7 +182,7 @@ export default function Home() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {filtered.map((meeting) => (
-                <MeetingCard key={meeting.parsedDate} meeting={meeting} />
+                <MeetingCard key={meeting.parsedDate} meeting={meeting} boardType={board} />
               ))}
             </div>
           </>

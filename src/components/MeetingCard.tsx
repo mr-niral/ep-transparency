@@ -7,6 +7,7 @@ import { saveSummary, loadSummary } from '@/lib/summaryStorage'
 
 interface Props {
   meeting: Meeting
+  boardType?: 'library' | 'village'
 }
 
 type DocType = 'agenda' | 'minutes' | 'director'
@@ -39,7 +40,7 @@ function toEmbedUrl(url: string): string {
   return url
 }
 
-export default function MeetingCard({ meeting }: Props) {
+export default function MeetingCard({ meeting, boardType = 'library' }: Props) {
   const [summary, setSummary] = useState<SummaryState>({
     text: '',
     loading: false,
@@ -89,7 +90,7 @@ export default function MeetingCard({ meeting }: Props) {
       const res = await fetch('/api/summarize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ pdfUrl, docType }),
+        body: JSON.stringify({ pdfUrl, docType, boardType }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Unknown error')
