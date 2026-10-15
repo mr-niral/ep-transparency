@@ -120,73 +120,80 @@ export async function scrapeMeetings(): Promise<Meeting[]> {
     .sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
 }
 
-// ─── Village of Elmwood Park Board Meetings ───────────────────────────────────
+// ─── Village of Elmwood Park Board Meetings (Granicus RSS) ───────────────────
 
-const VILLAGE_BASE = 'https://elmwoodpark.org'
-const VILLAGE_MINUTES_PAGES = [
-  `${VILLAGE_BASE}/315/Board-Meeting-Minutes-2026`,
-  `${VILLAGE_BASE}/314/Board-Meeting-Minutes-2025`,
-]
-
-async function resolveDocumentCenterUrl(href: string): Promise<string> {
-  const url = href.startsWith('http') ? href : `${VILLAGE_BASE}${href}`
-  try {
-    const res = await fetch(url, { headers: { 'User-Agent': 'ep-transparency/1.0' } })
-    const contentType = res.headers.get('content-type') ?? ''
-    if (contentType.includes('application/pdf')) {
-      return res.url.split('?')[0] // use final redirected URL, strip ?bidId=
-    }
-  } catch {}
-  return url
-}
+const GRANICUS_BASE = 'https://elmwoodpark.granicus.com'
+const GRANICUS_AGENDA_RSS = `${GRANICUS_BASE}/ViewPublisherRSS.php?view_id=2&mode=agendas`
+const GRANICUS_MINUTES_RSS = `${GRANICUS_BASE}/ViewPublisherRSS.php?view_id=2&mode=minutes`
 
 export async function scrapeVillageMeetings(): Promise<Meeting[]> {
-  const allMeetings: Meeting[] = []
+  const meetingMap = new Map<string, Meeting>()
 
-  for (const pageUrl of VILLAGE_MINUTES_PAGES) {
-    const res = await fetch(pageUrl, {
+  // Fetch both RSS feeds in parallel
+  const [agendasXml, minutesXml] = await Promise.all([
+    fetch(GRANICUS_AGENDA_RSS, {
       headers: { 'User-Agent': 'ep-transparency/1.0' },
       next: { revalidate: 300 },
     })
-    if (!res.ok) continue
+      .then((r) => (r.ok ? r.text() : ''))
+      .catch(() => ''),
+    fetch(GRANICUS_MINUTES_RSS, {
+      headers: { 'User-Agent': 'ep-transparency/1.0' },
+      next: { revalidate: 300 },
+    })
+      .then((r) => (r.ok ? r.text() : ''))
+      .catch(() => ''),
+  ])
 
-    const html = await res.text()
-    const $ = cheerio.load(html)
+  function parseItems(xml: string, urlField: 'agendaUrl' | 'minutesUrl') {
+    if (!xml) return
+    const itemRegex = /<item>([\s\S]*?)<\/item>/g
+    let match: RegExpExecArray | null
+    while ((match = itemRegex.exec(xml)) !== null) {
+      const block = match[1]
 
-    const rows = $('table tr').toArray().slice(1) // skip header row
-    const resolvePromises = rows.map(async (row) => {
-      const cells = $(row).find('td')
-      if (cells.length < 2) return null
+      const titleMatch = block.match(/<title>(.*?)<\/title>/)
+      const linkMatch = block.match(/<link>(.*?)<\/link>/) ?? block.match(/<guid[^>]*>(.*?)<\/guid>/)
+      const pubDateMatch = block.match(/<pubDate>(.*?)<\/pubDate>/)
 
-      const dateText = $(cells[0]).text().trim()
-      if (!dateText) return null
+      if (!titleMatch || !pubDateMatch) continue
 
-      const parsed = new Date(dateText)
-      if (isNaN(parsed.getTime())) return null
+      const pubDate = new Date(pubDateMatch[1])
+      if (isNaN(pubDate.getTime())) continue
 
-      const meetingType = $(cells[1]).text().trim().replace(/\s+/g, ' ') || undefined
-      const minutesAnchor = $(cells[2]).find('a[href]').first()
-      const minutesHref = minutesAnchor.attr('href')
+      const parsedDate = pubDate.toISOString().split('T')[0]
+      const title = titleMatch[1].replace(/<[^>]+>/g, '').trim()
 
-      let minutesUrl: string | undefined
-      if (minutesHref) {
-        minutesUrl = await resolveDocumentCenterUrl(minutesHref)
+      // Extract clip_id from the link to build viewer URL
+      const rawLink = linkMatch?.[1] ?? ''
+      const clipMatch = rawLink.match(/clip_id=(\d+)/)
+
+      if (!meetingMap.has(parsedDate)) {
+        meetingMap.set(parsedDate, {
+          date: title,
+          parsedDate,
+          year: pubDate.getFullYear(),
+          meetingType: 'Regular Meeting',
+        })
       }
 
-      return {
-        date: dateText,
-        parsedDate: parsed.toISOString().split('T')[0],
-        year: parsed.getFullYear(),
-        meetingType,
-        minutesUrl,
-      } as Meeting
-    })
+      const meeting = meetingMap.get(parsedDate)!
 
-    const resolved = await Promise.all(resolvePromises)
-    for (const m of resolved) {
-      if (m) allMeetings.push(m)
+      if (clipMatch) {
+        const clipId = clipMatch[1]
+        if (urlField === 'agendaUrl') {
+          meeting.agendaUrl = `${GRANICUS_BASE}/AgendaViewer.php?view_id=2&clip_id=${clipId}`
+        } else {
+          meeting.minutesUrl = `${GRANICUS_BASE}/MinutesViewer.php?view_id=2&clip_id=${clipId}`
+        }
+      }
     }
   }
 
-  return allMeetings.sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
+  parseItems(agendasXml, 'agendaUrl')
+  parseItems(minutesXml, 'minutesUrl')
+
+  return Array.from(meetingMap.values())
+    .filter((m) => m.year >= 2020)
+    .sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
 }
