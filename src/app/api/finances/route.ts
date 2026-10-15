@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   // Fetch the PDF
   let pdfBuffer: Buffer
   try {
-    const res = await fetch(minutesUrl)
+    const res = await fetch(minutesUrl, { headers: { 'User-Agent': 'ep-transparency/1.0' } })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     pdfBuffer = Buffer.from(await res.arrayBuffer())
   } catch (err) {
