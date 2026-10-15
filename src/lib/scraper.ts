@@ -183,6 +183,7 @@ export async function scrapeVillageMeetings(): Promise<Meeting[]> {
         const clipId = clipMatch[1]
         if (urlField === 'agendaUrl') {
           meeting.agendaUrl = `${GRANICUS_BASE}/AgendaViewer.php?view_id=2&clip_id=${clipId}`
+          meeting.videoUrl ??= `${GRANICUS_BASE}/MediaPlayer.php?view_id=2&clip_id=${clipId}`
         } else {
           meeting.minutesUrl = `${GRANICUS_BASE}/MinutesViewer.php?view_id=2&clip_id=${clipId}`
         }

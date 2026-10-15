@@ -36,6 +36,9 @@ function toEmbedUrl(url: string): string {
       videoId = u.searchParams.get('v') ?? ''
     }
     if (videoId) return `https://www.youtube.com/embed/${videoId}?autoplay=1`
+    if (u.hostname.includes('granicus.com') && u.pathname.includes('MediaPlayer')) {
+      return `${url}&embed=1`
+    }
   } catch {}
   return url
 }
