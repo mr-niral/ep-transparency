@@ -120,7 +120,12 @@ export default function MeetingCard({ meeting }: Props) {
   return (
     <>
       <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow p-5">
-        <h3 className="font-semibold text-gray-900 text-base mb-3">{formattedDate}</h3>
+        <div className="mb-3">
+          <h3 className="font-semibold text-gray-900 text-base">{formattedDate}</h3>
+          {meeting.meetingType && (
+            <span className="text-xs text-gray-500 mt-0.5 block">{meeting.meetingType}</span>
+          )}
+        </div>
 
         {/* Document links */}
         <div className="flex flex-wrap gap-2 mb-3">

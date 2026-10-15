@@ -6,6 +6,7 @@ export interface Meeting {
   minutesUrl?: string
   videoUrl?: string
   directorLetterUrl?: string
+  meetingType?: string  // e.g. "Regular Meeting", "Special Meeting"
 }
 
 export interface Ballot {

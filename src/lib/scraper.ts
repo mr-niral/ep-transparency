@@ -119,3 +119,74 @@ export async function scrapeMeetings(): Promise<Meeting[]> {
     .filter((m) => m.year > 0)
     .sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
 }
+
+// ─── Village of Elmwood Park Board Meetings ───────────────────────────────────
+
+const VILLAGE_BASE = 'https://elmwoodpark.org'
+const VILLAGE_MINUTES_PAGES = [
+  `${VILLAGE_BASE}/315/Board-Meeting-Minutes-2026`,
+  `${VILLAGE_BASE}/314/Board-Meeting-Minutes-2025`,
+]
+
+async function resolveDocumentCenterUrl(href: string): Promise<string> {
+  const url = href.startsWith('http') ? href : `${VILLAGE_BASE}${href}`
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': 'ep-transparency/1.0' } })
+    const contentType = res.headers.get('content-type') ?? ''
+    if (contentType.includes('application/pdf')) {
+      return res.url.split('?')[0] // use final redirected URL, strip ?bidId=
+    }
+  } catch {}
+  return url
+}
+
+export async function scrapeVillageMeetings(): Promise<Meeting[]> {
+  const allMeetings: Meeting[] = []
+
+  for (const pageUrl of VILLAGE_MINUTES_PAGES) {
+    const res = await fetch(pageUrl, {
+      headers: { 'User-Agent': 'ep-transparency/1.0' },
+      next: { revalidate: 300 },
+    })
+    if (!res.ok) continue
+
+    const html = await res.text()
+    const $ = cheerio.load(html)
+
+    const rows = $('table tr').toArray().slice(1) // skip header row
+    const resolvePromises = rows.map(async (row) => {
+      const cells = $(row).find('td')
+      if (cells.length < 2) return null
+
+      const dateText = $(cells[0]).text().trim()
+      if (!dateText) return null
+
+      const parsed = new Date(dateText)
+      if (isNaN(parsed.getTime())) return null
+
+      const meetingType = $(cells[1]).text().trim().replace(/\s+/g, ' ') || undefined
+      const minutesAnchor = $(cells[2]).find('a[href]').first()
+      const minutesHref = minutesAnchor.attr('href')
+
+      let minutesUrl: string | undefined
+      if (minutesHref) {
+        minutesUrl = await resolveDocumentCenterUrl(minutesHref)
+      }
+
+      return {
+        date: dateText,
+        parsedDate: parsed.toISOString().split('T')[0],
+        year: parsed.getFullYear(),
+        meetingType,
+        minutesUrl,
+      } as Meeting
+    })
+
+    const resolved = await Promise.all(resolvePromises)
+    for (const m of resolved) {
+      if (m) allMeetings.push(m)
+    }
+  }
+
+  return allMeetings.sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
+}

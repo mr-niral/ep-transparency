@@ -6,6 +6,7 @@ import type { Meeting } from '@/types'
 import { saveSummary, hasSummary } from '@/lib/summaryStorage'
 
 export default function Home() {
+  const [board, setBoard] = useState<'library' | 'village'>('library')
   const [meetings, setMeetings] = useState<Meeting[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -36,7 +37,11 @@ export default function Home() {
   }
 
   useEffect(() => {
-    fetch('/api/meetings')
+    setLoading(true)
+    setError('')
+    setMeetings([])
+    const url = board === 'library' ? '/api/meetings' : '/api/village-meetings'
+    fetch(url)
       .then((r) => r.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -47,7 +52,7 @@ export default function Home() {
       })
       .catch(() => setError('Network error. Please try again.'))
       .finally(() => setLoading(false))
-  }, [])
+  }, [board])
 
   const years = useMemo(
     () => [...new Set(meetings.map((m) => m.year))].sort((a, b) => b - a),
@@ -69,24 +74,29 @@ export default function Home() {
       <header className="bg-[#1F5239] text-white py-10 px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
-            Elmwood Park Public Library
+            Elmwood Park
           </p>
           <h1 className="text-3xl font-bold mb-2">Board Meeting Transparency</h1>
           <p className="text-green-100 text-sm max-w-xl">
             Browse agendas, minutes, and video recordings for every board meeting.
             Click &ldquo;Summarize&rdquo; to get a plain-English explanation powered by AI.
           </p>
-          <p className="mt-3 text-xs text-[#AEDCC0]">
-            Data sourced live from{' '}
-            <a
-              href="https://elmwoodparklibrary.org/about-eppl/library-board/agendas-minutes"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white"
-            >
-              elmwoodparklibrary.org
-            </a>
-          </p>
+          {/* Board toggle */}
+          <div className="mt-4 flex gap-2">
+            {(['library', 'village'] as const).map((b) => (
+              <button
+                key={b}
+                onClick={() => setBoard(b)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  board === b
+                    ? 'bg-white text-[#1F5239]'
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                {b === 'library' ? 'Library Board' : 'Village Board'}
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
@@ -156,7 +166,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 Showing {filtered.length} meeting{filtered.length !== 1 ? 's' : ''}
               </p>
-              {meetings.some((m) => m.year === 2026 && m.agendaUrl) && (
+              {board === 'library' && meetings.some((m) => m.year === 2026 && m.agendaUrl) && (
                 <button
                   onClick={summarizeAll2026}
                   disabled={bulkProgress.running}
