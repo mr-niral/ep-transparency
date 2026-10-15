@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useMemo } from 'react'
+import Image from 'next/image'
 import type { Meeting, MeetingVotes } from '@/types'
 import { saveVotes, loadVotes, loadAllVotes } from '@/lib/voteStorage'
 
@@ -140,14 +141,19 @@ export default function VotesPage() {
     <div className="min-h-screen">
       {/* Header */}
       <header className="bg-[#1F5239] text-white py-10 px-4">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
-            Elmwood Park Public Library
-          </p>
-          <h1 className="text-3xl font-bold mb-2">Vote Tracker</h1>
-          <p className="text-green-100 text-sm max-w-xl">
-            Extract trustee votes from meeting minutes and track attendance over time.
-          </p>
+        <div className="max-w-5xl mx-auto flex items-center justify-between gap-8">
+          <div className="flex-1">
+            <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
+              Elmwood Park Public Library
+            </p>
+            <h1 className="text-3xl font-bold mb-2">Vote Tracker</h1>
+            <p className="text-green-100 text-sm max-w-xl">
+              Extract trustee votes from meeting minutes and track attendance over time.
+            </p>
+          </div>
+          <div className="hidden sm:block flex-shrink-0">
+            <Image src="/logo.jpeg" alt="Elmwood Park" width={200} height={75} className="object-contain rounded-lg opacity-90" />
+          </div>
         </div>
       </header>
 

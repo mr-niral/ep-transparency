@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useMemo } from 'react'
+import Image from 'next/image'
 import MeetingCard from '@/components/MeetingCard'
 import type { Meeting } from '@/types'
 import { saveSummary, hasSummary } from '@/lib/summaryStorage'
@@ -72,30 +73,41 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Header */}
       <header className="bg-[#1F5239] text-white py-10 px-4">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
-            Elmwood Park
-          </p>
-          <h1 className="text-3xl font-bold mb-2">Board Meeting Transparency</h1>
-          <p className="text-green-100 text-sm max-w-xl">
-            Browse agendas, minutes, and video recordings for every board meeting.
-            Click &ldquo;Summarize&rdquo; to get a plain-English explanation powered by AI.
-          </p>
-          {/* Board toggle */}
-          <div className="mt-4 flex gap-2">
-            {(['library', 'village'] as const).map((b) => (
-              <button
-                key={b}
-                onClick={() => setBoard(b)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                  board === b
-                    ? 'bg-white text-[#1F5239]'
-                    : 'bg-white/20 text-white hover:bg-white/30'
-                }`}
-              >
-                {b === 'library' ? 'Library Board' : 'Village Board'}
-              </button>
-            ))}
+        <div className="max-w-4xl mx-auto flex items-center justify-between gap-8">
+          <div className="flex-1">
+            <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
+              Elmwood Park
+            </p>
+            <h1 className="text-3xl font-bold mb-2">Board Meeting Transparency</h1>
+            <p className="text-green-100 text-sm max-w-xl">
+              Browse agendas, minutes, and video recordings for every board meeting.
+              Click &ldquo;Summarize&rdquo; to get a plain-English explanation powered by AI.
+            </p>
+            {/* Board toggle */}
+            <div className="mt-4 flex gap-2">
+              {(['library', 'village'] as const).map((b) => (
+                <button
+                  key={b}
+                  onClick={() => setBoard(b)}
+                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                    board === b
+                      ? 'bg-white text-[#1F5239]'
+                      : 'bg-white/20 text-white hover:bg-white/30'
+                  }`}
+                >
+                  {b === 'library' ? 'Library Board' : 'Village Board'}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="hidden sm:block flex-shrink-0">
+            <Image
+              src="/logo.jpeg"
+              alt="Elmwood Park"
+              width={200}
+              height={75}
+              className="object-contain rounded-lg opacity-90"
+            />
           </div>
         </div>
       </header>

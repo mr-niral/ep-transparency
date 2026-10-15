@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
+import Image from 'next/image'
 import type { PaymentRecord, BudgetYear, Meeting, FinancialSnapshot } from '@/types'
 import { saveSnapshot, loadAllSnapshots } from '@/lib/financialStorage'
 import paymentsData from '@/data/payments.json'
@@ -794,12 +795,17 @@ export default function FinancesPage() {
     <div>
       {/* Header */}
       <header className="bg-[#1F5239] text-white py-8 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold">Money &amp; Decisions</h1>
-          <p className="mt-2 text-green-100 text-sm max-w-xl">
-            A plain-language view of where library tax dollars go — sourced from FOIA&apos;d bills
-            lists and annual budget documents.
-          </p>
+        <div className="max-w-5xl mx-auto flex items-center justify-between gap-8">
+          <div className="flex-1">
+            <h1 className="text-3xl font-bold">Money &amp; Decisions</h1>
+            <p className="mt-2 text-green-100 text-sm max-w-xl">
+              A plain-language view of where library tax dollars go — sourced from FOIA&apos;d bills
+              lists and annual budget documents.
+            </p>
+          </div>
+          <div className="hidden sm:block flex-shrink-0">
+            <Image src="/logo.jpeg" alt="Elmwood Park" width={200} height={75} className="object-contain rounded-lg opacity-90" />
+          </div>
         </div>
       </header>
 
