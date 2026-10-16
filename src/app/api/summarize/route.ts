@@ -31,17 +31,6 @@ function extractGranicusText(html: string): string {
   return $('body').text().replace(/\s+/g, ' ').trim()
 }
 
-function resolvedFetchUrl(pdfUrl: string, req: NextRequest): string {
-  try {
-    const parsed = new URL(pdfUrl)
-    const villageHosts = ['elmwoodpark.org', 'www.elmwoodpark.org']
-    if (villageHosts.includes(parsed.hostname)) {
-      const base = req.nextUrl.origin
-      return `${base}/api/pdf-proxy?url=${encodeURIComponent(pdfUrl)}`
-    }
-  } catch {}
-  return pdfUrl
-}
 
 export async function POST(req: NextRequest) {
   const { pdfUrl, docType, boardType } = await req.json()
@@ -123,14 +112,21 @@ export async function POST(req: NextRequest) {
   }
 
   // PDF path — fetch binary and send as base64 document to Claude
-  const fetchUrl = resolvedFetchUrl(pdfUrl, req)
-
+  // Fetch directly; this runs server-side so no CORS proxy is needed.
   let pdfBuffer: Buffer
   try {
-    const res = await fetch(fetchUrl, {
-      headers: fetchUrl === pdfUrl ? { 'User-Agent': 'ep-transparency/1.0' } : {},
+    const res = await fetch(pdfUrl, {
+      headers: { 'User-Agent': 'ep-transparency/1.0' },
     })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const contentType = res.headers.get('content-type') ?? ''
+    if (!contentType.includes('pdf') && !contentType.includes('octet-stream')) {
+      console.error('Unexpected content-type for PDF fetch:', contentType, pdfUrl)
+      return NextResponse.json(
+        { error: 'Could not retrieve the document. It may no longer be available.' },
+        { status: 502 }
+      )
+    }
     pdfBuffer = Buffer.from(await res.arrayBuffer())
   } catch (err) {
     console.error('Failed to fetch PDF:', err)
