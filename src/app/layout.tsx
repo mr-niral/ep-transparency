@@ -7,9 +7,9 @@ import './globals.css'
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
 export const metadata: Metadata = {
-  title: 'Elmwood Park Board Meeting Transparency',
+  title: 'The Village Hall Record — Local Government Transparency',
   description:
-    'Searchable archive of Elmwood Park board meeting agendas, minutes, and AI-powered plain-English summaries.',
+    'Making village politics transparent and accessible. Search for your municipality to get started.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

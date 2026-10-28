@@ -1,208 +1,167 @@
 'use client'
 
-import { useEffect, useState, useMemo, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
-import Image from 'next/image'
-import MeetingCard from '@/components/MeetingCard'
-import type { Meeting } from '@/types'
-import { saveSummary, hasSummary } from '@/lib/summaryStorage'
+import { Suspense } from 'react'
+import { useSearchParams, useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { villages } from '@/data/villages'
 
-function HomeInner() {
+function LandingInner() {
   const searchParams = useSearchParams()
-  const board = searchParams.get('board') === 'village' ? 'village' : 'library'
+  const router = useRouter()
+  const query = searchParams.get('q') ?? ''
 
-  const [meetings, setMeetings] = useState<Meeting[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [selectedYear, setSelectedYear] = useState<number | 'all'>('all')
-  const [search, setSearch] = useState('')
-  const [bulkProgress, setBulkProgress] = useState<{ done: number; total: number; running: boolean }>({
-    done: 0, total: 0, running: false,
-  })
-
-  async function summarizeAll2026() {
-    const targets = meetings.filter((m) => m.year === 2026 && !!m.agendaUrl && !hasSummary(m.parsedDate, 'agenda'))
-    if (targets.length === 0) return
-    setBulkProgress({ done: 0, total: targets.length, running: true })
-    let done = 0
-    for (const m of targets) {
-      try {
-        const res = await fetch('/api/summarize', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ pdfUrl: m.agendaUrl, docType: 'agenda' }),
-        })
-        const data = await res.json()
-        if (res.ok) saveSummary(m.parsedDate, 'agenda', data.summary)
-      } catch {}
-      done++
-      setBulkProgress({ done, total: targets.length, running: done < targets.length })
-    }
+  function handleSearch(value: string) {
+    const params = new URLSearchParams()
+    if (value) params.set('q', value)
+    router.replace(value ? `/?${params.toString()}` : '/', { scroll: false })
   }
 
-  useEffect(() => {
-    setLoading(true)
-    setError('')
-    setMeetings([])
-    setSelectedYear('all')
-    setSearch('')
-    setBulkProgress({ done: 0, total: 0, running: false })
-    const url = board === 'library' ? '/api/meetings' : '/api/village-meetings'
-    fetch(url)
-      .then((r) => r.json())
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setMeetings(data)
-        } else {
-          setError(data.error ?? 'Failed to load meetings.')
-        }
-      })
-      .catch(() => setError('Network error. Please try again.'))
-      .finally(() => setLoading(false))
-  }, [board])
+  const filtered = query.trim()
+    ? villages.filter(
+        (v) =>
+          v.name.toLowerCase().includes(query.toLowerCase()) ||
+          v.state.toLowerCase().includes(query.toLowerCase()) ||
+          v.zips.some((z) => z.includes(query.trim()))
+      )
+    : villages
 
-  const years = useMemo(
-    () => [...new Set(meetings.map((m) => m.year))].sort((a, b) => b - a),
-    [meetings]
-  )
-
-  const filtered = useMemo(() => {
-    return meetings.filter((m) => {
-      const yearMatch = selectedYear === 'all' || m.year === selectedYear
-      const searchMatch = !search || m.date.toLowerCase().includes(search.toLowerCase())
-      return yearMatch && searchMatch
-    })
-  }, [meetings, selectedYear, search])
-
-  const boardLabel = board === 'library' ? 'Library Board' : 'Village Board'
+  const noMatch = query.trim().length > 0 && filtered.length === 0
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="bg-[#1F5239] text-white py-10 px-4">
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-8">
-          <div className="flex-1">
-            <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
-              Elmwood Park
-            </p>
-            <h1 className="text-3xl font-bold mb-2">{boardLabel} Meetings</h1>
-            <p className="text-green-100 text-sm max-w-xl">
-              Browse agendas, minutes, and video recordings for every board meeting.
-              Click &ldquo;Summarize&rdquo; to get a plain-English explanation powered by AI.
-            </p>
-          </div>
-          <div className="hidden sm:block flex-shrink-0">
-            <Image
-              src="/logo.jpeg"
-              alt="Elmwood Park"
-              width={200}
-              height={75}
-              className="object-contain rounded-lg opacity-90"
-            />
-          </div>
+      {/* Hero */}
+      <header className="bg-[#1F5239] text-white py-20 px-4 text-center">
+        <h1 className="text-4xl font-bold mb-3">The Village Hall Record</h1>
+        <p className="text-green-100 text-lg mb-8 max-w-xl mx-auto">
+          Making village politics transparent and accessible.
+        </p>
+        <div className="max-w-md mx-auto">
+          <input
+            type="search"
+            placeholder="Search by city, state, or zip…"
+            value={query}
+            onChange={(e) => handleSearch(e.target.value)}
+            className="w-full rounded-lg px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-white/60"
+          />
         </div>
       </header>
 
-      {/* Filters */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex flex-wrap gap-3 items-center">
-          <input
-            type="search"
-            placeholder="Search by date…"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5239] w-48"
-          />
-          <div className="flex flex-wrap gap-1.5">
-            <button
-              onClick={() => setSelectedYear('all')}
-              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                selectedYear === 'all'
-                  ? 'bg-[#1F5239] text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
+      <main className="max-w-4xl mx-auto px-4 py-10">
+        {noMatch ? (
+          <div className="max-w-md mx-auto">
+            <p className="text-gray-600 mb-1 text-center">
+              <strong>{query}</strong> isn&apos;t available yet.
+            </p>
+            <p className="text-sm text-gray-500 mb-8 text-center">
+              We&apos;re adding new municipalities over time. Request yours below.
+            </p>
+
+            {/* Request form — replace YOUR_FORM_ID with your Formspree form ID */}
+            <form
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              className="bg-white border border-gray-200 rounded-xl p-6 space-y-4 shadow-sm"
             >
-              All years
-            </button>
-            {years.map((year) => (
+              <h2 className="text-base font-semibold text-gray-800">Request this municipality</h2>
+              <input type="hidden" name="_subject" value="The Village Hall Record municipality request" />
+
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">City</label>
+                <input
+                  type="text"
+                  name="city"
+                  defaultValue={query}
+                  required
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5239]"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">State</label>
+                <input
+                  type="text"
+                  name="state"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5239]"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">
+                  Your email <span className="text-gray-400">(optional)</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5239]"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">
+                  Any context <span className="text-gray-400">(optional)</span>
+                </label>
+                <textarea
+                  name="context"
+                  rows={3}
+                  placeholder="e.g. links to your municipality's meeting page, FOIA contact, etc."
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5239] resize-none"
+                />
+              </div>
+
               <button
-                key={year}
-                onClick={() => setSelectedYear(year)}
-                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                  selectedYear === year
-                    ? 'bg-[#1F5239] text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
+                type="submit"
+                className="w-full bg-[#1F5239] text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-[#163d2c] transition-colors"
               >
-                {year}
+                Send Request
               </button>
-            ))}
+            </form>
           </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
-        {loading && (
-          <div className="text-center py-20 text-gray-500">
-            <div className="text-4xl mb-3">⏳</div>
-            <p>Loading meetings…</p>
-          </div>
-        )}
-
-        {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-center text-red-700">
-            <p className="font-semibold mb-1">Could not load meetings</p>
-            <p className="text-sm">{error}</p>
-          </div>
-        )}
-
-        {!loading && !error && filtered.length === 0 && (
-          <div className="text-center py-20 text-gray-400">
-            <p>No meetings found.</p>
-          </div>
-        )}
-
-        {!loading && !error && filtered.length > 0 && (
+        ) : (
           <>
-            <div className="flex items-center justify-between mb-4">
-              <p className="text-sm text-gray-500">
-                Showing {filtered.length} meeting{filtered.length !== 1 ? 's' : ''}
-              </p>
-              {board === 'library' && meetings.some((m) => m.year === 2026 && m.agendaUrl) && (
-                <button
-                  onClick={summarizeAll2026}
-                  disabled={bulkProgress.running}
-                  className="text-xs px-4 py-1.5 rounded-full bg-[#1F5239] text-white hover:bg-[#163d2c] disabled:opacity-60 transition-colors"
-                >
-                  {bulkProgress.running
-                    ? `Summarizing… ${bulkProgress.done}/${bulkProgress.total}`
-                    : bulkProgress.total > 0 && bulkProgress.done === bulkProgress.total
-                    ? '✓ All 2026 agendas summarized'
-                    : '✨ Summarize all 2026 agendas'}
-                </button>
-              )}
-            </div>
+            <h2 className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-4">
+              {query.trim() ? 'Matching municipalities' : 'Supported municipalities'}
+            </h2>
             <div className="grid gap-4 sm:grid-cols-2">
-              {filtered.map((meeting) => (
-                <MeetingCard key={meeting.parsedDate} meeting={meeting} boardType={board} />
+              {filtered.map((village) => (
+                <Link
+                  key={village.slug}
+                  href={`/village/${village.slug}`}
+                  className="bg-white border border-gray-200 rounded-xl p-5 hover:border-[#1F5239] hover:shadow-md transition-all group"
+                >
+                  <p className="text-xs font-medium text-[#1F5239] uppercase tracking-wide mb-1">
+                    {village.state}
+                  </p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-[#1F5239] transition-colors">
+                    {village.name}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {village.features.map((f) => (
+                      <span
+                        key={f}
+                        className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-medium capitalize"
+                      >
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
               ))}
             </div>
           </>
         )}
       </main>
 
-      <footer className="text-center text-xs text-gray-400 py-8 border-t border-gray-200">
-        This is an independent civic transparency tool. Not affiliated with the Elmwood Park Public Library.
+      <footer className="text-center text-xs text-gray-400 py-8 border-t border-gray-200 mt-4">
+        The Village Hall Record — an independent civic transparency platform.
       </footer>
     </div>
   )
 }
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <Suspense>
-      <HomeInner />
+      <LandingInner />
     </Suspense>
   )
 }

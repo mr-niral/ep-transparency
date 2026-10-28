@@ -1,7 +1,20 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  // Allow fetching PDFs from the library site for summarization
+  async redirects() {
+    return [
+      {
+        source: '/votes',
+        destination: '/village/elmwood-park-il/votes',
+        permanent: true,
+      },
+      {
+        source: '/finances',
+        destination: '/village/elmwood-park-il/finances',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

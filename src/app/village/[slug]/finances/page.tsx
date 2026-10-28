@@ -2,10 +2,12 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import type { PaymentRecord, BudgetYear, Meeting, FinancialSnapshot } from '@/types'
 import { saveSnapshot, loadAllSnapshots } from '@/lib/financialStorage'
 import paymentsData from '@/data/payments.json'
 import budgetData from '@/data/budget.json'
+import { villages } from '@/data/villages'
 
 const payments = paymentsData as PaymentRecord[]
 const budgetYears = budgetData as BudgetYear[]
@@ -229,7 +231,6 @@ function SpendingTab() {
 
   return (
     <div className="space-y-6">
-      {/* Legend */}
       <div className="flex flex-wrap gap-3">
         {CATEGORY_ORDER.map((cat) => (
           <div key={cat} className="flex items-center gap-1.5 text-xs">
@@ -239,7 +240,6 @@ function SpendingTab() {
         ))}
       </div>
 
-      {/* Bars per year */}
       <div className="space-y-4">
         {years.map((yr) => {
           const totals = byYear[yr]
@@ -446,7 +446,6 @@ function LegalTab() {
     )
   }
 
-  // Group by firm then by legal category
   const byFirm: Record<
     string,
     { total: number; categories: Record<string, number>; payments: PaymentRecord[] }
@@ -464,14 +463,12 @@ function LegalTab() {
 
   return (
     <div className="space-y-6">
-      {/* Summary cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <Card label={`${currentYear} Legal Spending`} value={fmt.format(thisYearTotal)} />
         <Card label={`${currentYear - 1} Legal Spending`} value={fmt.format(lastYearTotal)} />
         <Card label="Total Legal Payments" value={String(legalPayments.length)} sub="line items" />
       </div>
 
-      {/* Per-firm breakdown */}
       {firms.map(([firm, data]) => (
         <div
           key={firm}
@@ -484,7 +481,6 @@ function LegalTab() {
             </span>
           </div>
 
-          {/* Category subtotals */}
           <div className="px-4 py-2 flex flex-wrap gap-3 border-b border-gray-100 bg-gray-50">
             {Object.entries(data.categories).map(([cat, amt]) => (
               <span key={cat} className="text-xs text-gray-600">
@@ -493,7 +489,6 @@ function LegalTab() {
             ))}
           </div>
 
-          {/* Individual payments */}
           <table className="w-full text-sm">
             <thead className="bg-gray-50 text-xs text-gray-500 uppercase tracking-wide">
               <tr>
@@ -541,7 +536,6 @@ function ReportsTab() {
   const [loadingDates, setLoadingDates] = useState<Set<string>>(new Set())
   const [errors, setErrors] = useState<Record<string, string>>({})
 
-  // Load meetings and cached snapshots on mount
   useEffect(() => {
     fetch('/api/meetings')
       .then((r) => r.json())
@@ -550,9 +544,8 @@ function ReportsTab() {
         filtered.sort((a, b) => a.parsedDate.localeCompare(b.parsedDate))
         setMeetings(filtered)
       })
-      .catch(() => {/* silently ignore — user will see empty list */})
+      .catch(() => {/* silently ignore */})
 
-    // Load cached snapshots from localStorage
     setSnapshots(loadAllSnapshots())
   }, [])
 
@@ -590,7 +583,6 @@ function ReportsTab() {
     }
   }
 
-  // Compute month-over-month YTD change
   const ytdRows = useMemo(() => {
     return snapshots.map((s, i) => {
       const prev = i > 0 ? snapshots[i - 1] : null
@@ -614,7 +606,6 @@ function ReportsTab() {
 
   return (
     <div className="space-y-8">
-      {/* Meeting List */}
       <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
         <div className="px-4 py-3 border-b border-gray-100">
           <h3 className="font-semibold text-gray-800">2026 Meetings with Minutes</h3>
@@ -669,7 +660,6 @@ function ReportsTab() {
 
       {snapshots.length > 0 && (
         <>
-          {/* Cash Balance Table */}
           <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
             <div className="px-4 py-3 border-b border-gray-100">
               <h3 className="font-semibold text-gray-800">Cash Balances by Meeting</h3>
@@ -712,7 +702,6 @@ function ReportsTab() {
             </div>
           </div>
 
-          {/* YTD Expenditure Tracker */}
           <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
             <div className="px-4 py-3 border-b border-gray-100">
               <h3 className="font-semibold text-gray-800">YTD Expenditure Tracker</h3>
@@ -745,7 +734,6 @@ function ReportsTab() {
             </table>
           </div>
 
-          {/* Notable Items */}
           {allNotable.length > 0 && (
             <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
               <div className="px-4 py-3 border-b border-gray-100">
@@ -788,8 +776,25 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'reports', label: 'Monthly Reports' },
 ]
 
-export default function FinancesPage() {
+export default function FinancesPage({ params }: { params: { slug: string } }) {
+  const { slug } = params
+  const village = villages.find((v) => v.slug === slug)
   const [tab, setTab] = useState<Tab>('budget')
+
+  if (!village) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center px-4">
+          <p className="text-4xl mb-4">🏛️</p>
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">Municipality not found</h1>
+          <p className="text-gray-500 mb-6">This municipality isn&apos;t supported yet.</p>
+          <Link href="/" className="text-[#1F5239] font-medium hover:underline">
+            ← Search for your municipality
+          </Link>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>
@@ -797,6 +802,9 @@ export default function FinancesPage() {
       <header className="bg-[#1F5239] text-white py-8 px-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-8">
           <div className="flex-1">
+            <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
+              {village.name} Public Library
+            </p>
             <h1 className="text-3xl font-bold">Money &amp; Decisions</h1>
             <p className="mt-2 text-green-100 text-sm max-w-xl">
               A plain-language view of where library tax dollars go — sourced from FOIA&apos;d bills
@@ -804,7 +812,7 @@ export default function FinancesPage() {
             </p>
           </div>
           <div className="hidden sm:block flex-shrink-0">
-            <Image src="/logo.jpeg" alt="Elmwood Park" width={200} height={75} className="object-contain rounded-lg opacity-90" />
+            <Image src="/logo.jpeg" alt={village.name} width={200} height={75} className="object-contain rounded-lg opacity-90" />
           </div>
         </div>
       </header>

@@ -2,8 +2,10 @@
 
 import { useEffect, useState, useMemo } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import type { Meeting, MeetingVotes } from '@/types'
 import { saveVotes, loadVotes, loadAllVotes } from '@/lib/voteStorage'
+import { villages } from '@/data/villages'
 
 type Tab = 'extract' | 'attendance'
 
@@ -14,7 +16,10 @@ const VOTE_DISPLAY: Record<string, { label: string; className: string }> = {
   absent: { label: '— Absent', className: 'text-gray-400' },
 }
 
-export default function VotesPage() {
+export default function VotesPage({ params }: { params: { slug: string } }) {
+  const { slug } = params
+  const village = villages.find((v) => v.slug === slug)
+
   const [tab, setTab] = useState<Tab>('extract')
   const [meetings, setMeetings] = useState<Meeting[]>([])
   const [loadingMeetings, setLoadingMeetings] = useState(true)
@@ -25,8 +30,9 @@ export default function VotesPage() {
   const [allVotes, setAllVotes] = useState<MeetingVotes[]>([])
   const [selectedDate, setSelectedDate] = useState<string | null>(null)
 
-  // Load meetings and cached state on mount
+  // All hooks must be called unconditionally before any early returns
   useEffect(() => {
+    if (!village) return
     fetch('/api/meetings')
       .then((r) => r.json())
       .then((data) => {
@@ -40,7 +46,69 @@ export default function VotesPage() {
       .finally(() => setLoadingMeetings(false))
 
     refreshCache()
-  }, [])
+  }, [village])
+
+  // Attendance data derived from extracted votes
+  const attendanceByYear = useMemo(() => {
+    const perMeeting = new Map<string, Record<string, 'attended' | 'absent'>>()
+    for (const mv of allVotes) {
+      const status: Record<string, 'attended' | 'absent'> = {}
+      for (const vr of mv.votes) {
+        for (const [name, vote] of Object.entries(vr.ballots)) {
+          if (!(name in status)) {
+            status[name] = vote === 'absent' ? 'absent' : 'attended'
+          } else if (status[name] === 'absent' && vote !== 'absent') {
+            status[name] = 'attended'
+          }
+        }
+      }
+      perMeeting.set(mv.meetingDate, status)
+    }
+
+    const byYear = new Map<number, MeetingVotes[]>()
+    for (const mv of allVotes) {
+      const year = parseInt(mv.meetingDate.slice(0, 4))
+      if (!byYear.has(year)) byYear.set(year, [])
+      byYear.get(year)!.push(mv)
+    }
+
+    const allTrusteeNames = [...new Set(
+      [...perMeeting.values()].flatMap((s) => Object.keys(s))
+    )].sort()
+
+    const years = [...byYear.keys()].sort((a, b) => b - a)
+    const summary = years.map((year) => {
+      const yearMeetings = byYear.get(year)!.sort((a, b) => b.meetingDate.localeCompare(a.meetingDate))
+      const trustees = allTrusteeNames.map((name) => {
+        let attended = 0, absent = 0
+        for (const mv of yearMeetings) {
+          const status = perMeeting.get(mv.meetingDate)
+          if (!status || !(name in status)) continue
+          if (status[name] === 'attended') attended++
+          else absent++
+        }
+        return { name, attended, absent, total: attended + absent }
+      }).filter((t) => t.total > 0)
+      return { year, meetings: yearMeetings, trustees }
+    })
+
+    return { summary, allTrusteeNames }
+  }, [allVotes])
+
+  if (!village) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center px-4">
+          <p className="text-4xl mb-4">🏛️</p>
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">Municipality not found</h1>
+          <p className="text-gray-500 mb-6">This municipality isn&apos;t supported yet.</p>
+          <Link href="/" className="text-[#1F5239] font-medium hover:underline">
+            ← Search for your municipality
+          </Link>
+        </div>
+      </div>
+    )
+  }
 
   function refreshCache(autoSelectDate?: string) {
     const saved = loadAllVotes()
@@ -84,59 +152,6 @@ export default function VotesPage() {
     }
   }
 
-  // Attendance data: per meeting, derive each trustee's attendance status.
-  // A trustee "attended" if they cast any yes/no/abstain vote in that meeting;
-  // "absent" if every ballot they appear in is 'absent'.
-  const attendanceByYear = useMemo(() => {
-    // meetingDate → { trusteeName → 'attended' | 'absent' }
-    const perMeeting = new Map<string, Record<string, 'attended' | 'absent'>>()
-    for (const mv of allVotes) {
-      const status: Record<string, 'attended' | 'absent'> = {}
-      for (const vr of mv.votes) {
-        for (const [name, vote] of Object.entries(vr.ballots)) {
-          if (!(name in status)) {
-            status[name] = vote === 'absent' ? 'absent' : 'attended'
-          } else if (status[name] === 'absent' && vote !== 'absent') {
-            status[name] = 'attended'
-          }
-        }
-      }
-      perMeeting.set(mv.meetingDate, status)
-    }
-
-    // Group meetings by year
-    const byYear = new Map<number, MeetingVotes[]>()
-    for (const mv of allVotes) {
-      const year = parseInt(mv.meetingDate.slice(0, 4))
-      if (!byYear.has(year)) byYear.set(year, [])
-      byYear.get(year)!.push(mv)
-    }
-
-    // All trustee names across all meetings
-    const allTrusteeNames = [...new Set(
-      [...perMeeting.values()].flatMap((s) => Object.keys(s))
-    )].sort()
-
-    // Build yearly summary: year → trustee → { attended, absent }
-    const years = [...byYear.keys()].sort((a, b) => b - a)
-    const summary = years.map((year) => {
-      const meetings = byYear.get(year)!.sort((a, b) => b.meetingDate.localeCompare(a.meetingDate))
-      const trustees = allTrusteeNames.map((name) => {
-        let attended = 0, absent = 0
-        for (const mv of meetings) {
-          const status = perMeeting.get(mv.meetingDate)
-          if (!status || !(name in status)) continue
-          if (status[name] === 'attended') attended++
-          else absent++
-        }
-        return { name, attended, absent, total: attended + absent }
-      }).filter((t) => t.total > 0)
-      return { year, meetings, trustees }
-    })
-
-    return { summary, allTrusteeNames }
-  }, [allVotes])
-
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -144,7 +159,7 @@ export default function VotesPage() {
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-8">
           <div className="flex-1">
             <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
-              Elmwood Park Public Library
+              {village.name} Public Library
             </p>
             <h1 className="text-3xl font-bold mb-2">Vote Tracker</h1>
             <p className="text-green-100 text-sm max-w-xl">
@@ -152,7 +167,7 @@ export default function VotesPage() {
             </p>
           </div>
           <div className="hidden sm:block flex-shrink-0">
-            <Image src="/logo.jpeg" alt="Elmwood Park" width={200} height={75} className="object-contain rounded-lg opacity-90" />
+            <Image src="/logo.jpeg" alt={village.name} width={200} height={75} className="object-contain rounded-lg opacity-90" />
           </div>
         </div>
       </header>
@@ -275,7 +290,6 @@ export default function VotesPage() {
                                 const trustees = Object.keys(vr.ballots)
                                 return (
                                   <div key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                                    {/* Motion header */}
                                     <div className="px-4 py-3 border-b border-gray-100">
                                       <p className="text-sm font-semibold text-gray-800">{vr.motion}</p>
                                       <div className="flex flex-wrap gap-x-4 gap-y-0.5 mt-1 text-xs text-gray-500">
@@ -297,7 +311,6 @@ export default function VotesPage() {
                                         {vr.seconder && <span>Seconded by {vr.seconder}</span>}
                                       </div>
                                     </div>
-                                    {/* Vote table */}
                                     {trustees.length > 0 && (
                                       <table className="w-full text-sm">
                                         <tbody className="divide-y divide-gray-50">
@@ -356,15 +369,12 @@ export default function VotesPage() {
                   Attendance is derived from roll-call votes in extracted minutes.
                   Meetings with only voice votes are not counted.
                 </p>
-                {attendanceByYear.summary.map(({ year, meetings, trustees }) => (
+                {attendanceByYear.summary.map(({ year, meetings: yearMeetings, trustees }) => (
                   <div key={year} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                    {/* Year header */}
                     <div className="px-5 py-3 bg-gray-50 border-b border-gray-200 flex items-baseline gap-3">
                       <h2 className="text-base font-semibold text-gray-800">{year}</h2>
-                      <span className="text-xs text-gray-500">{meetings.length} meeting{meetings.length !== 1 ? 's' : ''} extracted</span>
+                      <span className="text-xs text-gray-500">{yearMeetings.length} meeting{yearMeetings.length !== 1 ? 's' : ''} extracted</span>
                     </div>
-
-                    {/* Trustee rows */}
                     <div className="divide-y divide-gray-100">
                       {trustees.map(({ name, attended, absent, total }) => {
                         const attendedPct = total > 0 ? (attended / total) * 100 : 0
@@ -374,7 +384,6 @@ export default function VotesPage() {
                             <div className="w-40 shrink-0 text-sm font-medium text-gray-800 truncate">
                               {name}
                             </div>
-                            {/* Bar */}
                             <div className="flex-1 flex rounded-full overflow-hidden h-4 bg-gray-100 min-w-0">
                               {attended > 0 && (
                                 <div
@@ -391,7 +400,6 @@ export default function VotesPage() {
                                 />
                               )}
                             </div>
-                            {/* Counts */}
                             <div className="shrink-0 text-xs text-right w-36">
                               <span className="text-green-700 font-medium">{attended} attended</span>
                               {absent > 0 && (
@@ -411,7 +419,7 @@ export default function VotesPage() {
       </main>
 
       <footer className="text-center text-xs text-gray-400 py-8 border-t border-gray-200 mt-8">
-        This is an independent civic transparency tool. Not affiliated with the Elmwood Park Public Library.
+        This is an independent civic transparency tool. Not affiliated with the {village.name} Public Library.
       </footer>
     </div>
   )
