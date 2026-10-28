@@ -9,7 +9,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700
 export const metadata: Metadata = {
   title: 'The Village Hall Record — Local Government Transparency',
   description:
-    'Making village politics transparent and accessible. Search for your municipality to get started.',
+    'Making local politics accountable and accessible. Search for your municipality to get started.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

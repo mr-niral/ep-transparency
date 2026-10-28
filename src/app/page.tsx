@@ -33,7 +33,7 @@ function LandingInner() {
       <header className="bg-[#1F5239] text-white py-20 px-4 text-center">
         <h1 className="text-4xl font-bold mb-3">The Village Hall Record</h1>
         <p className="text-green-100 text-lg mb-8 max-w-xl mx-auto">
-          Making village politics transparent and accessible.
+          Making local politics accountable and accessible.
         </p>
         <div className="max-w-md mx-auto">
           <input
