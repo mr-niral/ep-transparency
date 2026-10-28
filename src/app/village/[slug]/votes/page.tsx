@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useMemo } from 'react'
+import { use, useEffect, useState, useMemo, Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Meeting, MeetingVotes } from '@/types'
@@ -16,8 +16,8 @@ const VOTE_DISPLAY: Record<string, { label: string; className: string }> = {
   absent: { label: '— Absent', className: 'text-gray-400' },
 }
 
-export default function VotesPage({ params }: { params: { slug: string } }) {
-  const { slug } = params
+function VotesContent({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params)
   const village = villages.find((v) => v.slug === slug)
 
   const [tab, setTab] = useState<Tab>('extract')
@@ -422,5 +422,13 @@ export default function VotesPage({ params }: { params: { slug: string } }) {
         This is an independent civic transparency tool. Not affiliated with the {village.name} Public Library.
       </footer>
     </div>
+  )
+}
+
+export default function VotesPage({ params }: { params: Promise<{ slug: string }> }) {
+  return (
+    <Suspense>
+      <VotesContent params={params} />
+    </Suspense>
   )
 }

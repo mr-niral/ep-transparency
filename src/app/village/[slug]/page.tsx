@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useMemo, Suspense } from 'react'
+import { use, useEffect, useState, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -9,7 +9,8 @@ import type { Meeting } from '@/types'
 import { saveSummary, hasSummary } from '@/lib/summaryStorage'
 import { villages } from '@/data/villages'
 
-function VillageMeetingsInner({ slug }: { slug: string }) {
+function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params)
   const village = villages.find((v) => v.slug === slug)
   const searchParams = useSearchParams()
   const board = searchParams.get('board') === 'village' ? 'village' : 'library'
@@ -219,11 +220,10 @@ function VillageMeetingsInner({ slug }: { slug: string }) {
   )
 }
 
-export default function VillagePage({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default function VillagePage({ params }: { params: Promise<{ slug: string }> }) {
   return (
     <Suspense>
-      <VillageMeetingsInner slug={slug} />
+      <VillageMeetingsInner params={params} />
     </Suspense>
   )
 }

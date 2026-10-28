@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect } from 'react'
+import { use, useState, useMemo, useEffect, Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { PaymentRecord, BudgetYear, Meeting, FinancialSnapshot } from '@/types'
@@ -776,8 +776,16 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'reports', label: 'Monthly Reports' },
 ]
 
-export default function FinancesPage({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default function FinancesPage({ params }: { params: Promise<{ slug: string }> }) {
+  return (
+    <Suspense>
+      <FinancesContent params={params} />
+    </Suspense>
+  )
+}
+
+function FinancesContent({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params)
   const village = villages.find((v) => v.slug === slug)
   const [tab, setTab] = useState<Tab>('budget')
 
