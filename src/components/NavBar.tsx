@@ -63,7 +63,7 @@ export default function NavBar() {
             </button>
 
             {open && (
-              <div className="absolute right-0 top-full mt-1 bg-white rounded-lg shadow-xl py-1 min-w-[160px] z-50 border border-gray-100">
+              <div className="absolute left-0 top-full mt-1 bg-white rounded-lg shadow-xl py-1 min-w-[160px] z-50 border border-gray-100">
                 {LIBRARY_ITEMS.map((item) => {
                   const active = pathname === item.href && isLibrary
                   return (
