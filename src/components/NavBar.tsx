@@ -17,7 +17,16 @@ export default function NavBar() {
   const isLibrary = !isVillage
 
   const [open, setOpen] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  function handleMouseEnter() {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setOpen(true)
+  }
+
+  function handleMouseLeave() {
+    closeTimer.current = setTimeout(() => setOpen(false), 150)
+  }
 
   return (
     <nav className="bg-[#1F5239] text-white text-sm">
@@ -29,10 +38,9 @@ export default function NavBar() {
         <div className="flex items-center gap-1">
           {/* Library Board with flyout */}
           <div
-            ref={containerRef}
             className="relative"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <button
               onClick={() => setOpen((o) => !o)}
