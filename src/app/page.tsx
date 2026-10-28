@@ -1,13 +1,16 @@
 'use client'
 
-import { useEffect, useState, useMemo } from 'react'
+import { useEffect, useState, useMemo, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import MeetingCard from '@/components/MeetingCard'
 import type { Meeting } from '@/types'
 import { saveSummary, hasSummary } from '@/lib/summaryStorage'
 
-export default function Home() {
-  const [board, setBoard] = useState<'library' | 'village'>('library')
+function HomeInner() {
+  const searchParams = useSearchParams()
+  const board = searchParams.get('board') === 'village' ? 'village' : 'library'
+
   const [meetings, setMeetings] = useState<Meeting[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -41,6 +44,9 @@ export default function Home() {
     setLoading(true)
     setError('')
     setMeetings([])
+    setSelectedYear('all')
+    setSearch('')
+    setBulkProgress({ done: 0, total: 0, running: false })
     const url = board === 'library' ? '/api/meetings' : '/api/village-meetings'
     fetch(url)
       .then((r) => r.json())
@@ -63,11 +69,12 @@ export default function Home() {
   const filtered = useMemo(() => {
     return meetings.filter((m) => {
       const yearMatch = selectedYear === 'all' || m.year === selectedYear
-      const searchMatch =
-        !search || m.date.toLowerCase().includes(search.toLowerCase())
+      const searchMatch = !search || m.date.toLowerCase().includes(search.toLowerCase())
       return yearMatch && searchMatch
     })
   }, [meetings, selectedYear, search])
+
+  const boardLabel = board === 'library' ? 'Library Board' : 'Village Board'
 
   return (
     <div className="min-h-screen">
@@ -78,27 +85,11 @@ export default function Home() {
             <p className="text-[#AEDCC0] text-sm font-medium mb-1 uppercase tracking-wide">
               Elmwood Park
             </p>
-            <h1 className="text-3xl font-bold mb-2">Board Meeting Transparency</h1>
+            <h1 className="text-3xl font-bold mb-2">{boardLabel} Meetings</h1>
             <p className="text-green-100 text-sm max-w-xl">
               Browse agendas, minutes, and video recordings for every board meeting.
               Click &ldquo;Summarize&rdquo; to get a plain-English explanation powered by AI.
             </p>
-            {/* Board toggle */}
-            <div className="mt-4 flex gap-2">
-              {(['library', 'village'] as const).map((b) => (
-                <button
-                  key={b}
-                  onClick={() => setBoard(b)}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                    board === b
-                      ? 'bg-white text-[#1F5239]'
-                      : 'bg-white/20 text-white hover:bg-white/30'
-                  }`}
-                >
-                  {b === 'library' ? 'Library Board' : 'Village Board'}
-                </button>
-              ))}
-            </div>
           </div>
           <div className="hidden sm:block flex-shrink-0">
             <Image
@@ -155,7 +146,7 @@ export default function Home() {
         {loading && (
           <div className="text-center py-20 text-gray-500">
             <div className="text-4xl mb-3">⏳</div>
-            <p>Loading meetings from the library site…</p>
+            <p>Loading meetings…</p>
           </div>
         )}
 
@@ -205,5 +196,13 @@ export default function Home() {
         This is an independent civic transparency tool. Not affiliated with the Elmwood Park Public Library.
       </footer>
     </div>
+  )
+}
+
+export default function Home() {
+  return (
+    <Suspense>
+      <HomeInner />
+    </Suspense>
   )
 }
