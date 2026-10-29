@@ -193,7 +193,7 @@ function LandingInner() {
         <section id="request-form" className="max-w-[1120px] mx-auto px-6 py-10">
           <div className="max-w-md mx-auto">
             <form
-              action="https://formspree.io/villagehallrecord@gmail.com"
+              action="https://formspree.io/f/maeebaqd"
               method="POST"
               className="bg-surface border border-rule rounded-[6px] p-6 flex flex-col gap-4"
             >
