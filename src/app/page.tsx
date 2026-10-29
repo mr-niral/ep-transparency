@@ -43,6 +43,7 @@ function LandingInner() {
   const router = useRouter()
   const query = searchParams.get('q') ?? ''
   const [latestMeetings, setLatestMeetings] = useState<Meeting[]>([])
+  const [showRequestForm, setShowRequestForm] = useState(false)
 
   useEffect(() => {
     fetch('/api/meetings')
@@ -182,14 +183,22 @@ function LandingInner() {
 
             <p id="request" className="m-0 text-[14px] text-muted leading-[1.5]">
               Don&apos;t see your town?{' '}
-              <a href="mailto:villagehallrecord@gmail.com?subject=Municipality%20request">Request it</a>
+              <a
+                href="#request-form"
+                onClick={() => {
+                  setShowRequestForm(true)
+                  setTimeout(() => document.getElementById('request-form')?.scrollIntoView({ behavior: 'smooth' }), 50)
+                }}
+              >
+                Request it
+              </a>
             </p>
           </aside>
         </div>
       </section>
 
       {/* ── Request form (shown when no match) ── */}
-      {noMatch && (
+      {(noMatch || showRequestForm) && (
         <section id="request-form" className="max-w-[1120px] mx-auto px-6 py-10">
           <div className="max-w-md mx-auto">
             <form
