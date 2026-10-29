@@ -53,10 +53,15 @@ function LandingInner() {
   }, [query])
 
   useEffect(() => {
-    fetch('/api/meetings')
-      .then((r) => r.json())
-      .then((data) => {
-        if (Array.isArray(data)) setLatestMeetings(data.slice(0, 3))
+    Promise.all([
+      fetch('/api/meetings').then((r) => r.json()),
+      fetch('/api/village-meetings').then((r) => r.json()),
+    ])
+      .then(([library, village]) => {
+        const lib = (Array.isArray(library) ? library : []).map((m: Meeting) => ({ ...m, boardLabel: 'Library Board' }))
+        const vil = (Array.isArray(village) ? village : []).map((m: Meeting) => ({ ...m, boardLabel: 'Village Board' }))
+        const combined = [...lib, ...vil].sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
+        setLatestMeetings(combined.slice(0, 3))
       })
       .catch(() => {})
   }, [])
@@ -280,7 +285,7 @@ function LandingInner() {
               Latest from Elmwood Park
             </h2>
             <Link href="/village/elmwood-park-il" className="text-[15px] font-semibold">
-              All Library Board meetings
+              All meetings
             </Link>
           </div>
           <ol
@@ -298,7 +303,7 @@ function LandingInner() {
                 </span>
                 <span className="flex-[1_1_260px] flex flex-col gap-0.5">
                   <span className="font-semibold text-[17px]">
-                    Library Board meeting
+                    {(m as Meeting & { boardLabel?: string }).boardLabel ?? 'Library Board'} meeting
                   </span>
                   <span className="text-[14px] text-muted">{getMeetingStatus(m)}</span>
                 </span>
@@ -318,9 +323,11 @@ function LandingInner() {
                       Video
                     </a>
                   )}
-                  <Link href={`/village/elmwood-park-il/library-board/${m.parsedDate}?source=agenda`}>
-                    Summary
-                  </Link>
+                  {(m.agendaUrl || m.minutesUrl) && (
+                    <Link href={`/village/elmwood-park-il/${(m as Meeting & { boardLabel?: string }).boardLabel === 'Village Board' ? 'village-board' : 'library-board'}/${m.parsedDate}?source=${m.minutesUrl ? 'minutes' : 'agenda'}`}>
+                      Summary
+                    </Link>
+                  )}
                 </span>
               </li>
             ))}
