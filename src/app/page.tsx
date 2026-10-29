@@ -44,6 +44,13 @@ function LandingInner() {
   const query = searchParams.get('q') ?? ''
   const [latestMeetings, setLatestMeetings] = useState<Meeting[]>([])
   const [showRequestForm, setShowRequestForm] = useState(false)
+  const isZip = /^\d+$/.test(query.trim())
+  const [reqCity, setReqCity] = useState(!isZip ? query : '')
+
+  useEffect(() => {
+    if (!/^\d+$/.test(query.trim())) setReqCity(query)
+    else setReqCity('')
+  }, [query])
 
   useEffect(() => {
     fetch('/api/meetings')
@@ -214,7 +221,8 @@ function LandingInner() {
                   id="req-city"
                   type="text"
                   name="city"
-                  defaultValue={/^\d+$/.test(query.trim()) ? '' : query}
+                  value={reqCity}
+                  onChange={(e) => setReqCity(e.target.value)}
                   required
                   className="h-10 border border-border-strong rounded px-3 text-[15px] bg-surface text-ink focus:outline-none focus:border-accent"
                 />
