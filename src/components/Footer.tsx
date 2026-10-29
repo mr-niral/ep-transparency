@@ -10,7 +10,7 @@ export default function Footer() {
         </span>
         <span className="flex gap-6">
           <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <a href="mailto:villagehallrecord@gmail.com">Contact</a>
         </span>
       </div>
     </footer>
