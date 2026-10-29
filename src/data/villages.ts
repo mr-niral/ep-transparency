@@ -2,6 +2,7 @@ export interface VillageConfig {
   slug: string
   name: string
   state: string
+  county?: string
   zips: string[]
   hasLibraryBoard: boolean
   hasVillageBoard: boolean
@@ -13,6 +14,7 @@ export const villages: VillageConfig[] = [
     slug: 'elmwood-park-il',
     name: 'Elmwood Park',
     state: 'IL',
+    county: 'Cook County',
     zips: ['60707'],
     hasLibraryBoard: true,
     hasVillageBoard: true,

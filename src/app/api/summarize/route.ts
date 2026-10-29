@@ -31,9 +31,27 @@ function extractGranicusText(html: string): string {
   return $('body').text().replace(/\s+/g, ' ').trim()
 }
 
+function extractJsonFromText(text: string): string {
+  // Strip markdown code fences
+  let s = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim()
+  // Extract just the outermost JSON object in case there's surrounding prose
+  const start = s.indexOf('{')
+  const end = s.lastIndexOf('}')
+  if (start !== -1 && end > start) s = s.slice(start, end + 1)
+  return s
+}
+
+
+const STRUCTURED_PROMPT = `Respond with a single raw JSON object and nothing else — no markdown fences, no explanation, no text before or after the JSON. Use this exact shape:
+{"key_figures":[{"label":"...","value":"..."}],"decisions":[{"status":"approved","motion":"...","notes":"..."}],"sections":[{"heading":"...","body":"..."}]}
+Rules:
+- key_figures: 2–4 items with notable numbers, dollar amounts, or counts from the document.
+- decisions: every formal motion or vote, status must be exactly "approved", "failed", or "tabled".
+- sections: 3–6 short narrative paragraphs covering the main topics.
+- No preamble, no date restatement, no "Here is a summary" opener. Plain text only inside JSON string values.`
 
 export async function POST(req: NextRequest) {
-  const { pdfUrl, docType, boardType } = await req.json()
+  const { pdfUrl, docType, boardType, structured } = await req.json()
 
   if (!pdfUrl || typeof pdfUrl !== 'string') {
     return NextResponse.json({ error: 'Missing pdfUrl' }, { status: 400 })
@@ -47,7 +65,9 @@ export async function POST(req: NextRequest) {
         ? "director's letter"
         : 'meeting minutes'
 
-  const prompt = `This is a ${boardLabel} ${typeLabel}. Please summarize it in plain, accessible English for a community member who wants to understand what was discussed or decided. Use bullet points for the key topics or decisions. Keep it under 300 words. Avoid jargon.`
+  const prompt = structured
+    ? `This is a ${boardLabel} ${typeLabel}.\n${STRUCTURED_PROMPT}`
+    : `This is a ${boardLabel} ${typeLabel}. Please summarize it in plain, accessible English for a community member who wants to understand what was discussed or decided. Use bullet points for the key topics or decisions. Keep it under 300 words. Avoid jargon.`
 
   // Granicus viewer pages return HTML — extract text and send as plain text to Claude
   if (isGranicusViewerUrl(pdfUrl)) {
@@ -85,7 +105,7 @@ export async function POST(req: NextRequest) {
     try {
       const message = await client.messages.create({
         model: 'claude-sonnet-4-6',
-        max_tokens: 1024,
+        max_tokens: structured ? 4096 : 1024,
         messages: [
           {
             role: 'user',
@@ -99,7 +119,9 @@ export async function POST(req: NextRequest) {
         ],
       })
 
-      const summary = message.content[0].type === 'text' ? message.content[0].text : ''
+      const raw = message.content[0].type === 'text' ? message.content[0].text : ''
+      if (structured) console.log('[summarize] raw structured output:', raw.slice(0, 500))
+      const summary = structured ? extractJsonFromText(raw) : raw
       return NextResponse.json({ summary })
     } catch (err) {
       console.error('Claude API error (Granicus):', err)
@@ -141,7 +163,7 @@ export async function POST(req: NextRequest) {
   try {
     const message = await client.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: 1024,
+      max_tokens: structured ? 4096 : 1024,
       messages: [
         {
           role: 'user',
@@ -163,7 +185,9 @@ export async function POST(req: NextRequest) {
       ],
     })
 
-    const summary = message.content[0].type === 'text' ? message.content[0].text : ''
+    const raw = message.content[0].type === 'text' ? message.content[0].text : ''
+    if (structured) console.log('[summarize] raw PDF structured output:', raw.slice(0, 500))
+    const summary = structured ? extractJsonFromText(raw) : raw
     return NextResponse.json({ summary })
   } catch (err) {
     console.error('Claude API error:', err)
