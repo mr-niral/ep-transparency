@@ -182,7 +182,7 @@ function LandingInner() {
 
             <p id="request" className="m-0 text-[14px] text-muted leading-[1.5]">
               Don&apos;t see your town?{' '}
-              <a href="#request-form">Request it</a>
+              <a href="mailto:villagehallrecord@gmail.com?subject=Municipality%20request">Request it</a>
             </p>
           </aside>
         </div>
