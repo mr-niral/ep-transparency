@@ -28,7 +28,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: 'The Village Hall Record — Local Government Transparency',
   description:
-    'Making local politics accountable and accessible. Search for your municipality to get started.',
+    'Making local politics accessible. Search for your municipality to get started.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

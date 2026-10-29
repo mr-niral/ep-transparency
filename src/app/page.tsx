@@ -91,12 +91,11 @@ function LandingInner() {
               Local government, small-town scale
             </p>
             <h1 className="m-0 font-display font-medium leading-[1.04] tracking-[-0.02em]" style={{ fontSize: 'clamp(40px, 6vw, 68px)' }}>
-              Making local politics accountable and accessible.
+              Making local politics accessible.
             </h1>
             <p className="m-0 text-[19px] leading-[1.55] text-ink-2 max-w-[560px]">
               Agendas, minutes, votes and meeting video from the village boards, library boards
-              and councils of smaller towns — the meetings big-city newsrooms rarely cover —
-              gathered in one place, with plain-English summaries.
+              and councils of smaller towns gathered in one place, with easy-to-read summaries.
             </p>
             <form
               role="search"

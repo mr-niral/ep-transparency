@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Elmwood Park Library Board — The Village Hall Record</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;family=Public+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0;background:#F5F6F3}
+a{color:#1E4D36}a:hover{color:#123323}
+</style>
+</helmet>
+<div style="font-family: 'Public Sans', system-ui, sans-serif; color: #15201B; background: #F5F6F3; min-height: 100vh">
+
+<header style="border-bottom: 1px solid #D5D9D3">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" style="font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 22px; color: #15201B; text-decoration: none; letter-spacing: -0.01em">The Village Hall Record</a>
+<nav aria-label="Primary" style="display: flex; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="Main.dc.html" style="text-decoration: none">Municipalities</a>
+<a href="Main.dc.html" style="text-decoration: none">How it works</a>
+</nav>
+</div>
+</header>
+
+<section style="border-bottom: 3px double #15201B">
+<div style="max-width: 1120px; margin: 0 auto; padding: 40px 24px 0; display: flex; flex-direction: column; gap: 28px">
+<nav aria-label="Breadcrumb" style="font-size: 14px; color: #59625C; display: flex; gap: 8px; flex-wrap: wrap">
+<a href="Main.dc.html">Home</a><span aria-hidden="true">/</span><span>Elmwood Park, IL</span>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between">
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<h1 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(38px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Elmwood Park Library Board</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #46504A; max-width: 620px; text-wrap: pretty">Agendas, minutes, video and director's letters for every board meeting since 2014.</p>
+</div>
+<dl style="flex: 1 1 300px; margin: 0; display: flex; gap: 32px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 2px"><dt style="font-size: 13px; color: #59625C">Meetings</dt><dd style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 600">153</dd></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><dt style="font-size: 13px; color: #59625C">Archive</dt><dd style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 600">2014–26</dd></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><dt style="font-size: 13px; color: #59625C">Latest</dt><dd style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 600">Oct 27</dd></div>
+</dl>
+</div>
+<nav aria-label="Boards" style="display: flex; gap: 4px; flex-wrap: wrap">
+<a href="Board.dc.html" aria-current="page" style="padding: 14px 4px; margin-right: 24px; font-weight: 600; font-size: 16px; color: #15201B; text-decoration: none; border-bottom: 3px solid #1E4D36; margin-bottom: -3px">Library Board</a>
+<a href="#" style="padding: 14px 4px; font-weight: 500; font-size: 16px; color: #59625C; text-decoration: none">Village Board</a>
+</nav>
+</div>
+</section>
+
+<div style="max-width: 1120px; margin: 0 auto; padding: 40px 24px 80px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+
+<aside aria-label="Filter meetings" style="flex: 1 1 220px; min-width: 0; max-width: 260px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="date-q" style="font-size: 14px; font-weight: 600">Search meetings</label>
+<input id="date-q" type="search" placeholder="e.g. March 2024" style="height: 44px; box-sizing: border-box; padding: 0 12px; font: inherit; font-size: 15px; background: #FFFFFF; border: 1px solid #A9B1AB; border-radius: 4px; color: #15201B">
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 600">Year</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px">
+<a href="#" style="grid-column: span 3; padding: 10px 12px; text-decoration: none; color: #59625C; border: 1px solid #D5D9D3; border-radius: 4px; background: #FFFFFF">All years</a>
+<a href="#y2026" aria-current="true" style="padding: 10px 0; text-align: center; text-decoration: none; color: #FFFFFF; background: #1E4D36; border-radius: 4px">2026</a>
+<a href="#y2025" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2025</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2024</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2023</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2022</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2021</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2020</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2019</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2018</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2017</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2016</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2015</a>
+<a href="#" style="padding: 10px 0; text-align: center; text-decoration: none; color: #15201B; border: 1px solid #D5D9D3; border-radius: 4px">2014</a>
+</div>
+</div>
+<fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<legend style="font-size: 14px; font-weight: 600; margin-bottom: 8px">Has document</legend>
+<label style="display: flex; gap: 10px; align-items: center"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #1E4D36">Minutes</label>
+<label style="display: flex; gap: 10px; align-items: center"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #1E4D36">Video</label>
+<label style="display: flex; gap: 10px; align-items: center"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #1E4D36">Director's letter</label>
+</fieldset>
+<p style="margin: 0; font-size: 13px; line-height: 1.55; color: #59625C; border-top: 1px solid #D5D9D3; padding-top: 16px">Summaries are AI-generated from the official documents. Always check the original before citing.</p>
+</aside>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 56px">
+
+<section id="y2026" aria-labelledby="h2026" style="display: flex; flex-direction: column">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #15201B">
+<h2 id="h2026" style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 34px; display: flex; align-items: baseline; gap: 14px">2026 <span style="font-family: 'Public Sans', system-ui, sans-serif; font-size: 15px; font-weight: 400; color: #59625C">11 meetings</span></h2>
+<button type="button" style="height: 44px; padding: 0 18px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #1E4D36; border-radius: 4px; cursor: pointer">Summarize the year's agendas</button>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 16px; margin: 0 -16px; border-bottom: 1px solid #D5D9D3; background: #FFFFFF">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Oct 27</span><span style="font-size: 13px; color: #59625C">Tuesday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<span style="align-self: flex-start; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #8A4A12; border: 1px solid #8A4A12; border-radius: 3px; padding: 2px 6px">Latest</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><span style="color: #59625C; font-weight: 400">Minutes not yet posted</span></div>
+</div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #1E4D36; border: 0; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Oct 12</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Video</a><span style="color: #59625C; font-weight: 400">Minutes not yet posted</span></div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #A9B1AB; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Sep 14</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Video</a><span style="color: #59625C; font-weight: 400">Minutes not yet posted</span></div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #A9B1AB; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Aug 10</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Minutes</a><a href="#">Video</a><a href="#">Director's letter</a></div>
+<a href="Summary.dc.html" style="height: 44px; box-sizing: border-box; padding: 0 18px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #1E4D36; text-decoration: none; border: 1.5px solid #A9B1AB; border-radius: 4px">Summarize</a>
+</li>
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Jul 13</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Minutes</a><a href="#">Video</a><a href="#">Director's letter</a></div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #A9B1AB; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Jun 8</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Minutes</a><a href="#">Video</a></div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #A9B1AB; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+</ol>
+<a href="#" style="align-self: flex-start; margin-top: 16px; font-size: 15px; font-weight: 600">Show 5 earlier 2026 meetings</a>
+</section>
+
+<section id="y2025" aria-labelledby="h2025" style="display: flex; flex-direction: column">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #15201B">
+<h2 id="h2025" style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 34px; display: flex; align-items: baseline; gap: 14px">2025 <span style="font-family: 'Public Sans', system-ui, sans-serif; font-size: 15px; font-weight: 400; color: #59625C">14 meetings</span></h2>
+<button type="button" style="height: 44px; padding: 0 18px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #1E4D36; border-radius: 4px; cursor: pointer">Summarize the year's agendas</button>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Dec 8</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Minutes</a></div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #A9B1AB; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Nov 10</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Minutes</a><a href="#">Video</a><a href="#">Director's letter</a></div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #A9B1AB; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding: 20px 0; border-bottom: 1px solid #D5D9D3">
+<div style="width: 84px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 22px; font-weight: 500">Oct 13</span><span style="font-size: 13px; color: #59625C">Monday</span></div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500"><a href="#">Agenda</a><a href="#">Minutes</a><a href="#">Video</a></div>
+<button type="button" aria-haspopup="menu" style="height: 44px; padding: 0 14px 0 18px; display: flex; align-items: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 600; color: #1E4D36; background: transparent; border: 1.5px solid #A9B1AB; border-radius: 4px; cursor: pointer">Summarize<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</li>
+
+</ol>
+<a href="#" style="align-self: flex-start; margin-top: 16px; font-size: 15px; font-weight: 600">Show all 14 meetings from 2025</a>
+</section>
+
+</main>
+</div>
+
+<footer style="border-top: 1px solid #D5D9D3">
+<div style="max-width: 1120px; margin: 0 auto; padding: 32px 24px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: #59625C">
+<span><span style="font-family: 'Newsreader', Georgia, serif; font-weight: 600; color: #15201B">The Village Hall Record</span> — an independent civic transparency platform.</span>
+<span style="display: flex; gap: 24px"><a href="#">About</a><a href="#">Contact</a></span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2300}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

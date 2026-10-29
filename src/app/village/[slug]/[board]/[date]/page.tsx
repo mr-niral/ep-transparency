@@ -368,9 +368,6 @@ function SummaryPageInner({
           {/* Article footer */}
           {!loading && (
             <footer className="flex flex-wrap justify-between gap-4 pt-6 border-t border-rule text-[15px]">
-              <a href="mailto:villagehallrecord@gmail.com" className="font-semibold">
-                Report an error in this summary
-              </a>
               <span className="flex gap-6 font-medium">
                 {nextMeeting && (
                   <Link href={`/village/${slug}/${board}/${nextMeeting.parsedDate}?source=${source}`}>

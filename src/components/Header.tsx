@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="h-16 border-b border-rule bg-ground">
+    <header className="h-24 border-b border-rule bg-ground">
       <div className="max-w-[1120px] mx-auto px-6 h-full flex items-center justify-between gap-4 flex-wrap">
         <Link
           href="/"
-          className="font-display font-semibold text-[22px] text-ink no-underline tracking-[-0.01em]"
+          className="font-display font-semibold text-[28px] text-ink no-underline tracking-[-0.01em]"
           style={{ textDecoration: 'none', color: '#15201B' }}
         >
           The Village Hall Record

@@ -8,10 +8,6 @@ export default function Footer() {
           <span className="font-display font-semibold text-ink">The Village Hall Record</span>
           {' '}— an independent civic transparency platform.
         </span>
-        <span className="flex gap-6">
-          <Link href="/about">About</Link>
-          <a href="mailto:villagehallrecord@gmail.com">Contact</a>
-        </span>
       </div>
     </footer>
   )
