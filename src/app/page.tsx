@@ -214,7 +214,7 @@ function LandingInner() {
                   id="req-city"
                   type="text"
                   name="city"
-                  defaultValue={query}
+                  defaultValue={/^\d+$/.test(query.trim()) ? '' : query}
                   required
                   className="h-10 border border-border-strong rounded px-3 text-[15px] bg-surface text-ink focus:outline-none focus:border-accent"
                 />
