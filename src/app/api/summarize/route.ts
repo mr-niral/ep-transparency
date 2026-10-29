@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import * as cheerio from 'cheerio'
+import { list, put } from '@vercel/blob'
+import { createHash } from 'crypto'
 
 export const maxDuration = 60
 
@@ -41,6 +43,31 @@ function extractJsonFromText(text: string): string {
   return s
 }
 
+function blobCacheKey(pdfUrl: string, structured: boolean): string {
+  const hash = createHash('sha256').update(pdfUrl).digest('hex').slice(0, 40)
+  return `summaries/${structured ? 'structured' : 'plain'}/${hash}.txt`
+}
+
+async function getFromCache(key: string): Promise<string | null> {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) return null
+  try {
+    const { blobs } = await list({ prefix: key, limit: 1 })
+    if (blobs.length > 0 && blobs[0].pathname === key) {
+      const res = await fetch(blobs[0].url)
+      return await res.text()
+    }
+  } catch {}
+  return null
+}
+
+async function saveToCache(key: string, content: string): Promise<void> {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) return
+  try {
+    await put(key, content, { access: 'public', addRandomSuffix: false })
+  } catch (err) {
+    console.error('Failed to save to blob cache:', err)
+  }
+}
 
 const STRUCTURED_PROMPT = `Respond with a single raw JSON object and nothing else — no markdown fences, no explanation, no text before or after the JSON. Use this exact shape:
 {"key_figures":[{"label":"...","value":"..."}],"decisions":[{"status":"approved","motion":"...","notes":"..."}],"sections":[{"heading":"...","body":"..."}]}
@@ -55,6 +82,14 @@ export async function POST(req: NextRequest) {
 
   if (!pdfUrl || typeof pdfUrl !== 'string') {
     return NextResponse.json({ error: 'Missing pdfUrl' }, { status: 400 })
+  }
+
+  // Check blob cache first
+  const cacheKey = blobCacheKey(pdfUrl, !!structured)
+  const cached = await getFromCache(cacheKey)
+  if (cached) {
+    console.log('[summarize] cache hit:', cacheKey)
+    return NextResponse.json({ summary: cached })
   }
 
   const boardLabel = boardType === 'village' ? 'village board' : 'public library board'
@@ -122,6 +157,7 @@ export async function POST(req: NextRequest) {
       const raw = message.content[0].type === 'text' ? message.content[0].text : ''
       if (structured) console.log('[summarize] raw structured output:', raw.slice(0, 500))
       const summary = structured ? extractJsonFromText(raw) : raw
+      await saveToCache(cacheKey, summary)
       return NextResponse.json({ summary })
     } catch (err) {
       console.error('Claude API error (Granicus):', err)
@@ -134,7 +170,6 @@ export async function POST(req: NextRequest) {
   }
 
   // PDF path — fetch binary and send as base64 document to Claude
-  // Fetch directly; this runs server-side so no CORS proxy is needed.
   let pdfBuffer: Buffer
   try {
     const res = await fetch(pdfUrl, {
@@ -188,6 +223,7 @@ export async function POST(req: NextRequest) {
     const raw = message.content[0].type === 'text' ? message.content[0].text : ''
     if (structured) console.log('[summarize] raw PDF structured output:', raw.slice(0, 500))
     const summary = structured ? extractJsonFromText(raw) : raw
+    await saveToCache(cacheKey, summary)
     return NextResponse.json({ summary })
   } catch (err) {
     console.error('Claude API error:', err)
