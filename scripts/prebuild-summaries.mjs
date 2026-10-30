@@ -60,8 +60,11 @@ async function run() {
         if (result.fromCache) {
           console.log('already cached')
           skipped++
+        } else if (result.cacheError) {
+          console.log(`generated but cache FAILED: ${result.cacheError}`)
+          done++
         } else {
-          console.log('generated ✓')
+          console.log('generated + cached ✓')
           done++
         }
       } catch (err) {

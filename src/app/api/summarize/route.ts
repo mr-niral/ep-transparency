@@ -68,12 +68,19 @@ async function getFromCache(key: string): Promise<string | null> {
   return null
 }
 
-async function saveToCache(key: string, content: string): Promise<void> {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) return
+async function saveToCache(key: string, content: string): Promise<string | null> {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    console.warn('[cache] saveToCache skipped: no BLOB_READ_WRITE_TOKEN')
+    return 'no token'
+  }
   try {
-    await put(key, content, { access: 'private', addRandomSuffix: false })
+    const blob = await put(key, content, { access: 'private', addRandomSuffix: false })
+    console.log('[cache] saved:', key, blob.url)
+    return null
   } catch (err) {
-    console.error('[cache] saveToCache error:', err)
+    const msg = err instanceof Error ? err.message : String(err)
+    console.error('[cache] saveToCache error:', msg)
+    return msg
   }
 }
 
@@ -164,8 +171,8 @@ export async function POST(req: NextRequest) {
       const raw = message.content[0].type === 'text' ? message.content[0].text : ''
       if (structured) console.log('[summarize] raw structured output:', raw.slice(0, 500))
       const summary = structured ? extractJsonFromText(raw) : raw
-      await saveToCache(cacheKey, summary)
-      return NextResponse.json({ summary })
+      const cacheErr = await saveToCache(cacheKey, summary)
+      return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
     } catch (err) {
       console.error('Claude API error (Granicus):', err)
       const msg = err instanceof Error ? err.message : String(err)
@@ -230,8 +237,8 @@ export async function POST(req: NextRequest) {
     const raw = message.content[0].type === 'text' ? message.content[0].text : ''
     if (structured) console.log('[summarize] raw PDF structured output:', raw.slice(0, 500))
     const summary = structured ? extractJsonFromText(raw) : raw
-    await saveToCache(cacheKey, summary)
-    return NextResponse.json({ summary })
+    const cacheErr = await saveToCache(cacheKey, summary)
+    return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
   } catch (err) {
     console.error('Claude API error:', err)
     return NextResponse.json(
