@@ -53,11 +53,13 @@ async function getFromCache(key: string): Promise<string | null> {
   try {
     const { blobs } = await list({ prefix: key, limit: 1 })
     if (blobs.length > 0) {
-      const res = await fetch(blobs[0].url, { cache: 'no-store' })
+      const res = await fetch(blobs[0].url, {
+        headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
+        cache: 'no-store',
+      })
       if (res.ok) {
-        const text = await res.text()
         console.log('[cache] hit:', key)
-        return text
+        return await res.text()
       }
     }
   } catch (err) {
@@ -69,9 +71,9 @@ async function getFromCache(key: string): Promise<string | null> {
 async function saveToCache(key: string, content: string): Promise<void> {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return
   try {
-    await put(key, content, { access: 'public', addRandomSuffix: false })
+    await put(key, content, { access: 'private', addRandomSuffix: false })
   } catch (err) {
-    console.error('Failed to save to blob cache:', err)
+    console.error('[cache] saveToCache error:', err)
   }
 }
 
