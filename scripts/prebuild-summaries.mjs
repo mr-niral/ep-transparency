@@ -3,7 +3,7 @@
  * Run with: node scripts/prebuild-summaries.mjs
  */
 
-const BASE_URL = 'https://www.villagehallrecord.org'
+const BASE_URL = 'https://villagehallrecord.org'
 
 async function fetchMeetings(board) {
   const url = board === 'library' ? `${BASE_URL}/api/meetings` : `${BASE_URL}/api/village-meetings`
