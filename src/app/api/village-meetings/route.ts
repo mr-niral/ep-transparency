@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { scrapeVillageMeetings } from '@/lib/scraper'
 
+export const maxDuration = 30
+
 export async function GET() {
   try {
     const meetings = await scrapeVillageMeetings()
