@@ -52,11 +52,17 @@ async function getFromCache(key: string): Promise<string | null> {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return null
   try {
     const { blobs } = await list({ prefix: key, limit: 1 })
-    if (blobs.length > 0 && blobs[0].pathname === key) {
-      const res = await fetch(blobs[0].url)
-      return await res.text()
+    if (blobs.length > 0) {
+      const res = await fetch(blobs[0].url, { cache: 'no-store' })
+      if (res.ok) {
+        const text = await res.text()
+        console.log('[cache] hit:', key)
+        return text
+      }
     }
-  } catch {}
+  } catch (err) {
+    console.error('[cache] getFromCache error:', err)
+  }
   return null
 }
 
@@ -88,8 +94,7 @@ export async function POST(req: NextRequest) {
   const cacheKey = blobCacheKey(pdfUrl, !!structured)
   const cached = await getFromCache(cacheKey)
   if (cached) {
-    console.log('[summarize] cache hit:', cacheKey)
-    return NextResponse.json({ summary: cached })
+    return NextResponse.json({ summary: cached, fromCache: true })
   }
 
   const boardLabel = boardType === 'village' ? 'village board' : 'public library board'
