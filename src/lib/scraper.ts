@@ -42,7 +42,7 @@ export async function scrapeMeetings(): Promise<Meeting[]> {
     headers: {
       'User-Agent': 'ep-transparency/1.0',
     },
-    next: { revalidate: 300 }, // cache for 5 minutes
+    next: { revalidate: 43200 }, // cache for 5 minutes
   })
   if (!res.ok) throw new Error(`Failed to fetch source page: ${res.status}`)
 
@@ -171,7 +171,7 @@ async function fetchSchoolPostDocs(
       `https://www.epcusd401.org/fs/elements/${elementId}?is_popup=true&post_id=${postId}&show_post=true`,
       {
         headers: { 'User-Agent': 'ep-transparency/1.0' },
-        next: { revalidate: 3600 },
+        next: { revalidate: 43200 },
         signal: AbortSignal.timeout(8000),
       }
     )
@@ -197,7 +197,7 @@ async function fetchSchoolPostDocs(
 export async function scrapeSchoolMeetings(): Promise<Meeting[]> {
   const res = await fetch(SCHOOL_BOARD_URL, {
     headers: { 'User-Agent': 'ep-transparency/1.0' },
-    next: { revalidate: 3600 },
+    next: { revalidate: 43200 },
     signal: AbortSignal.timeout(8000),
   })
   if (!res.ok) throw new Error(`Failed to fetch school board page: ${res.status}`)
@@ -285,7 +285,7 @@ async function scrapeVillageMinutesUrls(): Promise<Map<string, string>> {
     try {
       const res = await fetch(pageUrl, {
         headers: { 'User-Agent': 'ep-transparency/1.0' },
-        next: { revalidate: 300 },
+        next: { revalidate: 43200 },
         signal: AbortSignal.timeout(8000),
       })
       if (!res.ok) continue
@@ -351,14 +351,14 @@ export async function scrapeVillageMeetings(): Promise<Meeting[]> {
   const [agendasXml, minutesXml, minutesUrls] = await Promise.all([
     fetch(GRANICUS_AGENDA_RSS, {
       headers: { 'User-Agent': 'ep-transparency/1.0' },
-      next: { revalidate: 300 },
+      next: { revalidate: 43200 },
       signal: signal8s,
     })
       .then((r) => (r.ok ? r.text() : ''))
       .catch(() => ''),
     fetch(GRANICUS_MINUTES_RSS, {
       headers: { 'User-Agent': 'ep-transparency/1.0' },
-      next: { revalidate: 300 },
+      next: { revalidate: 43200 },
       signal: signal8s,
     })
       .then((r) => (r.ok ? r.text() : ''))
