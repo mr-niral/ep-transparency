@@ -610,22 +610,6 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                     </span>
                   </h2>
                   {board === 'library' && (
-                    <button
-                      type="button"
-                      onClick={() => summarizeYear(year)}
-                      disabled={bulkProgress.running}
-                      className="h-11 px-[18px] text-[15px] font-semibold text-accent bg-transparent rounded cursor-pointer disabled:opacity-60"
-                      style={{
-                        fontFamily: 'inherit',
-                        border: '1.5px solid #1E4D36',
-                      }}
-                    >
-                      {bulkProgress.running
-                        ? `Summarizing… ${bulkProgress.done}/${bulkProgress.total}`
-                        : "Summarize the year's agendas"}
-                    </button>
-                  )}
-                  {board === 'library' && (
                     <a
                       href="https://elmwoodparklibrary.org/about-eppl/library-board/agendas-minutes"
                       target="_blank"
