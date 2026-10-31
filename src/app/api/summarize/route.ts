@@ -106,7 +106,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ summary: cached, fromCache: true })
   }
 
-  const boardLabel = boardType === 'village' ? 'village board' : 'public library board'
+  const boardLabel = boardType === 'village' ? 'village board' : boardType === 'school' ? 'school board' : 'public library board'
   const typeLabel =
     docType === 'agenda'
       ? 'meeting agenda'

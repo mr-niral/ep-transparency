@@ -17,7 +17,10 @@ export async function GET(req: NextRequest) {
     return new NextResponse('Invalid url', { status: 400 })
   }
 
-  const allowed = ['elmwoodpark.org', 'www.elmwoodpark.org']
+  const allowed = [
+    'elmwoodpark.org', 'www.elmwoodpark.org',
+    'www.epcusd401.org', 'resources.finalsite.net',
+  ]
   if (!allowed.includes(parsed.hostname)) {
     return new NextResponse('Domain not allowed', { status: 403 })
   }

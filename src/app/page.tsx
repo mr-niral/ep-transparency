@@ -56,11 +56,13 @@ function LandingInner() {
     Promise.all([
       fetch('/api/meetings').then((r) => r.json()),
       fetch('/api/village-meetings').then((r) => r.json()),
+      fetch('/api/school-meetings').then((r) => r.json()),
     ])
-      .then(([library, village]) => {
-        const lib = (Array.isArray(library) ? library : []).map((m: Meeting) => ({ ...m, boardLabel: 'Library Board' }))
-        const vil = (Array.isArray(village) ? village : []).map((m: Meeting) => ({ ...m, boardLabel: 'Village Board' }))
-        const combined = [...lib, ...vil].sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
+      .then(([library, village, school]) => {
+        const lib = (Array.isArray(library) ? library : []).map((m: Meeting) => ({ ...m, boardLabel: 'Library Board', boardSlug: 'library-board' }))
+        const vil = (Array.isArray(village) ? village : []).map((m: Meeting) => ({ ...m, boardLabel: 'Village Board', boardSlug: 'village-board' }))
+        const sch = (Array.isArray(school) ? school : []).map((m: Meeting) => ({ ...m, boardLabel: 'School Board', boardSlug: 'school-board' }))
+        const combined = [...lib, ...vil, ...sch].sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
         setLatestMeetings(combined.slice(0, 3))
       })
       .catch(() => {})
@@ -169,6 +171,19 @@ function LandingInner() {
                       >
                         <span className="flex flex-col gap-0.5">
                           <span className="font-semibold text-[17px]">Library Board</span>
+                          <span className="text-[14px] text-muted">Meetings · Summaries</span>
+                        </span>
+                        <ArrowRightIcon />
+                      </Link>
+                    )}
+                    {village.hasSchoolBoard && (
+                      <Link
+                        href={`/village/${village.slug}?board=school`}
+                        className="flex items-center justify-between gap-3 py-4 border-b border-rule-soft"
+                        style={{ textDecoration: 'none', color: '#15201B' }}
+                      >
+                        <span className="flex flex-col gap-0.5">
+                          <span className="font-semibold text-[17px]">School Board</span>
                           <span className="text-[14px] text-muted">Meetings · Summaries</span>
                         </span>
                         <ArrowRightIcon />
@@ -324,7 +339,7 @@ function LandingInner() {
                     </a>
                   )}
                   {(m.agendaUrl || m.minutesUrl) && (
-                    <Link href={`/village/elmwood-park-il/${(m as Meeting & { boardLabel?: string }).boardLabel === 'Village Board' ? 'village-board' : 'library-board'}/${m.parsedDate}?source=${m.minutesUrl ? 'minutes' : 'agenda'}`}>
+                    <Link href={`/village/elmwood-park-il/${(m as Meeting & { boardSlug?: string }).boardSlug ?? 'library-board'}/${m.parsedDate}?source=${m.minutesUrl ? 'minutes' : 'agenda'}`}>
                       Summary
                     </Link>
                   )}

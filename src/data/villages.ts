@@ -6,6 +6,7 @@ export interface VillageConfig {
   zips: string[]
   hasLibraryBoard: boolean
   hasVillageBoard: boolean
+  hasSchoolBoard?: boolean
   features: ('votes' | 'finances' | 'summaries')[]
 }
 
@@ -18,6 +19,7 @@ export const villages: VillageConfig[] = [
     zips: ['60707'],
     hasLibraryBoard: true,
     hasVillageBoard: true,
+    hasSchoolBoard: true,
     features: ['votes', 'finances', 'summaries'],
   },
 ]

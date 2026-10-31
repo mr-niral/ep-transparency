@@ -6,7 +6,11 @@
 const BASE_URL = 'https://villagehallrecord.org'
 
 async function fetchMeetings(board) {
-  const url = board === 'library' ? `${BASE_URL}/api/meetings` : `${BASE_URL}/api/village-meetings`
+  const url = board === 'library'
+    ? `${BASE_URL}/api/meetings`
+    : board === 'village'
+      ? `${BASE_URL}/api/village-meetings`
+      : `${BASE_URL}/api/school-meetings`
   const res = await fetch(url)
   if (!res.ok) throw new Error(`Failed to fetch ${board} meetings: ${res.status}`)
   return res.json()
@@ -25,14 +29,16 @@ async function generateSummary(pdfUrl, docType, boardType) {
 
 async function run() {
   console.log('Fetching meetings...')
-  const [library, village] = await Promise.all([
+  const [library, village, school] = await Promise.all([
     fetchMeetings('library'),
     fetchMeetings('village'),
+    fetchMeetings('school'),
   ])
 
   const meetings2026 = [
     ...library.filter(m => m.year === 2026).map(m => ({ ...m, boardType: 'library' })),
     ...village.filter(m => m.year === 2026).map(m => ({ ...m, boardType: 'village' })),
+    ...school.filter(m => m.year === 2026).map(m => ({ ...m, boardType: 'school' })),
   ]
 
   console.log(`Found ${meetings2026.length} meetings in 2026\n`)

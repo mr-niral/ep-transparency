@@ -120,6 +120,148 @@ export async function scrapeMeetings(): Promise<Meeting[]> {
     .sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
 }
 
+// ─── Elmwood Park CUSD 401 School Board Meetings ────────────────────────────
+
+const SCHOOL_BOARD_URL = 'https://www.epcusd401.org/board-of-education/board-meetings'
+const SCHOOL_BOARD_PORTAL = 'https://epcusd401.community.diligentoneplatform.com/Portal/'
+
+const ABBR_MONTH_MAP: Record<string, number> = {
+  jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6,
+  jul: 7, aug: 8, sep: 9, sept: 9, oct: 10, nov: 11, dec: 12,
+}
+
+// Meeting types to include (exclude executive sessions and facility tours)
+const INCLUDED_TYPES = /regular|special|committee of the whole|cow/i
+
+function normalizeSchoolMeetingType(raw: string): string {
+  const t = raw.trim()
+  if (/cow meeting/i.test(t)) return 'Committee of the Whole'
+  if (/committee of the whole/i.test(t)) return 'Committee of the Whole'
+  if (/regular meeting/i.test(t)) return 'Regular Meeting'
+  if (/special meeting/i.test(t)) return 'Special Meeting'
+  return t
+}
+
+// Priority order for deduplication when multiple meeting types share a date
+function meetingTypePriority(type: string): number {
+  if (type === 'Regular Meeting') return 0
+  if (type === 'Special Meeting') return 1
+  if (type === 'Committee of the Whole') return 2
+  return 99
+}
+
+type PostInfo = {
+  postId: string
+  elementId: string
+  text: string
+  parsedDate: string
+  year: number
+  meetingType: string
+  monthStr: string
+  day: string
+  yearStr: string
+}
+
+async function fetchSchoolPostDocs(
+  elementId: string,
+  postId: string
+): Promise<{ agendaUrl?: string; minutesUrl?: string; videoUrl?: string }> {
+  try {
+    const res = await fetch(
+      `https://www.epcusd401.org/fs/elements/${elementId}?is_popup=true&post_id=${postId}&show_post=true`,
+      {
+        headers: { 'User-Agent': 'ep-transparency/1.0' },
+        next: { revalidate: 300 },
+        signal: AbortSignal.timeout(8000),
+      }
+    )
+    if (!res.ok) return {}
+    const html = await res.text()
+    const $p = cheerio.load(html)
+    const docs: { agendaUrl?: string; minutesUrl?: string; videoUrl?: string } = {}
+    $p('a[href*="/fs/resource-manager/view/"]').each((_, el) => {
+      const label = $p(el).text().trim().toLowerCase()
+      const href = 'https://www.epcusd401.org' + ($p(el).attr('href') ?? '')
+      if (label.includes('minute')) docs.minutesUrl = href
+      else if (label.includes('agenda')) docs.agendaUrl = href
+    })
+    $p('a[href*="youtu"]').each((_, el) => {
+      docs.videoUrl ??= normalizeVideoUrl($p(el).attr('href') ?? '')
+    })
+    return docs
+  } catch {
+    return {}
+  }
+}
+
+export async function scrapeSchoolMeetings(): Promise<Meeting[]> {
+  const res = await fetch(SCHOOL_BOARD_URL, {
+    headers: { 'User-Agent': 'ep-transparency/1.0' },
+    next: { revalidate: 300 },
+    signal: AbortSignal.timeout(8000),
+  })
+  if (!res.ok) throw new Error(`Failed to fetch school board page: ${res.status}`)
+
+  const html = await res.text()
+  const $ = cheerio.load(html)
+
+  // Collect all relevant posts: element ID + post ID + parsed date/type
+  const posts: PostInfo[] = []
+
+  $('div.fsPostElement[id^="fsEl_"]').each((_, el) => {
+    const elementId = ($(el).attr('id') ?? '').replace('fsEl_', '')
+    if (!elementId) return
+
+    $(el).find('article[data-post-id]').each((_, article) => {
+      const postId = $(article).attr('data-post-id') ?? ''
+      const text = $(article).find('a.fsPostLink').text().trim()
+      if (!postId || !text) return
+      if (/cancel/i.test(text)) return
+
+      const match = text.match(/^(\w+)\.?\s+(\d{1,2}),?\s+(\d{4})\s*\|\s*(.+)$/)
+      if (!match) return
+
+      const [, monthStr, day, yearStr, typeRaw] = match
+      const monthNum = ABBR_MONTH_MAP[monthStr.toLowerCase()]
+      if (!monthNum) return
+
+      const meetingType = normalizeSchoolMeetingType(typeRaw)
+      if (!INCLUDED_TYPES.test(meetingType)) return
+
+      const parsedDate = `${yearStr}-${String(monthNum).padStart(2, '0')}-${String(parseInt(day)).padStart(2, '0')}`
+      posts.push({ postId, elementId, text, parsedDate, year: parseInt(yearStr), meetingType, monthStr, day, yearStr })
+    })
+  })
+
+  // Fetch document links for all posts in parallel
+  const docResults = await Promise.all(
+    posts.map((p) => fetchSchoolPostDocs(p.elementId, p.postId))
+  )
+
+  // Merge into meeting map — one entry per date, preferring Regular > Special > COW
+  const meetingMap = new Map<string, Meeting>()
+  for (let i = 0; i < posts.length; i++) {
+    const p = posts[i]
+    const docs = docResults[i]
+    const existing = meetingMap.get(p.parsedDate)
+    if (!existing || meetingTypePriority(p.meetingType) < meetingTypePriority(existing.meetingType ?? '')) {
+      meetingMap.set(p.parsedDate, {
+        date: `${p.monthStr} ${parseInt(p.day)}, ${p.yearStr}`,
+        parsedDate: p.parsedDate,
+        year: p.year,
+        meetingType: p.meetingType,
+        ...docs,
+        // Fall back to portal link only if no direct docs found
+        portalUrl: (!docs.agendaUrl && !docs.minutesUrl) ? SCHOOL_BOARD_PORTAL : undefined,
+      })
+    }
+  }
+
+  return Array.from(meetingMap.values())
+    .filter((m) => m.year >= 2020)
+    .sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
+}
+
 // ─── Village of Elmwood Park Board Meetings (Granicus RSS) ───────────────────
 
 const GRANICUS_BASE = 'https://elmwoodpark.granicus.com'

@@ -192,7 +192,10 @@ function MeetingRow({
           {meeting.directorLetterUrl && (
             <a href={meeting.directorLetterUrl} target="_blank" rel="noopener noreferrer">Director&apos;s letter</a>
           )}
-          {!meeting.minutesUrl && !missingMinutes && (
+          {meeting.portalUrl && !meeting.agendaUrl && !meeting.minutesUrl && (
+            <a href={meeting.portalUrl} target="_blank" rel="noopener noreferrer">Documents</a>
+          )}
+          {!meeting.minutesUrl && !missingMinutes && !meeting.portalUrl && (
             <span className="text-muted font-normal">Minutes not yet posted</span>
           )}
         </div>
@@ -230,8 +233,9 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
   const { slug } = use(params)
   const village = villages.find((v) => v.slug === slug)
   const searchParams = useSearchParams()
-  const board = searchParams.get('board') === 'village' ? 'village' : 'library'
-  const boardSlug = board === 'library' ? 'library-board' : 'village-board'
+  const boardParam = searchParams.get('board')
+  const board = boardParam === 'village' ? 'village' : boardParam === 'school' ? 'school' : 'library'
+  const boardSlug = board === 'library' ? 'library-board' : board === 'village' ? 'village-board' : 'school-board'
 
   const [meetings, setMeetings] = useState<Meeting[]>([])
   const [loading, setLoading] = useState(true)
@@ -258,7 +262,7 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
     setFilterDirector(false)
     setExpandedYears(new Set())
     setBulkProgress({ done: 0, total: 0, running: false })
-    const url = board === 'library' ? '/api/meetings' : '/api/village-meetings'
+    const url = board === 'library' ? '/api/meetings' : board === 'village' ? '/api/village-meetings' : '/api/school-meetings'
     fetch(url)
       .then((r) => r.json())
       .then((data) => {
@@ -314,7 +318,7 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
     )
   }
 
-  const boardLabel = board === 'library' ? 'Library Board' : 'Village Board'
+  const boardLabel = board === 'library' ? 'Library Board' : board === 'village' ? 'Village Board' : 'School Board'
   const pageTitle = `${village.name} ${boardLabel}`
 
   async function summarizeYear(year: number) {
@@ -361,8 +365,10 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                 {pageTitle}
               </h1>
               <p className="m-0 text-[18px] leading-[1.55] text-ink-2 max-w-[620px]">
-                Agendas, minutes, video and director&apos;s letters for every board meeting
-                {archiveMin ? ` since ${archiveMin}` : ''}.
+                {board === 'school'
+                  ? <>Meeting dates for the EPCUSD 401 School Board{archiveMin ? ` since ${archiveMin}` : ''}. Agendas and minutes on the <a href="https://epcusd401.community.diligentoneplatform.com/Portal/" target="_blank" rel="noopener noreferrer">Diligent Community portal</a>.</>
+                  : <>Agendas, minutes, video and director&apos;s letters for every board meeting{archiveMin ? ` since ${archiveMin}` : ''}.</>
+                }
               </p>
             </div>
 
@@ -409,6 +415,25 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                 }}
               >
                 Library Board
+              </Link>
+            )}
+            {village.hasSchoolBoard && (
+              <Link
+                href={`/village/${village.slug}?board=school`}
+                aria-current={board === 'school' ? 'page' : undefined}
+                className="py-3.5 no-underline"
+                style={{
+                  color: board === 'school' ? '#15201B' : '#59625C',
+                  borderBottom: board === 'school' ? '3px solid #1E4D36' : '3px solid transparent',
+                  textDecoration: 'none',
+                  marginBottom: '-3px',
+                  fontWeight: board === 'school' ? 600 : 500,
+                  fontSize: '16px',
+                  paddingLeft: '4px',
+                  paddingRight: '4px',
+                }}
+              >
+                School Board
               </Link>
             )}
             {village.hasVillageBoard && (
@@ -599,6 +624,17 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                         ? `Summarizing… ${bulkProgress.done}/${bulkProgress.total}`
                         : "Summarize the year's agendas"}
                     </button>
+                  )}
+                  {board === 'school' && (
+                    <a
+                      href="https://epcusd401.community.diligentoneplatform.com/Portal/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
+                      style={{ border: '1.5px solid #1E4D36' }}
+                    >
+                      View on Diligent ↗
+                    </a>
                   )}
                 </div>
 

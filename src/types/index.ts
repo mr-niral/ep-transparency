@@ -6,6 +6,7 @@ export interface Meeting {
   minutesUrl?: string
   videoUrl?: string
   directorLetterUrl?: string
+  portalUrl?: string    // Non-PDF documents portal (e.g. Diligent Community)
   meetingType?: string  // e.g. "Regular Meeting", "Special Meeting"
 }
 

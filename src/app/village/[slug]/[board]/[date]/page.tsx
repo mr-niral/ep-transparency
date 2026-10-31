@@ -110,8 +110,8 @@ function SummaryPageInner({
   const source = searchParams.get('source') ?? 'agenda'
 
   const village = villages.find((v) => v.slug === slug)
-  const boardType = board === 'village-board' ? 'village' : 'library'
-  const boardLabel = boardType === 'library' ? 'Library Board' : 'Village Board'
+  const boardType = board === 'village-board' ? 'village' : board === 'school-board' ? 'school' : 'library'
+  const boardLabel = boardType === 'library' ? 'Library Board' : boardType === 'village' ? 'Village Board' : 'School Board'
   const sourceLabel =
     source === 'minutes' ? 'Minutes' : source === 'director' ? "Director's letter" : 'Agenda'
 
@@ -150,7 +150,7 @@ function SummaryPageInner({
   // Fetch meetings list
   useEffect(() => {
     if (!village) return
-    const url = boardType === 'library' ? '/api/meetings' : '/api/village-meetings'
+    const url = boardType === 'library' ? '/api/meetings' : boardType === 'village' ? '/api/village-meetings' : '/api/school-meetings'
     fetch(url)
       .then((r) => r.json())
       .then((data) => {
@@ -237,7 +237,7 @@ function SummaryPageInner({
           <span aria-hidden="true">/</span>
           <span>{village.name}, {village.state}</span>
           <span aria-hidden="true">/</span>
-          <Link href={`/village/${slug}${boardType === 'village' ? '?board=village' : ''}`}>
+          <Link href={`/village/${slug}${boardType === 'village' ? '?board=village' : boardType === 'school' ? '?board=school' : ''}`}>
             {boardLabel}
           </Link>
           <span aria-hidden="true">/</span>
