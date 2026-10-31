@@ -399,12 +399,12 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
           </div>
 
           {/* Board tabs */}
-          <nav aria-label="Boards" className="flex gap-1 flex-wrap">
+          <nav aria-label="Boards" className="flex gap-8 flex-wrap">
             {village.hasLibraryBoard && (
               <Link
                 href={`/village/${village.slug}`}
                 aria-current={board === 'library' ? 'page' : undefined}
-                className="py-3.5 mr-6 font-semibold text-[16px] no-underline"
+                className="py-3.5 font-semibold text-[16px] no-underline"
                 style={{
                   color: board === 'library' ? '#15201B' : '#59625C',
                   borderBottom: board === 'library' ? '3px solid #1E4D36' : '3px solid transparent',
@@ -627,13 +627,13 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                   )}
                   {board === 'school' && (
                     <a
-                      href="https://epcusd401.community.diligentoneplatform.com/Portal/"
+                      href="https://www.epcusd401.org/board-of-education/board-meetings"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
                       style={{ border: '1.5px solid #1E4D36' }}
                     >
-                      View on Diligent ↗
+                      View Source ↗
                     </a>
                   )}
                 </div>
