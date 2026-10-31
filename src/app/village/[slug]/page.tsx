@@ -625,6 +625,28 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                         : "Summarize the year's agendas"}
                     </button>
                   )}
+                  {board === 'library' && (
+                    <a
+                      href="https://elmwoodparklibrary.org/about-eppl/library-board/agendas-minutes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
+                      style={{ border: '1.5px solid #1E4D36' }}
+                    >
+                      View Source ↗
+                    </a>
+                  )}
+                  {board === 'village' && (
+                    <a
+                      href="https://elmwoodpark.org/290/Board-Meeting-Minutes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
+                      style={{ border: '1.5px solid #1E4D36' }}
+                    >
+                      View Source ↗
+                    </a>
+                  )}
                   {board === 'school' && (
                     <a
                       href="https://www.epcusd401.org/board-of-education/board-meetings"
