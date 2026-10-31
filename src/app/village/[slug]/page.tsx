@@ -14,9 +14,6 @@ function getEmbedUrl(videoUrl: string): string | null {
     if (url.hostname.includes('youtube.com') && url.searchParams.get('v')) {
       return `https://www.youtube.com/embed/${url.searchParams.get('v')}`
     }
-    if (url.hostname.includes('granicus.com') && url.pathname.includes('MediaPlayer')) {
-      return videoUrl
-    }
   } catch {}
   return null
 }
