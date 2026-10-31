@@ -171,7 +171,7 @@ async function fetchSchoolPostDocs(
       `https://www.epcusd401.org/fs/elements/${elementId}?is_popup=true&post_id=${postId}&show_post=true`,
       {
         headers: { 'User-Agent': 'ep-transparency/1.0' },
-        next: { revalidate: 300 },
+        next: { revalidate: 3600 },
         signal: AbortSignal.timeout(8000),
       }
     )
@@ -197,7 +197,7 @@ async function fetchSchoolPostDocs(
 export async function scrapeSchoolMeetings(): Promise<Meeting[]> {
   const res = await fetch(SCHOOL_BOARD_URL, {
     headers: { 'User-Agent': 'ep-transparency/1.0' },
-    next: { revalidate: 300 },
+    next: { revalidate: 3600 },
     signal: AbortSignal.timeout(8000),
   })
   if (!res.ok) throw new Error(`Failed to fetch school board page: ${res.status}`)
