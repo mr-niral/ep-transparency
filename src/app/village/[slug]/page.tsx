@@ -4,7 +4,6 @@ import { use, useEffect, useState, useMemo, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import type { Meeting } from '@/types'
-import { saveSummary, hasSummary } from '@/lib/summaryStorage'
 import { villages } from '@/data/villages'
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -246,9 +245,6 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
   const [filterVideo, setFilterVideo] = useState(false)
   const [filterDirector, setFilterDirector] = useState(false)
   const [expandedYears, setExpandedYears] = useState<Set<number>>(new Set())
-  const [bulkProgress, setBulkProgress] = useState<{ done: number; total: number; running: boolean }>({
-    done: 0, total: 0, running: false,
-  })
 
   useEffect(() => {
     if (!village) return
@@ -261,7 +257,6 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
     setFilterVideo(false)
     setFilterDirector(false)
     setExpandedYears(new Set())
-    setBulkProgress({ done: 0, total: 0, running: false })
     const url = board === 'library' ? '/api/meetings' : board === 'village' ? '/api/village-meetings' : '/api/school-meetings'
     fetch(url)
       .then((r) => r.json())
@@ -320,26 +315,6 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
 
   const boardLabel = board === 'library' ? 'Library Board' : board === 'village' ? 'Village Board' : 'School Board'
   const pageTitle = `${village.name} ${boardLabel}`
-
-  async function summarizeYear(year: number) {
-    const targets = meetings.filter((m) => m.year === year && !!m.agendaUrl && !hasSummary(m.parsedDate, 'agenda'))
-    if (targets.length === 0) return
-    setBulkProgress({ done: 0, total: targets.length, running: true })
-    let done = 0
-    for (const m of targets) {
-      try {
-        const res = await fetch('/api/summarize', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ pdfUrl: m.agendaUrl, docType: 'agenda' }),
-        })
-        const data = await res.json()
-        if (res.ok) saveSummary(m.parsedDate, 'agenda', data.summary)
-      } catch {}
-      done++
-      setBulkProgress({ done, total: targets.length, running: done < targets.length })
-    }
-  }
 
   return (
     <div className="min-h-screen">
