@@ -101,8 +101,8 @@ function LandingInner() {
               Making local politics accessible.
             </h1>
             <p className="m-0 text-[19px] leading-[1.55] text-ink-2 max-w-[560px]">
-              Agendas, minutes, votes and meeting video from the village boards, library boards
-              and councils of smaller towns gathered in one place, with easy-to-read summaries.
+              Agendas, minutes, votes and meeting video from the village boards, library boards, school boards
+              and councils of smaller towns, with easy-to-read summaries.
             </p>
             <form
               role="search"
