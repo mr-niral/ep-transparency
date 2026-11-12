@@ -48,6 +48,12 @@ function extractBoardBookText(html: string): string {
   return text
 }
 
+function extractBoardBookDocumentId(html: string): string | null {
+  // Minutes are served as a PDF viewer — the document ID is in a hidden input
+  const match = html.match(/id="NewDocumentViewerDocumentID"[^>]*value="(\d+)"/)
+  return match ? match[1] : null
+}
+
 function extractGranicusText(html: string): string {
   const $ = cheerio.load(html)
   $('script, style, noscript, head').remove()
@@ -224,7 +230,45 @@ export async function POST(req: NextRequest) {
     const text = extractBoardBookText(htmlText)
     console.log(`BoardBook text length for ${pdfUrl}: ${text.length}`)
 
-    if (!text || text.length < 200) {
+    // Minutes are rendered as a JS PDF viewer — text will be < 200. Pivot to the actual PDF.
+    if (text.length < 200) {
+      const docId = extractBoardBookDocumentId(htmlText)
+      if (docId) {
+        const orgMatch = new URL(pdfUrl).pathname.match(/\/(\d+)(?:\/|$)/)
+        const orgId = orgMatch ? orgMatch[1] : ''
+        const directPdfUrl = `https://meetings.boardbook.org/Documents/DownloadPDF/${docId}?org=${orgId}`
+        console.log(`BoardBook PDF viewer detected — fetching PDF: ${directPdfUrl}`)
+        let pdfBuf: Buffer
+        try {
+          const pdfRes = await fetch(directPdfUrl, { headers: { 'User-Agent': 'village-hall-record/1.0' } })
+          if (!pdfRes.ok) throw new Error(`HTTP ${pdfRes.status}`)
+          pdfBuf = Buffer.from(await pdfRes.arrayBuffer())
+        } catch (err) {
+          console.error('Failed to fetch BoardBook PDF:', directPdfUrl, err)
+          return NextResponse.json({ error: 'Could not retrieve the document.' }, { status: 502 })
+        }
+        try {
+          const message = await client.messages.create({
+            model: 'claude-sonnet-4-6',
+            max_tokens: structured ? 4096 : 1024,
+            messages: [{
+              role: 'user',
+              content: [
+                { type: 'document', source: { type: 'base64', media_type: 'application/pdf', data: pdfBuf.toString('base64') } },
+                { type: 'text', text: prompt },
+              ],
+            }],
+          })
+          const raw = message.content[0].type === 'text' ? message.content[0].text : ''
+          const summary = structured ? extractJsonFromText(raw) : raw
+          const cacheErr = await saveToCache(cacheKey, summary)
+          return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
+        } catch (err) {
+          console.error('Claude API error (BoardBook PDF):', err)
+          const msg = err instanceof Error ? err.message : String(err)
+          return NextResponse.json({ error: `Summary failed: ${msg}` }, { status: 500 })
+        }
+      }
       return NextResponse.json(
         { error: 'This document does not appear to be published yet.' },
         { status: 404 }
