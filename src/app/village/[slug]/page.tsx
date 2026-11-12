@@ -254,7 +254,7 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
     setFilterVideo(false)
     setFilterDirector(false)
     setExpandedYears(new Set())
-    const url = board === 'library' ? '/api/meetings' : board === 'village' ? '/api/village-meetings' : '/api/school-meetings'
+    const url = board === 'library' ? `/api/meetings?village=${slug}` : board === 'village' ? `/api/village-meetings?village=${slug}` : `/api/school-meetings?village=${slug}`
     fetch(url)
       .then((r) => r.json())
       .then((data) => {
@@ -291,10 +291,7 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
   }, [filtered])
 
   // Stats
-  const meetingCount = meetings.length
   const archiveMin = meetings.length ? Math.min(...meetings.map((m) => m.year)) : null
-  const archiveMax = meetings.length ? Math.max(...meetings.map((m) => m.year)) : null
-  const latestParsedDate = meetings[0]?.parsedDate
 
   if (!village) {
     return (
@@ -312,6 +309,20 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
 
   const boardLabel = board === 'library' ? 'Library Board' : board === 'village' ? 'Village Board' : 'School Board'
   const pageTitle = `${village.name} ${boardLabel}`
+
+  const sourceLinks: Record<string, Record<string, string>> = {
+    'elmwood-park-il': {
+      library: 'https://elmwoodparklibrary.org/about-eppl/library-board/agendas-minutes',
+      village: 'https://elmwoodpark.org/290/Board-Meeting-Minutes',
+      school: 'https://www.epcusd401.org/board-of-education/board-meetings',
+    },
+    'riverside-il': {
+      library: 'https://www.riversidelibrary.org/board-policies',
+      village: 'https://www.riverside.il.us/AgendaCenter',
+      school: 'https://meetings.boardbook.org/Public/Organization/1668',
+    },
+  }
+  const sourceHref = sourceLinks[slug]?.[board]
 
   return (
     <div className="min-h-screen">
@@ -337,37 +348,26 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                 {pageTitle}
               </h1>
               <p className="m-0 text-[18px] leading-[1.55] text-ink-2 max-w-[620px]">
-                {board === 'school'
+                {board === 'school' && slug === 'elmwood-park-il'
                   ? <>Meeting dates for the EPCUSD 401 School Board{archiveMin ? ` since ${archiveMin}` : ''}. Agendas and minutes on the <a href="https://epcusd401.community.diligentoneplatform.com/Portal/" target="_blank" rel="noopener noreferrer">Diligent Community portal</a>.</>
-                  : <>Agendas, minutes, video and director&apos;s letters for every board meeting{archiveMin ? ` since ${archiveMin}` : ''}.</>
+                  : <>Agendas, minutes{board === 'library' ? '' : ', video'} and{board === 'library' ? " director\u2019s letters" : ' other documents'} for every board meeting{archiveMin ? ` since ${archiveMin}` : ''}.</>
                 }
               </p>
             </div>
 
-            {!loading && meetingCount > 0 && (
-              <dl className="flex-[1_1_300px] m-0 flex gap-8 flex-wrap">
-                <div className="flex flex-col gap-0.5">
-                  <dt className="text-[13px] text-muted">Meetings</dt>
-                  <dd className="m-0 font-display font-semibold text-[30px]">{meetingCount}</dd>
-                </div>
-                {archiveMin && archiveMax && (
-                  <div className="flex flex-col gap-0.5">
-                    <dt className="text-[13px] text-muted">Archive</dt>
-                    <dd className="m-0 font-display font-semibold text-[30px]">
-                      {archiveMin}–{String(archiveMax).slice(2)}
-                    </dd>
-                  </div>
-                )}
-                {latestParsedDate && (
-                  <div className="flex flex-col gap-0.5">
-                    <dt className="text-[13px] text-muted">Latest</dt>
-                    <dd className="m-0 font-display font-semibold text-[30px]">
-                      {formatLatestDate(latestParsedDate)}
-                    </dd>
-                  </div>
-                )}
-              </dl>
+            <div className="flex-[1_1_300px] flex flex-col gap-6 items-start">
+            {sourceHref && (
+              <a
+                href={sourceHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
+                style={{ border: '1.5px solid #1E4D36' }}
+              >
+                View Source ↗
+              </a>
             )}
+            </div>
           </div>
 
           {/* Board tabs */}
@@ -581,39 +581,6 @@ function VillageMeetingsInner({ params }: { params: Promise<{ slug: string }> })
                       {yearMeetings.length} meetings
                     </span>
                   </h2>
-                  {board === 'library' && (
-                    <a
-                      href="https://elmwoodparklibrary.org/about-eppl/library-board/agendas-minutes"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
-                      style={{ border: '1.5px solid #1E4D36' }}
-                    >
-                      View Source ↗
-                    </a>
-                  )}
-                  {board === 'village' && (
-                    <a
-                      href="https://elmwoodpark.org/290/Board-Meeting-Minutes"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
-                      style={{ border: '1.5px solid #1E4D36' }}
-                    >
-                      View Source ↗
-                    </a>
-                  )}
-                  {board === 'school' && (
-                    <a
-                      href="https://www.epcusd401.org/board-of-education/board-meetings"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="h-11 px-[18px] flex items-center text-[15px] font-semibold text-accent bg-transparent rounded no-underline"
-                      style={{ border: '1.5px solid #1E4D36' }}
-                    >
-                      View Source ↗
-                    </a>
-                  )}
                 </div>
 
                 {/* Meetings list */}

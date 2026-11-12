@@ -150,7 +150,7 @@ function SummaryPageInner({
   // Fetch meetings list
   useEffect(() => {
     if (!village) return
-    const url = boardType === 'library' ? '/api/meetings' : boardType === 'village' ? '/api/village-meetings' : '/api/school-meetings'
+    const url = boardType === 'library' ? `/api/meetings?village=${slug}` : boardType === 'village' ? `/api/village-meetings?village=${slug}` : `/api/school-meetings?village=${slug}`
     fetch(url)
       .then((r) => r.json())
       .then((data) => {

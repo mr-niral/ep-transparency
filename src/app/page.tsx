@@ -90,137 +90,138 @@ function LandingInner() {
 
       {/* ── Hero ── */}
       <section style={{ borderBottom: '3px double #15201B' }}>
-        <div className="max-w-[1120px] mx-auto px-6 py-[72px] pb-16 flex flex-wrap gap-14 items-end">
-
-          {/* Left column */}
-          <div className="flex-[999_1_520px] min-w-0 flex flex-col gap-6">
-            <p className="m-0 font-mono text-[13px] tracking-[0.08em] uppercase text-accent">
-              Local government, small-town scale
-            </p>
-            <h1 className="m-0 font-display font-medium leading-[1.04] tracking-[-0.02em]" style={{ fontSize: 'clamp(40px, 6vw, 68px)' }}>
-              Making local politics accessible.
-            </h1>
-            <p className="m-0 text-[19px] leading-[1.55] text-ink-2 max-w-[560px]">
-              Agendas, minutes, votes and meeting video from the village boards, library boards, school boards
-              and councils of smaller towns, with easy-to-read summaries.
-            </p>
-            <form
-              role="search"
-              className="flex flex-col gap-2 max-w-[560px] mt-2"
-              onSubmit={(e) => {
-                e.preventDefault()
-                const val = (e.currentTarget.elements.namedItem('q') as HTMLInputElement).value
-                handleSearch(val)
-              }}
-            >
-              <label htmlFor="muni-search" className="text-[14px] font-semibold">
-                Find your municipality
-              </label>
-              <div className="flex flex-wrap gap-2">
-                <input
-                  id="muni-search"
-                  name="q"
-                  type="search"
-                  placeholder="City, state, or ZIP"
-                  value={query}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  className="flex-[1_1_260px] min-w-0 h-[52px] box-border px-4 text-[17px] text-ink bg-surface border-[1.5px] border-ink rounded"
-                />
-                <button
-                  type="submit"
-                  className="h-[52px] px-7 text-[16px] font-semibold text-white bg-accent border-0 rounded cursor-pointer hover:bg-accent-hover transition-colors"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
-          </div>
-
-          {/* Right column — municipalities panel */}
-          <aside
-            id="municipalities"
-            aria-label="Now covering"
-            className="flex-[1_1_340px] min-w-0 bg-surface border border-rule rounded-[6px] p-7 flex flex-col gap-5"
+        <div className="max-w-[1120px] mx-auto px-6 py-[72px] pb-16 flex flex-col gap-6">
+          <p className="m-0 font-mono text-[20px] tracking-[0.08em] uppercase text-accent">
+            Local government, small-town scale
+          </p>
+          <h1 className="m-0 font-display font-medium leading-[1.04] tracking-[-0.02em]" style={{ fontSize: 'clamp(40px, 6vw, 68px)' }}>
+            Making local politics accessible.
+          </h1>
+          <p className="m-0 text-[19px] leading-[1.55] text-ink-2 max-w-[840px]">
+            Agendas, minutes, votes and meeting video from the village boards, library boards, school boards
+            and councils of smaller towns, with easy-to-read summaries.
+          </p>
+          <form
+            role="search"
+            className="flex flex-col gap-2 max-w-[680px] mt-2"
+            onSubmit={(e) => {
+              e.preventDefault()
+              const val = (e.currentTarget.elements.namedItem('q') as HTMLInputElement).value
+              handleSearch(val)
+            }}
           >
-            <p className="m-0 font-mono text-[12px] tracking-[0.08em] uppercase text-muted">
-              Now covering · {filtered.length} {filtered.length === 1 ? 'municipality' : 'municipalities'}
-            </p>
-
-            {noMatch ? (
-              <p className="m-0 text-[15px] text-muted">
-                No municipality found for &ldquo;{query}&rdquo;.
-              </p>
-            ) : (
-              filtered.map((village) => (
-                <div key={village.slug}>
-                  <div className="flex flex-col gap-1 mb-3">
-                    <h2 className="m-0 font-display font-semibold text-[32px] tracking-[-0.01em] text-ink">
-                      {village.name}
-                    </h2>
-                    <p className="m-0 text-[15px] text-muted">
-                      {village.state === 'IL' ? 'Illinois' : village.state}
-                      {village.county ? ` · ${village.county}` : ''}
-                    </p>
-                  </div>
-                  <div className="flex flex-col border-t border-rule-soft">
-                    {village.hasLibraryBoard && (
-                      <Link
-                        href={`/village/${village.slug}`}
-                        className="flex items-center justify-between gap-3 py-4 border-b border-rule-soft"
-                        style={{ textDecoration: 'none', color: '#15201B' }}
-                      >
-                        <span className="flex flex-col gap-0.5">
-                          <span className="font-semibold text-[17px]">Library Board</span>
-                          <span className="text-[14px] text-muted">Meetings · Summaries</span>
-                        </span>
-                        <ArrowRightIcon />
-                      </Link>
-                    )}
-                    {village.hasSchoolBoard && (
-                      <Link
-                        href={`/village/${village.slug}?board=school`}
-                        className="flex items-center justify-between gap-3 py-4 border-b border-rule-soft"
-                        style={{ textDecoration: 'none', color: '#15201B' }}
-                      >
-                        <span className="flex flex-col gap-0.5">
-                          <span className="font-semibold text-[17px]">School Board</span>
-                          <span className="text-[14px] text-muted">Meetings · Summaries</span>
-                        </span>
-                        <ArrowRightIcon />
-                      </Link>
-                    )}
-                    {village.hasVillageBoard && (
-                      <Link
-                        href={`/village/${village.slug}?board=village`}
-                        className="flex items-center justify-between gap-3 py-4 border-b border-rule-soft"
-                        style={{ textDecoration: 'none', color: '#15201B' }}
-                      >
-                        <span className="flex flex-col gap-0.5">
-                          <span className="font-semibold text-[17px]">Village Board</span>
-                          <span className="text-[14px] text-muted">Votes · Finances · Summaries</span>
-                        </span>
-                        <ArrowRightIcon />
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              ))
-            )}
-
-            <p id="request" className="m-0 text-[14px] text-muted leading-[1.5]">
-              Don&apos;t see your town?{' '}
-              <a
-                href="#request-form"
-                onClick={() => {
-                  setShowRequestForm(true)
-                  setTimeout(() => document.getElementById('request-form')?.scrollIntoView({ behavior: 'smooth' }), 50)
-                }}
+            <label htmlFor="muni-search" className="text-[14px] font-semibold">
+              Find your municipality
+            </label>
+            <div className="flex flex-wrap gap-2">
+              <input
+                id="muni-search"
+                name="q"
+                type="search"
+                placeholder="City, state, or ZIP"
+                value={query}
+                onChange={(e) => handleSearch(e.target.value)}
+                className="flex-[1_1_260px] min-w-0 h-[52px] box-border px-4 text-[17px] text-ink bg-surface border-[1.5px] border-ink rounded"
+              />
+              <button
+                type="submit"
+                className="h-[52px] px-7 text-[16px] font-semibold text-white bg-accent border-0 rounded cursor-pointer hover:bg-accent-hover transition-colors"
               >
-                Request it
-              </a>
-            </p>
-          </aside>
+                Search
+              </button>
+            </div>
+          </form>
         </div>
+      </section>
+
+      {/* ── Municipalities grid ── */}
+      <section id="municipalities" aria-label="Now covering" className="max-w-[1120px] mx-auto px-6 pt-12 pb-4">
+        <p className="m-0 font-mono text-[12px] tracking-[0.08em] uppercase text-muted mb-7">
+          Now covering · {filtered.length} {filtered.length === 1 ? 'municipality' : 'municipalities'}
+        </p>
+
+        {noMatch ? (
+          <p className="text-[15px] text-muted mb-6">
+            No municipality found for &ldquo;{query}&rdquo;.
+          </p>
+        ) : (
+          <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+            {filtered.map((village) => (
+              <div key={village.slug} className="bg-surface border border-rule rounded-[6px] p-6 flex flex-col gap-0">
+                <div className="flex flex-col gap-1 mb-4">
+                  <h2 className="m-0 font-display font-semibold text-[28px] tracking-[-0.01em] text-ink">
+                    {village.name}
+                  </h2>
+                  <p className="m-0 text-[14px] text-muted">
+                    {village.state === 'IL' ? 'Illinois' : village.state}
+                    {village.county ? ` · ${village.county}` : ''}
+                  </p>
+                </div>
+                <div className="flex flex-col border-t border-rule-soft">
+                  {village.hasLibraryBoard && (
+                    <Link
+                      href={`/village/${village.slug}`}
+                      className="flex items-center justify-between gap-3 py-3.5 border-b border-rule-soft"
+                      style={{ textDecoration: 'none', color: '#15201B' }}
+                    >
+                      <span className="flex flex-col gap-0.5">
+                        <span className="font-semibold text-[16px]">Library Board</span>
+                        <span className="text-[13px] text-muted">Meetings · Summaries</span>
+                      </span>
+                      <ArrowRightIcon />
+                    </Link>
+                  )}
+                  {village.hasSchoolBoard && (
+                    <Link
+                      href={`/village/${village.slug}?board=school`}
+                      className="flex items-center justify-between gap-3 py-3.5 border-b border-rule-soft"
+                      style={{ textDecoration: 'none', color: '#15201B' }}
+                    >
+                      <span className="flex flex-col gap-0.5">
+                        <span className="font-semibold text-[16px]">School Board</span>
+                        <span className="text-[13px] text-muted">Meetings · Summaries</span>
+                      </span>
+                      <ArrowRightIcon />
+                    </Link>
+                  )}
+                  {village.hasVillageBoard && (
+                    <Link
+                      href={`/village/${village.slug}?board=village`}
+                      className="flex items-center justify-between gap-3 py-3.5 border-b border-rule-soft"
+                      style={{ textDecoration: 'none', color: '#15201B' }}
+                    >
+                      <span className="flex flex-col gap-0.5">
+                        <span className="font-semibold text-[16px]">Village Board</span>
+                        <span className="text-[13px] text-muted">
+                          {[
+                            'Meetings',
+                            village.features.includes('summaries') && 'Summaries',
+                            village.features.includes('votes') && 'Votes',
+                            village.features.includes('finances') && 'Finances',
+                          ].filter(Boolean).join(' · ')}
+                        </span>
+                      </span>
+                      <ArrowRightIcon />
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <p id="request" className="mt-6 mb-2 text-[14px] text-muted leading-[1.5]">
+          Don&apos;t see your town?{' '}
+          <a
+            href="#request-form"
+            onClick={() => {
+              setShowRequestForm(true)
+              setTimeout(() => document.getElementById('request-form')?.scrollIntoView({ behavior: 'smooth' }), 50)
+            }}
+          >
+            Request it
+          </a>
+        </p>
       </section>
 
       {/* ── Request form (shown when no match) ── */}

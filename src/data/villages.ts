@@ -22,6 +22,17 @@ export const villages: VillageConfig[] = [
     hasSchoolBoard: true,
     features: ['votes', 'finances', 'summaries'],
   },
+  {
+    slug: 'riverside-il',
+    name: 'Riverside',
+    state: 'IL',
+    county: 'Cook County',
+    zips: ['60546'],
+    hasLibraryBoard: true,
+    hasVillageBoard: true,
+    hasSchoolBoard: true,
+    features: ['summaries'],
+  },
 ]
 
 export function findVillage(query: string): VillageConfig | undefined {

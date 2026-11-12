@@ -1,18 +1,21 @@
 /**
- * Pre-generate and cache all 2026 summaries for both boards.
+ * Pre-generate and cache AI summaries for all villages and boards.
  * Run with: node scripts/prebuild-summaries.mjs
  */
 
 const BASE_URL = 'https://villagehallrecord.org'
 
-async function fetchMeetings(board) {
-  const url = board === 'library'
-    ? `${BASE_URL}/api/meetings`
-    : board === 'village'
-      ? `${BASE_URL}/api/village-meetings`
-      : `${BASE_URL}/api/school-meetings`
+const VILLAGES = ['elmwood-park-il', 'riverside-il']
+
+async function fetchMeetings(village, board) {
+  const url =
+    board === 'library'
+      ? `${BASE_URL}/api/meetings?village=${village}`
+      : board === 'village'
+        ? `${BASE_URL}/api/village-meetings?village=${village}`
+        : `${BASE_URL}/api/school-meetings?village=${village}`
   const res = await fetch(url)
-  if (!res.ok) throw new Error(`Failed to fetch ${board} meetings: ${res.status}`)
+  if (!res.ok) throw new Error(`Failed to fetch ${village}/${board} meetings: ${res.status}`)
   return res.json()
 }
 
@@ -28,20 +31,8 @@ async function generateSummary(pdfUrl, docType, boardType) {
 }
 
 async function run() {
-  console.log('Fetching meetings...')
-  const [library, village, school] = await Promise.all([
-    fetchMeetings('library'),
-    fetchMeetings('village'),
-    fetchMeetings('school'),
-  ])
-
-  const meetings2026 = [
-    ...library.filter(m => m.year === 2026).map(m => ({ ...m, boardType: 'library' })),
-    ...village.filter(m => m.year === 2026).map(m => ({ ...m, boardType: 'village' })),
-    ...school.filter(m => m.year === 2026).map(m => ({ ...m, boardType: 'school' })),
-  ]
-
-  console.log(`Found ${meetings2026.length} meetings in 2026\n`)
+  const currentYear = new Date().getFullYear()
+  console.log(`Fetching meetings for year ${currentYear}...\n`)
 
   const sources = [
     { key: 'agenda',   urlField: 'agendaUrl',        label: 'agenda' },
@@ -53,34 +44,60 @@ async function run() {
   let skipped = 0
   let failed = 0
 
-  for (const meeting of meetings2026) {
-    for (const source of sources) {
-      const url = meeting[source.urlField]
-      if (!url) continue
+  for (const village of VILLAGES) {
+    console.log(`── ${village} ──`)
 
-      const label = `${meeting.boardType} / ${meeting.parsedDate} / ${source.label}`
-      process.stdout.write(`  ${label}... `)
+    let library = [], village_meetings = [], school = []
+    try {
+      ;[library, village_meetings, school] = await Promise.all([
+        fetchMeetings(village, 'library'),
+        fetchMeetings(village, 'village'),
+        fetchMeetings(village, 'school'),
+      ])
+    } catch (err) {
+      console.error(`  Failed to fetch meetings for ${village}:`, err.message)
+      continue
+    }
 
-      try {
-        const result = await generateSummary(url, source.key, meeting.boardType)
-        if (result.fromCache) {
-          console.log('already cached')
-          skipped++
-        } else if (result.cacheError) {
-          console.log(`generated but cache FAILED: ${result.cacheError}`)
-          done++
-        } else {
-          console.log('generated + cached ✓')
-          done++
+    const meetings = [
+      ...library.filter(m => m.year === currentYear).map(m => ({ ...m, boardType: 'library' })),
+      ...village_meetings.filter(m => m.year === currentYear).map(m => ({ ...m, boardType: 'village' })),
+      ...school.filter(m => m.year === currentYear).map(m => ({ ...m, boardType: 'school' })),
+    ]
+
+    console.log(`  ${meetings.length} meetings in ${currentYear}`)
+
+    for (const meeting of meetings) {
+      for (const source of sources) {
+        const url = meeting[source.urlField]
+        if (!url) continue
+
+        const label = `${meeting.boardType} / ${meeting.parsedDate} / ${source.label}`
+        process.stdout.write(`  ${label}... `)
+
+        try {
+          const result = await generateSummary(url, source.key, meeting.boardType)
+          if (result.fromCache) {
+            console.log('already cached')
+            skipped++
+          } else if (result.cacheError) {
+            console.log(`generated but cache FAILED: ${result.cacheError}`)
+            done++
+          } else {
+            console.log('generated + cached ✓')
+            done++
+          }
+        } catch (err) {
+          console.log(`FAILED: ${err.message}`)
+          failed++
         }
-      } catch (err) {
-        console.log(`FAILED: ${err.message}`)
-        failed++
       }
     }
+
+    console.log()
   }
 
-  console.log(`\nDone. Generated: ${done}, Already cached: ${skipped}, Failed: ${failed}`)
+  console.log(`Done. Generated: ${done}, Already cached: ${skipped}, Failed: ${failed}`)
 }
 
 run().catch(err => {

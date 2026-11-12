@@ -27,6 +27,27 @@ function isGranicusViewerUrl(url: string): boolean {
   }
 }
 
+function isBoardBookViewerUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url)
+    return (
+      parsed.hostname.includes('boardbook.org') &&
+      (parsed.pathname.includes('/Public/Agenda/') || parsed.pathname.includes('/Public/Minutes/'))
+    )
+  } catch {
+    return false
+  }
+}
+
+function extractBoardBookText(html: string): string {
+  const $ = cheerio.load(html)
+  $('script, style, noscript, head, nav, header, footer').remove()
+  // BoardBook renders agenda/minutes as structured HTML — grab the main content area
+  const main = $('#AgendaContainer, #MinutesContainer, .agenda-content, main, #mainContent')
+  const text = (main.length ? main : $('body')).text().replace(/\s+/g, ' ').trim()
+  return text
+}
+
 function extractGranicusText(html: string): string {
   const $ = cheerio.load(html)
   $('script, style, noscript, head').remove()
@@ -180,6 +201,55 @@ export async function POST(req: NextRequest) {
         { error: `Step 2 failed: ${msg}` },
         { status: 500 }
       )
+    }
+  }
+
+  // BoardBook viewer pages — extract HTML text and send to Claude
+  if (isBoardBookViewerUrl(pdfUrl)) {
+    let htmlText: string
+    try {
+      const res = await fetch(pdfUrl, {
+        headers: { 'User-Agent': 'village-hall-record/1.0' },
+      })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      htmlText = await res.text()
+    } catch (err) {
+      console.error('Failed to fetch BoardBook page:', pdfUrl, err)
+      return NextResponse.json(
+        { error: 'Could not retrieve the document.' },
+        { status: 502 }
+      )
+    }
+
+    const text = extractBoardBookText(htmlText)
+    console.log(`BoardBook text length for ${pdfUrl}: ${text.length}`)
+
+    if (!text || text.length < 200) {
+      return NextResponse.json(
+        { error: 'This document does not appear to be published yet.' },
+        { status: 404 }
+      )
+    }
+
+    try {
+      const message = await client.messages.create({
+        model: 'claude-sonnet-4-6',
+        max_tokens: structured ? 4096 : 1024,
+        messages: [
+          {
+            role: 'user',
+            content: [{ type: 'text', text: `${prompt}\n\n---\n\n${text.slice(0, 12000)}` }],
+          },
+        ],
+      })
+      const raw = message.content[0].type === 'text' ? message.content[0].text : ''
+      const summary = structured ? extractJsonFromText(raw) : raw
+      const cacheErr = await saveToCache(cacheKey, summary)
+      return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
+    } catch (err) {
+      console.error('Claude API error (BoardBook):', err)
+      const msg = err instanceof Error ? err.message : String(err)
+      return NextResponse.json({ error: `Summary failed: ${msg}` }, { status: 500 })
     }
   }
 
