@@ -29,6 +29,10 @@ const config: Config = {
         display: ['var(--font-display)', 'Georgia', 'serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
+      spacing: {
+        'section-y': '80px',
+        'section-header': '32px',
+      },
     },
   },
   plugins: [],

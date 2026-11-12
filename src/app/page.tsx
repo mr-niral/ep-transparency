@@ -89,21 +89,21 @@ function LandingInner() {
     <div className="min-h-screen">
 
       {/* ── Hero ── */}
-      <section style={{ borderBottom: '3px double #15201B' }}>
-        <div className="max-w-[1120px] mx-auto px-6 py-[72px] pb-16 flex flex-col gap-6">
-          <p className="m-0 font-mono text-[20px] tracking-[0.08em] uppercase text-accent">
+      <section>
+        <div className="max-w-[1120px] mx-auto px-6 py-16 md:py-24 flex flex-col border-b border-rule">
+          <p className="m-0 font-mono text-[14px] tracking-[0.08em] uppercase text-accent">
             Local government, small-town scale
           </p>
-          <h1 className="m-0 font-display font-medium leading-[1.04] tracking-[-0.02em]" style={{ fontSize: 'clamp(40px, 6vw, 68px)' }}>
+          <h1 className="m-0 mt-4 font-display font-medium leading-[1.04] tracking-[-0.02em]" style={{ fontSize: 'clamp(40px, 6vw, 68px)' }}>
             Making local politics accessible.
           </h1>
-          <p className="m-0 text-[19px] leading-[1.55] text-ink-2 max-w-[840px]">
+          <p className="m-0 mt-6 text-[19px] leading-[1.55] text-ink-2 max-w-[840px]">
             Agendas, minutes, votes and meeting video from the village boards, library boards, school boards
             and councils of smaller towns, with easy-to-read summaries.
           </p>
           <form
             role="search"
-            className="flex flex-col gap-2 max-w-[680px] mt-2"
+            className="flex flex-col gap-2 max-w-[680px] mt-12"
             onSubmit={(e) => {
               e.preventDefault()
               const val = (e.currentTarget.elements.namedItem('q') as HTMLInputElement).value
@@ -135,33 +135,36 @@ function LandingInner() {
       </section>
 
       {/* ── Municipalities grid ── */}
-      <section id="municipalities" aria-label="Now covering" className="max-w-[1120px] mx-auto px-6 pt-12 pb-4">
-        <p className="m-0 font-mono text-[12px] tracking-[0.08em] uppercase text-muted mb-7">
-          Now covering · {filtered.length} {filtered.length === 1 ? 'municipality' : 'municipalities'}
-        </p>
+      <section id="municipalities" aria-label="Towns we cover" className="max-w-[1120px] mx-auto px-6 py-12 md:py-section-y">
+        <div className="mb-section-header">
+          <h2 className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">Towns we cover</h2>
+          <p className="m-0 mt-1 text-[14px] text-muted">
+            {filtered.length} {filtered.length === 1 ? 'municipality' : 'municipalities'}
+          </p>
+        </div>
 
         {noMatch ? (
           <p className="text-[15px] text-muted mb-6">
             No municipality found for &ldquo;{query}&rdquo;.
           </p>
         ) : (
-          <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+          <div className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
             {filtered.map((village) => (
-              <div key={village.slug} className="bg-surface border border-rule rounded-[6px] p-6 flex flex-col gap-0">
-                <div className="flex flex-col gap-1 mb-4">
-                  <h2 className="m-0 font-display font-semibold text-[28px] tracking-[-0.01em] text-ink">
+              <div key={village.slug} className="bg-surface border border-rule rounded-[6px] flex flex-col gap-0">
+                <div className="flex flex-col gap-1 pt-6 px-6 pb-2">
+                  <h3 className="m-0 font-display font-semibold text-[28px] tracking-[-0.01em] text-ink">
                     {village.name}
-                  </h2>
+                  </h3>
                   <p className="m-0 text-[14px] text-muted">
                     {village.state === 'IL' ? 'Illinois' : village.state}
                     {village.county ? ` · ${village.county}` : ''}
                   </p>
                 </div>
-                <div className="flex flex-col border-t border-rule-soft">
+                <div className="flex flex-col border-t border-rule-soft divide-y divide-rule-soft">
                   {village.hasLibraryBoard && (
                     <Link
                       href={`/village/${village.slug}`}
-                      className="flex items-center justify-between gap-3 py-3.5 border-b border-rule-soft"
+                      className="flex items-center justify-between gap-3 py-3.5 px-6"
                       style={{ textDecoration: 'none', color: '#15201B' }}
                     >
                       <span className="flex flex-col gap-0.5">
@@ -174,7 +177,7 @@ function LandingInner() {
                   {village.hasSchoolBoard && (
                     <Link
                       href={`/village/${village.slug}?board=school`}
-                      className="flex items-center justify-between gap-3 py-3.5 border-b border-rule-soft"
+                      className="flex items-center justify-between gap-3 py-3.5 px-6"
                       style={{ textDecoration: 'none', color: '#15201B' }}
                     >
                       <span className="flex flex-col gap-0.5">
@@ -187,7 +190,7 @@ function LandingInner() {
                   {village.hasVillageBoard && (
                     <Link
                       href={`/village/${village.slug}?board=village`}
-                      className="flex items-center justify-between gap-3 py-3.5 border-b border-rule-soft"
+                      className="flex items-center justify-between gap-3 py-3.5 px-6"
                       style={{ textDecoration: 'none', color: '#15201B' }}
                     >
                       <span className="flex flex-col gap-0.5">
@@ -294,7 +297,7 @@ function LandingInner() {
       {latestMeetings.length > 0 && (
         <section
           aria-labelledby="latest-h"
-          className="max-w-[1120px] mx-auto px-6 pt-16 pb-6 flex flex-col gap-6"
+          className="max-w-[1120px] mx-auto px-6 py-12 md:py-section-y flex flex-col gap-section-header"
         >
           <div className="flex flex-wrap items-baseline justify-between gap-3">
             <h2 id="latest-h" className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">
@@ -352,7 +355,7 @@ function LandingInner() {
       )}
 
       {/* ── What's in the record ── */}
-      <section id="how" aria-labelledby="how-h" className="max-w-[1120px] mx-auto px-6 py-14 pb-20 flex flex-col gap-8">
+      <section id="how" aria-labelledby="how-h" className="max-w-[1120px] mx-auto px-6 py-12 md:pt-section-y md:pb-24 flex flex-col gap-8">
         <h2 id="how-h" className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">
           What&apos;s in the record
         </h2>
