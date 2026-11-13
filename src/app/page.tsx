@@ -157,7 +157,7 @@ function LandingInner() {
       {/* ── Municipalities grid ── */}
       <section id="municipalities" aria-label="Towns we cover" className="max-w-[1120px] mx-auto px-6 py-12 md:py-section-y">
         <div className="mb-section-header">
-          <h2 className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">Explore Your Town</h2>
+          <h2 className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">Explore your town</h2>
           <p className="m-0 mt-1 text-[14px] text-muted">
             {filtered.length} {filtered.length === 1 ? 'municipality' : 'municipalities'}
           </p>
