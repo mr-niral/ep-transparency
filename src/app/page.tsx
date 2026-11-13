@@ -42,7 +42,8 @@ function LandingInner() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const query = searchParams.get('q') ?? ''
-  const [latestMeetings, setLatestMeetings] = useState<Meeting[]>([])
+  type LatestMeeting = Meeting & { boardLabel: string; boardSlug: string; villageSlug: string; villageName: string }
+  const [latestMeetings, setLatestMeetings] = useState<LatestMeeting[]>([])
   const [showRequestForm, setShowRequestForm] = useState(false)
   const isZip = /^\d+$/.test(query.trim())
   const [reqCity, setReqCity] = useState(!isZip ? query : '')
@@ -53,16 +54,35 @@ function LandingInner() {
   }, [query])
 
   useEffect(() => {
-    Promise.all([
-      fetch('/api/meetings').then((r) => r.json()),
-      fetch('/api/village-meetings').then((r) => r.json()),
-      fetch('/api/school-meetings').then((r) => r.json()),
+    const fetches = villages.flatMap((v) => [
+      v.hasLibraryBoard
+        ? fetch(`/api/meetings?village=${v.slug}`).then((r) => r.json()).then((data) =>
+            (Array.isArray(data) ? data : []).map((m: Meeting) => ({
+              ...m, boardLabel: 'Library Board', boardSlug: 'library-board',
+              villageSlug: v.slug, villageName: v.name,
+            }))
+          ).catch(() => [])
+        : Promise.resolve([]),
+      v.hasVillageBoard
+        ? fetch(`/api/village-meetings?village=${v.slug}`).then((r) => r.json()).then((data) =>
+            (Array.isArray(data) ? data : []).map((m: Meeting) => ({
+              ...m, boardLabel: 'Village Board', boardSlug: 'village-board',
+              villageSlug: v.slug, villageName: v.name,
+            }))
+          ).catch(() => [])
+        : Promise.resolve([]),
+      v.hasSchoolBoard
+        ? fetch(`/api/school-meetings?village=${v.slug}`).then((r) => r.json()).then((data) =>
+            (Array.isArray(data) ? data : []).map((m: Meeting) => ({
+              ...m, boardLabel: 'School Board', boardSlug: 'school-board',
+              villageSlug: v.slug, villageName: v.name,
+            }))
+          ).catch(() => [])
+        : Promise.resolve([]),
     ])
-      .then(([library, village, school]) => {
-        const lib = (Array.isArray(library) ? library : []).map((m: Meeting) => ({ ...m, boardLabel: 'Library Board', boardSlug: 'library-board' }))
-        const vil = (Array.isArray(village) ? village : []).map((m: Meeting) => ({ ...m, boardLabel: 'Village Board', boardSlug: 'village-board' }))
-        const sch = (Array.isArray(school) ? school : []).map((m: Meeting) => ({ ...m, boardLabel: 'School Board', boardSlug: 'school-board' }))
-        const combined = [...lib, ...vil, ...sch].sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
+    Promise.all(fetches)
+      .then((results) => {
+        const combined = results.flat().sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
         setLatestMeetings(combined.slice(0, 3))
       })
       .catch(() => {})
@@ -293,27 +313,22 @@ function LandingInner() {
         </section>
       )}
 
-      {/* ── Latest from Elmwood Park ── */}
+      {/* ── Latest meetings ── */}
       {latestMeetings.length > 0 && (
         <section
           aria-labelledby="latest-h"
           className="max-w-[1120px] mx-auto px-6 py-12 md:py-section-y flex flex-col gap-section-header"
         >
-          <div className="flex flex-wrap items-baseline justify-between gap-3">
-            <h2 id="latest-h" className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">
-              Latest from Elmwood Park
-            </h2>
-            <Link href="/village/elmwood-park-il" className="text-[15px] font-semibold">
-              All meetings
-            </Link>
-          </div>
+          <h2 id="latest-h" className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">
+            Latest meetings
+          </h2>
           <ol
             className="list-none m-0 p-0 flex flex-col"
             style={{ borderTop: '1px solid #15201B' }}
           >
             {latestMeetings.map((m) => (
               <li
-                key={m.parsedDate}
+                key={`${m.villageSlug}-${m.boardSlug}-${m.parsedDate}`}
                 className="flex flex-wrap items-center gap-4 py-5 border-b border-rule"
                 style={{ columnGap: '32px' }}
               >
@@ -322,7 +337,7 @@ function LandingInner() {
                 </span>
                 <span className="flex-[1_1_260px] flex flex-col gap-0.5">
                   <span className="font-semibold text-[17px]">
-                    {(m as Meeting & { boardLabel?: string }).boardLabel ?? 'Library Board'} meeting
+                    {m.villageName} {m.boardLabel}
                   </span>
                   <span className="text-[14px] text-muted">{getMeetingStatus(m)}</span>
                 </span>
@@ -343,7 +358,7 @@ function LandingInner() {
                     </a>
                   )}
                   {(m.agendaUrl || m.minutesUrl) && (
-                    <Link href={`/village/elmwood-park-il/${(m as Meeting & { boardSlug?: string }).boardSlug ?? 'library-board'}/${m.parsedDate}?source=${m.minutesUrl ? 'minutes' : 'agenda'}`}>
+                    <Link href={`/village/${m.villageSlug}/${m.boardSlug}/${m.parsedDate}?source=${m.minutesUrl ? 'minutes' : 'agenda'}`}>
                       Summary
                     </Link>
                   )}
