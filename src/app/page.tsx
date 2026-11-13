@@ -83,7 +83,7 @@ function LandingInner() {
     Promise.all(fetches)
       .then((results) => {
         const combined = results.flat().sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
-        setLatestMeetings(combined.slice(0, 3))
+        setLatestMeetings(combined.slice(0, 6))
       })
       .catch(() => {})
   }, [])
