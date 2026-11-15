@@ -219,8 +219,6 @@ function LandingInner() {
                           {[
                             'Meetings',
                             village.features.includes('summaries') && 'Summaries',
-                            village.features.includes('votes') && 'Votes',
-                            village.features.includes('finances') && 'Finances',
                           ].filter(Boolean).join(' · ')}
                         </span>
                       </span>
