@@ -30,6 +30,34 @@ async function generateSummary(pdfUrl, docType, boardType) {
   return data
 }
 
+function boardSlug(boardType) {
+  return boardType === 'library' ? 'library-board'
+    : boardType === 'village' ? 'village-board'
+    : 'school-board'
+}
+
+async function isVotesCached(village, board, date) {
+  const res = await fetch(`${BASE_URL}/api/votes?village=${village}&board=${board}&date=${date}`)
+  return res.ok
+}
+
+async function extractVotes(village, board, meeting) {
+  const res = await fetch(`${BASE_URL}/api/votes`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      minutesUrl: meeting.minutesUrl,
+      meetingDate: meeting.parsedDate,
+      meetingDateLabel: meeting.date,
+      village,
+      board,
+    }),
+  })
+  const data = await res.json()
+  if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`)
+  return data
+}
+
 async function run() {
   const currentYear = new Date().getFullYear()
   console.log(`Fetching meetings for year ${currentYear}...\n`)
@@ -92,6 +120,33 @@ async function run() {
           failed++
         }
       }
+    }
+
+    // Extract roll-call votes for meetings with minutes
+    const withMinutes = meetings.filter(m => m.minutesUrl)
+    if (withMinutes.length > 0) {
+      console.log(`  Extracting votes for ${withMinutes.length} meetings with minutes...`)
+      let vDone = 0, vSkipped = 0, vFailed = 0
+      for (const meeting of withMinutes) {
+        const slug = boardSlug(meeting.boardType)
+        const label = `${meeting.boardType} / ${meeting.parsedDate}`
+        process.stdout.write(`  votes ${label}... `)
+        try {
+          const cached = await isVotesCached(village, slug, meeting.parsedDate)
+          if (cached) {
+            console.log('already cached')
+            vSkipped++
+          } else {
+            await extractVotes(village, slug, meeting)
+            console.log('extracted + cached ✓')
+            vDone++
+          }
+        } catch (err) {
+          console.log(`FAILED: ${err.message}`)
+          vFailed++
+        }
+      }
+      console.log(`  Votes — extracted: ${vDone}, already cached: ${vSkipped}, failed: ${vFailed}`)
     }
 
     console.log()

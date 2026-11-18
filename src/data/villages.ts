@@ -31,7 +31,7 @@ export const villages: VillageConfig[] = [
     hasLibraryBoard: true,
     hasVillageBoard: true,
     hasSchoolBoard: true,
-    features: ['summaries'],
+    features: ['votes', 'summaries'],
   },
 ]
 

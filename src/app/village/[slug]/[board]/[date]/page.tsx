@@ -4,7 +4,7 @@ import { use, useEffect, useState, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { villages } from '@/data/villages'
-import type { Meeting } from '@/types'
+import type { Meeting, MeetingVotes } from '@/types'
 import { saveStructuredSummary, loadStructuredSummary } from '@/lib/summaryStorage'
 
 // ── Types ───────────────────────────────────────────────────────────────────
@@ -121,6 +121,13 @@ function SummaryPageInner({
   const [error, setError] = useState('')
   const [docUrl, setDocUrl] = useState<string | null>(null)
 
+  const [votes, setVotes] = useState<MeetingVotes | null>(null)
+  const [votesChecked, setVotesChecked] = useState(false)
+  const [votesExtracting, setVotesExtracting] = useState(false)
+  const [votesError, setVotesError] = useState('')
+  const [expandedVotes, setExpandedVotes] = useState<Set<number>>(new Set())
+  const isEPLibrary = true // roll-call votes enabled for all boards
+
   // All hooks before any early return
   const meeting = useMemo(
     () => allMeetings.find((m) => m.parsedDate === date) ?? null,
@@ -216,6 +223,54 @@ function SummaryPageInner({
       .catch(() => setError('Failed to generate summary. Please try again.'))
       .finally(() => setLoading(false))
   }, [meeting, source, date, boardType])
+
+  // Fetch cached votes from Blob (EP Library only)
+  useEffect(() => {
+    if (!isEPLibrary || !meeting?.minutesUrl) {
+      setVotesChecked(true)
+      return
+    }
+    fetch(`/api/votes?village=${slug}&board=${board}&date=${date}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => { if (data?.votes) setVotes(data as MeetingVotes) })
+      .catch(() => {})
+      .finally(() => setVotesChecked(true))
+  }, [meeting, isEPLibrary, slug, board, date])
+
+  function toggleVote(i: number) {
+    setExpandedVotes((prev) => {
+      const next = new Set(prev)
+      if (next.has(i)) next.delete(i)
+      else next.add(i)
+      return next
+    })
+  }
+
+  async function handleLoadVotes() {
+    if (!meeting?.minutesUrl) return
+    setVotesExtracting(true)
+    setVotesError('')
+    try {
+      const res = await fetch('/api/votes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          minutesUrl: meeting.minutesUrl,
+          meetingDate: date,
+          meetingDateLabel: meeting.date,
+          village: slug,
+          board,
+        }),
+      })
+      const data = await res.json()
+      if (res.ok) setVotes(data as MeetingVotes)
+      else setVotesError(data.error ?? 'Extraction failed.')
+    } catch {
+      setVotesError('Network error. Please try again.')
+    } finally {
+      setVotesExtracting(false)
+    }
+  }
 
   if (!village) {
     return (
@@ -314,6 +369,118 @@ function SummaryPageInner({
                       </div>
                     ))}
                   </dl>
+                </section>
+              )}
+
+              {/* Roll-call votes */}
+              {isEPLibrary && meeting?.minutesUrl && (
+                <section aria-labelledby="rollcall-h" className="flex flex-col gap-0">
+                  <div className="flex flex-wrap items-center justify-between gap-4 py-5" style={{ borderTop: '1px solid #15201B' }}>
+                    <h2 id="rollcall-h" className="m-0 font-display font-semibold text-[28px] tracking-[-0.01em]">Roll-call votes</h2>
+                    {!votesChecked && (
+                      <div className="h-9 w-36 bg-rule-soft rounded animate-pulse" />
+                    )}
+                    {votesChecked && !votes && (
+                      <div className="flex flex-col items-end gap-1.5">
+                        <button
+                          onClick={handleLoadVotes}
+                          disabled={votesExtracting}
+                          className="h-9 px-5 bg-surface border-[1.5px] border-border-strong text-accent font-semibold text-[14px] rounded cursor-pointer hover:border-accent transition-colors disabled:opacity-50"
+                          style={{ fontFamily: 'inherit' }}
+                        >
+                          {votesExtracting ? 'Loading…' : 'Load roll-call votes'}
+                        </button>
+                        {votesError && <p className="m-0 text-[12px] text-signal">{votesError}</p>}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Extracting skeleton */}
+                  {votesExtracting && (
+                    <div className="flex flex-col gap-0 animate-pulse" style={{ borderTop: '1px solid #15201B' }}>
+                      {[0, 1, 2].map((i) => (
+                        <div key={i} className="flex items-center gap-5 py-4 border-b border-rule">
+                          <div className="h-2.5 w-16 bg-rule rounded" style={{ flexShrink: 0 }} />
+                          <div className="h-3 bg-rule-soft rounded flex-1" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Voice votes only */}
+                  {votes?.votes.length === 0 && (
+                    <p className="m-0 text-[15px] text-muted pt-2">
+                      These minutes only record voice votes — no individual ballot data.
+                    </p>
+                  )}
+
+                  {/* Expandable list */}
+                  {votes && votes.votes.length > 0 && (
+                    <ol className="list-none m-0 p-0 flex flex-col" style={{ borderTop: '1px solid #15201B' }}>
+                      {votes.votes.map((vr, i) => {
+                        const isOpen = expandedVotes.has(i)
+                        const resultStatus = vr.result === 'passed' ? 'approved' : vr.result === 'failed' ? 'failed' : 'tabled'
+                        const trustees = Object.entries(vr.ballots)
+                        return (
+                          <li key={i} className="border-b border-rule">
+                            <button
+                              onClick={() => toggleVote(i)}
+                              className="w-full flex items-start gap-5 py-[15px] text-left cursor-pointer bg-transparent border-0"
+                              style={{ fontFamily: 'inherit' }}
+                              aria-expanded={isOpen}
+                            >
+                              <span
+                                className="font-mono text-[11px] tracking-[0.07em] uppercase font-medium pt-[3px]"
+                                style={{ flexShrink: 0, width: '56px', color: statusColor(resultStatus) }}
+                              >
+                                {vr.result}
+                              </span>
+                              <span className="flex-1 text-[16px] leading-[1.5] font-semibold text-ink">{vr.motion}</span>
+                              <svg
+                                width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                                aria-hidden="true"
+                                className="text-muted transition-transform mt-1"
+                                style={{ flexShrink: 0, transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                              >
+                                <path d="M6 9l6 6 6-6" />
+                              </svg>
+                            </button>
+
+                            {isOpen && (
+                              <div className="pb-4 pl-[76px] flex flex-col gap-3">
+                                {(vr.mover || vr.seconder) && (
+                                  <p className="m-0 text-[13px] text-muted">
+                                    {[
+                                      vr.mover && `Moved by ${vr.mover}`,
+                                      vr.seconder && `Seconded by ${vr.seconder}`,
+                                    ].filter(Boolean).join(' · ')}
+                                  </p>
+                                )}
+                                {trustees.length > 0 && (
+                                  <div className="flex flex-col divide-y divide-rule-soft border border-rule rounded-[6px] overflow-hidden">
+                                    {trustees.map(([name, vote]) => (
+                                      <div key={name} className="flex items-center justify-between px-3.5 py-2.5 bg-surface">
+                                        <span className="text-[14px] text-ink">{name}</span>
+                                        <span
+                                          className="font-mono text-[12px] tracking-[0.06em] uppercase font-medium"
+                                          style={{
+                                            color: vote === 'yes' ? '#1E4D36' : vote === 'no' ? '#8A4A12' : '#59625C',
+                                          }}
+                                        >
+                                          {vote}
+                                        </span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </li>
+                        )
+                      })}
+                    </ol>
+                  )}
                 </section>
               )}
 
@@ -494,6 +661,7 @@ function SummaryPageInner({
           </div>
         </aside>
       </div>
+
     </div>
   )
 }

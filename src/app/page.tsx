@@ -45,6 +45,7 @@ function LandingInner() {
   type LatestMeeting = Meeting & { boardLabel: string; boardSlug: string; villageSlug: string; villageName: string }
   const [latestMeetings, setLatestMeetings] = useState<LatestMeeting[]>([])
   const [showRequestForm, setShowRequestForm] = useState(false)
+
   const isZip = /^\d+$/.test(query.trim())
   const [reqCity, setReqCity] = useState(!isZip ? query : '')
 
@@ -231,30 +232,38 @@ function LandingInner() {
           </div>
         )}
 
-        <p id="request" className="mt-6 mb-2 text-[14px] text-muted leading-[1.5]">
-          Don&apos;t see your town?{' '}
-          <a
-            href="#request-form"
-            onClick={() => {
-              setShowRequestForm(true)
-              setTimeout(() => document.getElementById('request-form')?.scrollIntoView({ behavior: 'smooth' }), 50)
-            }}
-          >
-            Request it
-          </a>
-        </p>
       </section>
 
-      {/* ── Request form (shown when no match) ── */}
-      {(noMatch || showRequestForm) && (
-        <section id="request-form" className="max-w-[1120px] mx-auto px-6 py-10">
-          <div className="max-w-md mx-auto">
+      {/* ── Request form ── */}
+      <section id="request-form" className="max-w-[1120px] mx-auto px-6 py-12 md:py-section-y border-t border-rule">
+        <div className="flex flex-col md:flex-row md:items-start gap-10">
+          <div className="flex flex-col gap-3 md:flex-[1_1_340px]">
+            <h2 className="m-0 font-display font-semibold text-[28px] tracking-[-0.01em]">Don&apos;t see your town?</h2>
+            <p className="m-0 text-[16px] leading-[1.6] text-ink-2">
+              We&apos;re adding new municipalities regularly. Submit a request and we&apos;ll let you know when yours is live.
+            </p>
+            {noMatch && (
+              <p className="m-0 text-[14px] text-muted">
+                No results for &ldquo;{query}&rdquo;.
+              </p>
+            )}
+            {!showRequestForm && (
+              <button
+                onClick={() => setShowRequestForm(true)}
+                className="self-start mt-1 h-[44px] px-6 bg-accent text-white font-semibold text-[15px] rounded border-0 cursor-pointer hover:bg-accent-hover transition-colors"
+              >
+                Request your town
+              </button>
+            )}
+          </div>
+          {showRequestForm && (
+          <div className="md:flex-[1_1_380px]">
             <form
               action="https://formspree.io/f/maeebaqd"
               method="POST"
               className="bg-surface border border-rule rounded-[6px] p-6 flex flex-col gap-4"
             >
-              <h2 className="m-0 text-base font-semibold text-ink">Request this municipality</h2>
+              <h3 className="m-0 text-base font-semibold text-ink">Request a municipality</h3>
               <input type="hidden" name="_subject" value="The Village Hall Record municipality request" />
               <div className="flex flex-col gap-1">
                 <label className="text-[13px] font-medium text-muted" htmlFor="req-city">City</label>
@@ -308,8 +317,9 @@ function LandingInner() {
               </button>
             </form>
           </div>
-        </section>
-      )}
+          )}
+        </div>
+      </section>
 
       {/* ── Latest meetings ── */}
       {latestMeetings.length > 0 && (

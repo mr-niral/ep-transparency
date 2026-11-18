@@ -1,11 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import type { MeetingVotes } from '@/types'
+import { getBlobVotes, saveBlobVotes } from '@/lib/blobVoteStorage'
 
 const client = new Anthropic()
 
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url)
+  const village = searchParams.get('village') ?? 'elmwood-park-il'
+  const board = searchParams.get('board') ?? 'library-board'
+  const date = searchParams.get('date')
+
+  if (!date) return NextResponse.json({ error: 'Missing date' }, { status: 400 })
+
+  const cached = await getBlobVotes(village, board, date)
+  if (!cached) return NextResponse.json({ cached: false }, { status: 404 })
+
+  return NextResponse.json(cached)
+}
+
 export async function POST(req: NextRequest) {
-  const { minutesUrl, meetingDate, meetingDateLabel } = await req.json()
+  const { minutesUrl, meetingDate, meetingDateLabel, village = 'elmwood-park-il', board = 'library-board' } = await req.json()
 
   if (!minutesUrl || typeof minutesUrl !== 'string') {
     return NextResponse.json({ error: 'Missing minutesUrl' }, { status: 400 })
@@ -30,7 +45,7 @@ export async function POST(req: NextRequest) {
 
   const base64Pdf = pdfBuffer.toString('base64')
 
-  const prompt = `You are extracting structured vote data from public library board meeting minutes.
+  const prompt = `You are extracting structured vote data from public board meeting minutes.
 
 Return ONLY a valid JSON object — no markdown, no explanation, no surrounding text. The JSON must match this exact schema:
 
@@ -51,7 +66,7 @@ Return ONLY a valid JSON object — no markdown, no explanation, no surrounding 
 }
 
 Rules:
-- Include every motion that had a recorded vote.
+- Include every motion that had a recorded vote, EXCEPT motions to adjourn — skip those entirely.
 - If the minutes show a roll call vote, list each trustee's vote in "ballots".
 - If the minutes only show a voice vote with no individual names, leave "ballots" as {}.
 - If no individual votes are recorded anywhere in the document, return "votes": [].
@@ -103,6 +118,7 @@ Rules:
       )
     }
 
+    await saveBlobVotes(village, board, meetingDate, parsed)
     return NextResponse.json(parsed)
   } catch (err) {
     console.error('Claude API error:', err)
