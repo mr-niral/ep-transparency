@@ -1,0 +1,393 @@
+{
+  "meetingDate": "2024-05-13",
+  "meetingDateLabel": "May 13 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:15:08.929Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "narayan",
+      "monahan",
+      "balundis",
+      "gordon"
+    ],
+    "remote": [],
+    "absent": [
+      "fosco"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Elect Trustee Pesko as President of the Library Board of Trustees for Fiscal Year 2024-25.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "gordon",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Elect Trustee Santangelo as Vice President of the Library Board of Trustees for Fiscal Year 2024-25.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Elect Trustee Fosco as Treasurer of the Library Board of Trustees for Fiscal Year 2024-25, dependent upon his acceptance at the next board meeting attended.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "gordon",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Elect Trustee Balundis as Secretary of the Library Board of Trustees for Fiscal Year 2024-25.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the May 2024 Consent Agenda.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the Home Delivery Policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "gordon",
+      "seconder": "santangelo",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the Director's Succession Policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "gordon",
+      "seconder": "santangelo",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the Ethics Policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "gordon",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve the Patron Behavior policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 10,
+      "description": "Approve the Authorized Contact Policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 11,
+      "description": "Approve the Confidentiality Policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 12,
+      "description": "Approve the Photography and Recording Policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "gordon",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 13,
+      "description": "Approve the Board By-laws.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "gordon",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 14,
+      "description": "Approve the Holiday Policy for Staff.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "gordon",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 15,
+      "description": "Approve the 2024-25 Secretary's Certificate.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 16,
+      "description": "Approve the 2024-25 Intergovernmental Agreement.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "gordon",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 17,
+      "description": "Approve the hiring of Thomas Guth as Full-time Circulation Assistant.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "gordon",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 18,
+      "description": "Approve the 2024-25 EPPL Budget.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "santangelo",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 19,
+      "description": "Approve the 2024-25 Levy Request.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "santangelo",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    },
+    {
+      "order": 20,
+      "description": "Move to Executive Session.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "santangelo",
+      "votes": {}
+    },
+    {
+      "order": 21,
+      "description": "Return from Executive Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "xxx",
+      "seconder": "xxx",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "yes",
+        "fosco": "absent"
+      }
+    }
+  ]
+}

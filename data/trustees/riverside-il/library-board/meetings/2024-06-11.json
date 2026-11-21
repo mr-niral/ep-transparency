@@ -1,0 +1,104 @@
+{
+  "meetingDate": "2024-06-11",
+  "meetingDateLabel": "June 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:39:58.478Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the May 14, 2024 Sine Die meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the minutes of the May 14, 2024 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hagins",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 23796 through 23811 and 23813 through 23829, in the total amount of $98,625.95, which includes payroll through May 24, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the financial statements for May 31, 2024, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve $2,895.00 payable to Fullmer Locksmith for the installation of keypad on the side entry door and the patron services door.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the increase in PTO hours from 45 hours per year to 60 hours per year for IMRF eligible part-time employees.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve $2,960.00 payable to Holton Brothers for masonry work on the front entry stairs, with the amended contract terms discussed.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Approve the closure of the Riverside Savings bank account.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 9,
+      "description": "Approve the proposal to rename the Community Room the Foley Community Room in recognition of Janice Foley's 30 years of service to the Riverside Public Library and of her being named the Riverside 2024 Person of the Year.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "long",
+      "votes": {}
+    }
+  ]
+}

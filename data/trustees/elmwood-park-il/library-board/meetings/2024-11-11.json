@@ -1,0 +1,131 @@
+{
+  "meetingDate": "2024-11-11",
+  "meetingDateLabel": "November 11 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:16:32.746Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "santangelo",
+      "narayan",
+      "balundis",
+      "monahan",
+      "fosco"
+    ],
+    "remote": [],
+    "absent": [
+      "pesko",
+      "gordon"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Authorize Trustee Santangelo to conduct the meeting in Trustee Pesko's absence.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "absent",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the consent agenda including September and October 2024 Board Meeting Minutes, November 2024 Payroll, December 2024 Medical Insurance, Treasurer's report, December 2024 IMRF check, and October 2024 General Fund Disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "narayan",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "absent",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Anti-Harassment Policy as reviewed and approved by Klein, Thorpe and Jenkins.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "absent",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Local History Policy as reviewed and approved by Klein, Thorpe and Jenkins.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "absent",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Library Reimbursement Policy as reviewed and approved by Klein, Thorpe and Jenkins.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "absent",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the Study Room Policy as reviewed and approved by Klein, Thorpe and Jenkins.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "absent",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes",
+        "gordon": "absent"
+      }
+    }
+  ]
+}

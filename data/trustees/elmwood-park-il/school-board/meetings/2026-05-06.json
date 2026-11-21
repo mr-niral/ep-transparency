@@ -1,0 +1,113 @@
+{
+  "meetingDate": "2026-05-06",
+  "meetingDateLabel": "May 6, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:37:09.198Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "ranallo",
+      "doyle",
+      "loughnane",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session to discuss employment, compensation, discipline, performance, or dismissal of specific employees; student discipline; and possible litigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "doyle",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to open session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Administrator's Contract for Assistant Principal for Athletics and Activities for Tom Lentine for the 2026-2027 School Year.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Terminate the employment of Custodial staff employee Kennedy Tarrance, for cause, retroactively on April 17, 2026.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "shipinski",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Personnel Reports as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    }
+  ]
+}

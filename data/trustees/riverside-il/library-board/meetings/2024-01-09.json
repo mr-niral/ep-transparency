@@ -1,0 +1,62 @@
+{
+  "meetingDate": "2024-01-09",
+  "meetingDateLabel": "January 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:38:20.720Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "treasurer",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the December 12, 2023 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 23610 through 23646, in the total amount of $179,313.94, which includes payroll through December 22, 2023.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for December 31, 2023, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the transfer of $30,000 from the Operating Fund to the Capital Improvement Fund, in accordance with the 2023 budget.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "birmingham",
+      "votes": {}
+    }
+  ]
+}

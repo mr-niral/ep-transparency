@@ -1,0 +1,149 @@
+{
+  "meetingDate": "2024-12-18",
+  "meetingDateLabel": "Dec 18, 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:31:07.190Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "capraro",
+      "ranallo",
+      "rivera",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Enter into Executive Session to discuss employment, litigation, student disciplinary cases, collective negotiating matters, and semi-annual review of minutes.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Uphold the 2-day suspension of Student A and approve the written decision to that effect.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "no",
+        "shipinski": "no",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the 2024 Levy as proposed.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the continuation of Standards Based Grading at Grades 6-8.",
+      "outcome": "failed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "parisi",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "no",
+        "rivera": "no",
+        "shipinski": "no",
+        "silver": "no",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Sunset Standards Based Grading at Grades 6-8 at the conclusion of the school year.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "no",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the Consent Agenda as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "ranallo",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    }
+  ]
+}

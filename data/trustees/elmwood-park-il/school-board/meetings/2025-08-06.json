@@ -1,0 +1,185 @@
+{
+  "meetingDate": "2025-08-06",
+  "meetingDateLabel": "Aug 6, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:33:48.333Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "ranallo",
+      "doyle",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe",
+      "loughnane"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session to discuss appointment, employment, compensation, discipline, performance, or dismissal of specific employees; student disciplinary cases; and litigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Expel Student #2526001 from Elmwood Park Community Unit School District 401 for the period from August 6, 2025 through August 5, 2027 and approve the written expulsion decision.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the River Grove Supplemental Municipal Police Services Agreement.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the EPET Memorandum of Understanding for Seasonal Assistant Athletic Director.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "ranallo",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the ProCare Therapy Staffing Addendum.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the Amergis Healthcare Staffing, Inc. Customer Assignment St. Celestine's School Confirmation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the ProCare Therapy Agreement for Permanent Placement.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "doyle",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve the revised Personnel Report for the August 6, 2025 Board Meeting including new hires, transfers, and resignations.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "shipinski",
+      "seconder": "doyle",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "meetingDate": "2025-12-08",
+  "meetingDateLabel": "December 8 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:19:12.265Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "monahan",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "pesko",
+      "segura"
+    ],
+    "remote": [],
+    "absent": [
+      "narayan"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda, including approval of November 2025 board minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve an Intergovernmental Agreement (IGA) between the Elmwood Park Public Library and the Village of Elmwood Park for short-term funding in anticipation of Cook County's 2025 tax levy disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve a request to the Village of Elmwood Park for a December fund transfer to support payroll, benefits, insurance, and general operations for January 2026.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve a resolution committing $36,000 as the Library's required local cost share for the Ferrentino Room Renovation and Expansion Grant application to the Illinois State Library.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(1) to discuss employment, compensation, discipline, performance, or dismissal of specific employees or legal counsel.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the Library Director's compensation package for FY 2025–26, reflecting no change in base salary and including continued support for Business Management, Finance, and Human Resources functions.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

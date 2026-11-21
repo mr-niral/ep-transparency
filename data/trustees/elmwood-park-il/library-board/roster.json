@@ -1,0 +1,177 @@
+{
+  "village": "elmwood-park-il",
+  "board": "library-board",
+  "trustees": [
+    {
+      "id": "president",
+      "displayName": "(President)",
+      "nameAliases": [
+        "Chris Pesko (President)"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-02-12",
+      "lastSeenDate": "2024-03-11",
+      "isCurrent": false
+    },
+    {
+      "id": "secretary",
+      "displayName": "(Secretary)",
+      "nameAliases": [
+        "Alice Balundis (Secretary)"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-02-12",
+      "lastSeenDate": "2024-03-11",
+      "isCurrent": false
+    },
+    {
+      "id": "trustee",
+      "displayName": "(Trustee)",
+      "nameAliases": [
+        "Marissa Santangelo (Trustee)",
+        "Michael Monahan (Trustee)",
+        "SK Narayan (Trustee)",
+        "Diana Gordon (Trustee)"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-02-12",
+      "lastSeenDate": "2024-03-11",
+      "isCurrent": false
+    },
+    {
+      "id": "vicepresident",
+      "displayName": "(Vice-President)",
+      "nameAliases": [
+        "Peter Fosco (Vice-President)"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-02-12",
+      "lastSeenDate": "2024-03-11",
+      "isCurrent": false
+    },
+    {
+      "id": "balundis",
+      "displayName": "Balundis",
+      "nameAliases": [
+        "Alice Balundis",
+        "Trustee Balundis",
+        "Balundis"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-08",
+      "lastSeenDate": "2026-10-27",
+      "isCurrent": true
+    },
+    {
+      "id": "foran",
+      "displayName": "Foran",
+      "nameAliases": [
+        "Trustee Foran"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2026-09-14",
+      "lastSeenDate": "2026-10-27",
+      "isCurrent": true
+    },
+    {
+      "id": "fosco",
+      "displayName": "Fosco",
+      "nameAliases": [
+        "Peter Fosco",
+        "Trustee Fosco",
+        "Fosco"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-08",
+      "lastSeenDate": "2026-10-27",
+      "isCurrent": true
+    },
+    {
+      "id": "gordon",
+      "displayName": "Gordon",
+      "nameAliases": [
+        "Diana Gordon",
+        "Trustee Gordon"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-08",
+      "lastSeenDate": "2025-04-14",
+      "isCurrent": false
+    },
+    {
+      "id": "monahan",
+      "displayName": "Monahan",
+      "nameAliases": [
+        "Michael Monahan",
+        "Trustee Monahan",
+        "Monahan"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-08",
+      "lastSeenDate": "2026-10-27",
+      "isCurrent": true
+    },
+    {
+      "id": "narayan",
+      "displayName": "Narayan",
+      "nameAliases": [
+        "Trustee Narayan",
+        "Narayan"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-03-11",
+      "lastSeenDate": "2026-10-27",
+      "isCurrent": true
+    },
+    {
+      "id": "pesko",
+      "displayName": "Pesko",
+      "nameAliases": [
+        "Chris Pesko",
+        "Trustee Pesko",
+        "Pesko"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-08",
+      "lastSeenDate": "2026-08-10",
+      "isCurrent": false
+    },
+    {
+      "id": "santangelo",
+      "displayName": "Santangelo",
+      "nameAliases": [
+        "Marissa Santangelo",
+        "Trustee Santangelo",
+        "Santangelo"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-08",
+      "lastSeenDate": "2026-10-27",
+      "isCurrent": true
+    },
+    {
+      "id": "segura",
+      "displayName": "Segura",
+      "nameAliases": [
+        "Trustee Segura",
+        "Segura"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-05-12",
+      "lastSeenDate": "2026-10-27",
+      "isCurrent": true
+    },
+    {
+      "id": "xxx",
+      "displayName": "XXX",
+      "nameAliases": [
+        "Trustee XXX"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-05-13",
+      "lastSeenDate": "2024-05-13",
+      "isCurrent": false
+    }
+  ],
+  "lastUpdated": "2026-11-21T20:22:15.810Z"
+}

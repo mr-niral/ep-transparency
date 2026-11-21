@@ -1,0 +1,149 @@
+{
+  "meetingDate": "2025-08-11",
+  "meetingDateLabel": "August 11 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:18:04.176Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "monahan",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": [
+      "segura"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda, including approval of June 2025 Board Meeting Minutes, Payroll for July 2025, Medical Insurance for August 2025, Treasurer's Report, IMRF Payment for June 2025, and General Fund Disbursements for June 2025.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the 2026 Holiday Schedule as presented in the board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the 2026 Board Meeting Schedule as presented in the board packet, with all meetings to take place starting at 5 pm.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the resolution requesting the Village of Elmwood Park issue a tax anticipation note on behalf of the Elmwood Park Public Library.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Salary Scale for 2025-2026 as presented in the board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(l) for the appointment, employment, compensation, discipline, performance, or dismissal of specific employees, specific individuals who serve as independent contractors in a park, recreational, or educational setting, or particular volunteers of the public body or legal counsel for the public body.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Adjourn the Executive Session and reconvene the Regular Open Session pursuant to 5 ILCS 120/2(e).",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "absent"
+      }
+    }
+  ]
+}

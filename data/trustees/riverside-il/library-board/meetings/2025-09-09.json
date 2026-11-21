@@ -1,0 +1,131 @@
+{
+  "meetingDate": "2025-09-09",
+  "meetingDateLabel": "September 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:43:41.315Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the August 12, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve accounts payable check numbers 242373 through 24400, including voided check numbers 24369, 24370, 24371 and 24372, and payment of payroll checks for department numbers 01 through 04 in the total amount of $105,007.28.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for August 31, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the Employee Handbook with the discussed edits.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the Conflict of Interest Policy.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the Gift Ban Policy with the added text of 'item not to exceed $75' in the eighth bullet of the Exceptions section.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve the updated 2025 Tax Levy.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Approve the updated 2026 Operating Budget.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "novak",
+      "votes": {}
+    },
+    {
+      "order": 9,
+      "description": "Approve 2026 Holiday Closings.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 10,
+      "description": "Convene in Executive Session to discuss two confidential employee matters.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 11,
+      "description": "Return to Regular Session.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "bohrer",
+      "votes": {}
+    }
+  ]
+}

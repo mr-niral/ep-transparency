@@ -1,0 +1,64 @@
+{
+  "meetingDate": "2025-12-09",
+  "meetingDateLabel": "December 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:44:38.137Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "treasurer",
+      "secretary",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "president",
+      "trustee",
+      "trustee",
+      "manager"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the November 11, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "novak",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve accounts payable check numbers 24480 through 24509, including voided check numbers 24484, and payment of payroll checks for department numbers 01 through 04 through November 22, 2025, in the total amount of $188,507.79.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for November 30, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the Artistic Lighting Outdoor proposal of $4,275 for exterior lighting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    }
+  ]
+}

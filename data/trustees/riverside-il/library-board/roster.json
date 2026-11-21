@@ -1,0 +1,207 @@
+{
+  "village": "riverside-il",
+  "board": "library-board",
+  "trustees": [
+    {
+      "id": "circo",
+      "displayName": "Circo",
+      "nameAliases": [
+        "President Ken Circo",
+        "Ken Circo"
+      ],
+      "role": "President",
+      "firstSeenDate": "2024-12-10",
+      "lastSeenDate": "2025-08-12",
+      "isCurrent": false
+    },
+    {
+      "id": "hack",
+      "displayName": "Hack",
+      "nameAliases": [
+        "Courtney Greve Hack",
+        "Vice President Courtney Greve Hack"
+      ],
+      "role": "Vice President",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2024-12-10",
+      "isCurrent": false
+    },
+    {
+      "id": "long",
+      "displayName": "Long",
+      "nameAliases": [
+        "Christine Long",
+        "Secretary Christine Long",
+        "Long"
+      ],
+      "role": "Secretary",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2024-12-10",
+      "isCurrent": false
+    },
+    {
+      "id": "birmingham",
+      "displayName": "Birmingham",
+      "nameAliases": [
+        "Jane Birmingham",
+        "Birmingham",
+        "Treasurer Jane Birmingham"
+      ],
+      "role": "Treasurer",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2024-12-10",
+      "isCurrent": false
+    },
+    {
+      "id": "bilow",
+      "displayName": "Bilow",
+      "nameAliases": [
+        "Bilow",
+        "Amy Bilow"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-05-13",
+      "lastSeenDate": "2025-08-12",
+      "isCurrent": false
+    },
+    {
+      "id": "bohrer",
+      "displayName": "Bohrer",
+      "nameAliases": [
+        "Tracy Bohrer",
+        "Bohrer"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-08-12",
+      "lastSeenDate": "2025-08-12",
+      "isCurrent": false
+    },
+    {
+      "id": "defauw",
+      "displayName": "DeFauw",
+      "nameAliases": [
+        "Nancy DeFauw",
+        "DeFauw",
+        "Trustee Nancy DeFauw"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-02-13",
+      "lastSeenDate": "2025-08-12",
+      "isCurrent": false
+    },
+    {
+      "id": "director",
+      "displayName": "Director",
+      "nameAliases": [
+        "Janice Foley, Library Director"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-03-12",
+      "lastSeenDate": "2024-03-12",
+      "isCurrent": false
+    },
+    {
+      "id": "hagins",
+      "displayName": "Hagins",
+      "nameAliases": [
+        "Michael Hagins",
+        "Trustee Michael Hagins",
+        "Hagins"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-02-13",
+      "lastSeenDate": "2024-12-10",
+      "isCurrent": false
+    },
+    {
+      "id": "loucks",
+      "displayName": "Loucks",
+      "nameAliases": [
+        "Dan Loucks",
+        "Trustee Daniel Loucks",
+        "Loucks",
+        "Daniel Loucks"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2025-08-12",
+      "isCurrent": false
+    },
+    {
+      "id": "manager",
+      "displayName": "Manager",
+      "nameAliases": [
+        "Ashley Vimont, Financial Services Manager"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-12-09",
+      "lastSeenDate": "2025-12-09",
+      "isCurrent": true
+    },
+    {
+      "id": "novak",
+      "displayName": "Novak",
+      "nameAliases": [
+        "Mickey Novak"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-09-09",
+      "lastSeenDate": "2025-09-09",
+      "isCurrent": false
+    },
+    {
+      "id": "president",
+      "displayName": "President",
+      "nameAliases": [
+        "Ken Circo, President",
+        "Courtney Greve Hack, Vice President"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2026-01-13",
+      "isCurrent": true
+    },
+    {
+      "id": "secretary",
+      "displayName": "Secretary",
+      "nameAliases": [
+        "Christine Long, Secretary",
+        "Daniel Loucks, Secretary",
+        "Dan Loucks, Secretary"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2026-01-13",
+      "isCurrent": true
+    },
+    {
+      "id": "treasurer",
+      "displayName": "Treasurer",
+      "nameAliases": [
+        "Jane Birmingham, Treasurer",
+        "Nancy DeFauw, Treasurer"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2026-01-13",
+      "isCurrent": true
+    },
+    {
+      "id": "trustee",
+      "displayName": "Trustee",
+      "nameAliases": [
+        "Michael Hagins, Trustee",
+        "Nancy DeFauw, Trustee",
+        "Daniel Loucks, Trustee",
+        "Amy Bilow, Trustee",
+        "Tracy Bohrer, Trustee",
+        "Mickey Novak, Trustee"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-01-09",
+      "lastSeenDate": "2026-01-13",
+      "isCurrent": true
+    }
+  ],
+  "lastUpdated": "2026-11-21T20:44:54.938Z"
+}

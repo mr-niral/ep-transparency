@@ -1,0 +1,83 @@
+{
+  "meetingDate": "2024-12-10",
+  "meetingDateLabel": "December 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:41:32.033Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "hack",
+      "long",
+      "birmingham",
+      "hagins",
+      "defauw",
+      "loucks"
+    ],
+    "remote": [],
+    "absent": [
+      "circo"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the November 12, 2024 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve payment of payroll checks for department numbers 01 through 04 and accounts payable check numbers 24021 through 24032, 24034 and 24035, 24042 through 24058, and 24060 and 24061 in the total amount of $196,008.06, which includes payroll through November 22, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for November 30, 2024, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve a 12-day sick time benefit for full time employees.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the vacation benefit for full time employees as described.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the FLOS Co-Sponsorship agreement with the discussed edits.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "birmingham",
+      "votes": {}
+    }
+  ]
+}

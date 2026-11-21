@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio'
-import { list } from '@vercel/blob'
+import { head } from '@vercel/blob'
 import type { Meeting } from '@/types'
 
 const BASE_URL = 'https://elmwoodparklibrary.org'
@@ -583,28 +583,29 @@ export async function scrapeRiversideLibraryMeetings(): Promise<Meeting[]> {
   // Try Vercel Blob first — kept current by GitHub Actions cron on the 15th
   if (process.env.BLOB_READ_WRITE_TOKEN) {
     try {
-      const { blobs } = await list({ prefix: RIVERSIDE_LIBRARY_BLOB_KEY, limit: 1 })
-      if (blobs.length > 0) {
-        const res = await fetch(blobs[0].url, {
-          headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
-          cache: 'no-store',
-        })
-        if (res.ok) {
-          const data = (await res.json()) as { year: number; month: number; minutesUrl: string }[]
-          if (Array.isArray(data) && data.length > 0) {
-            return data
-              .map(({ year, month, minutesUrl }) => ({
-                date: `${MONTH_NAMES[month - 1]} ${year}`,
-                parsedDate: secondTuesdayOf(year, month),
-                year,
-                minutesUrl,
-              }))
-              .sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
-          }
+      const blob = await head(RIVERSIDE_LIBRARY_BLOB_KEY)
+      const res = await fetch(blob.url, {
+        headers: {
+          Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`,
+          'Cache-Control': 'no-cache',
+        },
+        cache: 'no-store',
+      })
+      if (res.ok) {
+        const data = (await res.json()) as { year: number; month: number; minutesUrl: string }[]
+        if (Array.isArray(data) && data.length > 0) {
+          return data
+            .map(({ year, month, minutesUrl }) => ({
+              date: `${MONTH_NAMES[month - 1]} ${year}`,
+              parsedDate: secondTuesdayOf(year, month),
+              year,
+              minutesUrl,
+            }))
+            .sort((a, b) => b.parsedDate.localeCompare(a.parsedDate))
         }
       }
-    } catch (err) {
-      console.error('[scrapeRiversideLibraryMeetings] Blob error:', err)
+    } catch {
+      // head() throws if blob doesn't exist — fall through to hardcoded list
     }
   }
 

@@ -1,0 +1,50 @@
+{
+  "meetingDate": "2026-04-06",
+  "meetingDateLabel": "Village Board Meeting  - Apr 06, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:26:11.502Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve all items on the Consent Agenda including minutes, finance committee minutes, bills and vouchers, license applications, and various ordinances and resolutions.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "lollino",
+      "seconder": "conte",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "lollino": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve a request by Tina Stiefel, Coordinating Volunteer for Misericordia, to hold their annual Candy Day at various locations throughout the Village on April 24-25, 2026.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "zivojnovic",
+      "votes": {}
+    }
+  ]
+}

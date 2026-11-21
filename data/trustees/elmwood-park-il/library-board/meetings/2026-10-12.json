@@ -1,0 +1,233 @@
+{
+  "meetingDate": "2026-10-12",
+  "meetingDateLabel": "October 12 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:22:02.556Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "balundis",
+      "santangelo",
+      "monahan",
+      "fosco",
+      "segura",
+      "foran"
+    ],
+    "remote": [],
+    "absent": [
+      "narayan"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the Consent Agenda as presented, including minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements for September 2026.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Amend the agenda to move the item 'Appointment to the BGPP Committee' forward to immediately precede Committee Reports.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "foran",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the President's appointment of Trustee Foran to the BGPP committee.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "abstain",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Library's request to the Village of Elmwood Park for an advance of $211,350.00 to cover Library operating costs for November 2026, and authorize the Board President and Secretary to execute and submit the request.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "foran",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Adopt Resolution No. 2027-07 approving and ratifying a revised Memorandum of Agreement between Cook County Health and the Elmwood Park Public Library for the Naloxone Vending Machine, with updated effective and expiration dates, and authorizing the Board President to execute it.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "foran",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve hosting a NARCAN Training event by the Cook County Department of Public Health on Monday, October 19, 2026, from 5:15 p.m. to 6:15 p.m. (amended motion).",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve hosting a training event by the Cook County Department of Public Health on Monday, October 19, 2026, from 5:15 p.m. to 6:15 p.m.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "foran",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the Illinois Secretary of State hosting a Mobile DMV Event on Wednesday, November 11, 2026, from 10:00 a.m. to 2:00 p.m.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve the 2027 Board Meeting Schedule.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {}
+    },
+    {
+      "order": 10,
+      "description": "Approve the 2027 Staff Holiday Schedule.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 11,
+      "description": "Amend the Library's hours of operation to close at 9:00 PM on Mondays through Thursdays.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "fosco",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 12,
+      "description": "Amend the Board of Trustees' regular meeting start time from 5:30 p.m. to 6:00 p.m.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "fosco",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 13,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(1) for matters relating to the appointment, employment, compensation, discipline, performance, or dismissal of specific employees or legal counsel.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {}
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "meetingDate": "2025-02-11",
+  "meetingDateLabel": "February 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:41:52.234Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the January 14, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 24095 through 24122, check numbers 24132 through 24135 and check numbers 24037 through 24141 in the total amount of $138,096.76, which includes payroll through January 31, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for January 31, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the transfer of $25,000 from the Operating Fund to the Special Reserve Fund.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the updates to The SPOT policy, including the replacement of 'faultless in matters related to' with 'harmless for any and all claims for'.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the updates to the Confidentiality of Records / Patriot Act policy with edits suggested by Trustee Loucks, including retaining 'court order' language and moving the first two sentences of section 3 to section 2.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve the Illinois Public Library Annual Report (IPLAR) with the correction of President Circo's telephone number.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Approve the Holton Brothers' quote for masonry repair on the East Elevation for $23,700 and the East Chimney for $12,860, totaling $36,600 to be funded with the Working Cash Fund.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    }
+  ]
+}

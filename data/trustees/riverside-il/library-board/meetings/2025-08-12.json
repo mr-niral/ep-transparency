@@ -1,0 +1,120 @@
+{
+  "meetingDate": "2025-08-12",
+  "meetingDateLabel": "August 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:43:21.655Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "circo",
+      "loucks",
+      "defauw",
+      "bilow",
+      "bohrer"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the June 10, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve accounts payable check numbers 24287 through 24321 and payroll checks for department numbers 01 through 04 including payroll through June 28, 2025 in the total amount of $81,073.04.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for June 30, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve accounts payable check numbers 24322 through 24368 including voided checks #24348 and #24365 and payroll checks for department numbers 01 through 04 including payroll through July 26, 2025 in the total amount of $103,934.48.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the financial statements for July 31, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the Non-Discrimination and Anti-Harassment Policy with the discussed edits.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve the Fullmer Locksmith estimate of $4,295 to replace the side door lock.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Approve the 2025 Tax Levy.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "bohrer",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 9,
+      "description": "Approve the 2026 Pay Ranges.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "bilow",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 10,
+      "description": "Approve the updated Library Use policy with the discussed edits.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bohrer",
+      "votes": {}
+    }
+  ]
+}

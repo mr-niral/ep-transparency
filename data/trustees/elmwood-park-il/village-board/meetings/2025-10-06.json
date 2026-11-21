@@ -1,0 +1,53 @@
+{
+  "meetingDate": "2025-10-06",
+  "meetingDateLabel": "Village Board Meeting  - Oct 06, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:24:49.446Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": [
+      "kaminski"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Motion to excuse Trustee Kaminski from the evening's meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "lollino",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approval of all items on the consent agenda including meeting minutes, bills and vouchers for September 2025, various license applications, and multiple ordinances and resolutions.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "lollino",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approval of a raffle application submitted by Len Buonincontro, Project 22Nine President, to hold a 'Queen of Hearts' raffle at Caputo's Fresh Market in Elmwood Park from November 1, 2025 to January 31, 2026.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "volpe",
+      "votes": {}
+    }
+  ]
+}

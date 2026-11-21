@@ -1,0 +1,159 @@
+{
+  "meetingDate": "2026-06-08",
+  "meetingDateLabel": "June 8 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:20:20.275Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "balundis",
+      "santangelo",
+      "narayan",
+      "fosco",
+      "pesko",
+      "segura"
+    ],
+    "remote": [],
+    "absent": [
+      "monahan"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda as presented, including approval of May 2026 meeting minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "segura",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "absent",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the addition of a Professional Librarian Vacation section to the personnel manual granting four weeks of annual vacation upon hire to newly hired full-time MLS-required employees with three or more years of prior professional library experience.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "no",
+        "santangelo": "yes",
+        "monahan": "absent",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Authorize the Board President to request an amendment to the Intergovernmental Agreement between the Village of Elmwood Park and the Elmwood Park Public Library to extend the repayment date to February 2027.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "absent",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Adopt Resolution No. 2027-02, A Resolution Determining the Amount of Money Necessary to Be Levied for Library Purposes for Tax Year 2027.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "absent",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Adopt Resolution No. 2027-03, A Resolution Authorizing Intergovernmental and Interagency Library Card Agreements for calendar years 2026-2027.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "absent",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the closing of the Library on July 9, 2026, for Staff Development Day and participation in the Touch-a-Truck Event with the Village of Elmwood Park from 5:00 PM to 7:00 PM.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "absent",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(21) for the purpose of reviewing minutes of meetings lawfully closed under the Open Meetings Act, including the semi-annual review of Executive Session minutes.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "absent",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the release of executive session minutes from eleven specified sessions between March 2024 and December 2025, upon determination that the need for confidentiality no longer exists.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "balundis",
+      "votes": {}
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import * as cheerio from 'cheerio'
-import { list, put } from '@vercel/blob'
+import { head, put } from '@vercel/blob'
 import { createHash } from 'crypto'
 
 export const maxDuration = 60
@@ -78,19 +78,20 @@ function blobCacheKey(pdfUrl: string, structured: boolean): string {
 async function getFromCache(key: string): Promise<string | null> {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return null
   try {
-    const { blobs } = await list({ prefix: key, limit: 1 })
-    if (blobs.length > 0) {
-      const res = await fetch(blobs[0].url, {
-        headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
-        cache: 'no-store',
-      })
-      if (res.ok) {
-        console.log('[cache] hit:', key)
-        return await res.text()
-      }
+    const blob = await head(key)
+    const res = await fetch(blob.url, {
+      headers: {
+        Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`,
+        'Cache-Control': 'no-cache',
+      },
+      cache: 'no-store',
+    })
+    if (res.ok) {
+      console.log('[cache] hit:', key)
+      return await res.text()
     }
-  } catch (err) {
-    console.error('[cache] getFromCache error:', err)
+  } catch {
+    // head() throws if blob doesn't exist — treat as cache miss
   }
   return null
 }
@@ -101,7 +102,7 @@ async function saveToCache(key: string, content: string): Promise<string | null>
     return 'no token'
   }
   try {
-    const blob = await put(key, content, { access: 'private', addRandomSuffix: false })
+    const blob = await put(key, content, { access: 'private', addRandomSuffix: false, allowOverwrite: true })
     console.log('[cache] saved:', key, blob.url)
     return null
   } catch (err) {

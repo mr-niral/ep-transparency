@@ -1,0 +1,158 @@
+{
+  "meetingDate": "2024-09-09",
+  "meetingDateLabel": "September 9 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:16:04.115Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "narayan",
+      "monahan",
+      "fosco",
+      "balundis",
+      "santangelo",
+      "gordon"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the August 2024 Board Meeting Minutes, Payroll for September 2024, Medical Insurance for October 2024, acknowledgement of the Treasurer's Report, IMRF Check for October 2024, and General Fund Disbursements for September 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "narayan",
+      "seconder": "gordon",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Accept the Meeting Room Policy as presented in the board packet before being presented to the lawyer.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "monahan": "no",
+        "balundis": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Accept the 3D Printer Usage Policy as presented in the board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Accept the Exhibit Policy as presented in the board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Accept the Community Information and Bulletin Policy as presented in the board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Accept the Study Room Policy as presented in the board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Accept the Program Policy as presented in the board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "balundis": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the compensation increase of the Library Director.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {
+        "pesko": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "monahan": "no",
+        "balundis": "yes"
+      }
+    }
+  ]
+}

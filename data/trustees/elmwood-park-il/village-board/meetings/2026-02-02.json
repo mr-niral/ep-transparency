@@ -1,0 +1,72 @@
+{
+  "meetingDate": "2026-02-02",
+  "meetingDateLabel": "Village Board Meeting  - Feb 02, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:25:52.158Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve all items on the Consent Agenda including minutes, bills and vouchers, license applications, and various resolutions and ordinances.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Ratify President Saviano's approval of a raffle application submitted by Rich Mazzulla Sr, Italian American War Veterans Post #10, for a Queen of Hearts raffle to be held at Circle Tavern.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve a raffle application submitted by John Machonga, American Veterans Community Trust, to sell raffle tickets during the 2026 Taste of Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve a raffle application submitted by John Machonga, American Veterans Community Trust, to sell raffle tickets during their annual Veterans Dinner on November 10, 2026 at Donny G's.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve President Saviano's re-appointments to the West Suburban Special Recreation Association, with Ted Gruber as Regular Representative and Alan Schmidt as Alternate Representative.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "volpe",
+      "votes": {}
+    }
+  ]
+}

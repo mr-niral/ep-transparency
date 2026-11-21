@@ -1,0 +1,61 @@
+{
+  "meetingDate": "2026-09-14",
+  "meetingDateLabel": "Village Board Meeting  - Sep 14, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:29:15.710Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "volpe",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": [
+      "conte",
+      "lollino"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Motion to excuse the absence of Trustees Lollino and Conte.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "zivojnovic",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approval of all items on the Consent Agenda, including meeting minutes, finance committee minutes, ratification of August 2026 bills and vouchers totaling $5,492,475.24, various license applications, and multiple resolutions and ordinances.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "estradavolpe",
+      "votes": {
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "sargent": "yes",
+        "kaminski": "yes",
+        "saviano": "yes",
+        "lollino": "absent",
+        "conte": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approval of a raffle application submitted by Jan Walch, Director of Philanthropy for Aging Care Connections, for their annual fundraiser at Elmcrest Banquets on October 3, 2026.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    }
+  ]
+}

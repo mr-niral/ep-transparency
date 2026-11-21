@@ -1,0 +1,112 @@
+{
+  "meetingDate": "2026-08-19",
+  "meetingDateLabel": "Aug 19, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:37:59.759Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "ranallo",
+      "doyle",
+      "loughnane",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session to discuss employment matters and litigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to open session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the purchase of Ellevation Essential from Curriculum Associates, LLC for $28,945.00.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the purchase of a Daiken Compressor at Elm Middle School from Midwest Mechanical for $30,996.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "volpe",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Consent Agenda as presented, including minutes, staffing approvals, financial reports, and bills lists.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "volpe",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

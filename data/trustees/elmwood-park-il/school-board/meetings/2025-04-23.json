@@ -1,0 +1,239 @@
+{
+  "meetingDate": "2025-04-23",
+  "meetingDateLabel": "Apr 23, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:32:41.125Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "ranallo",
+      "rivera",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "capraro"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Enter into Executive Session to discuss employment matters and litigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the High School Assistant Principal Administrator Agreement for Angela Andrews, pending certification.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Superintendent's Contract for Dr. Leah Gauthier from July 1, 2025 to June 30, 2030.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve Science curriculum instructional materials for grades K-5 with TCI at $199,629.15 and grades 6-8 with SAVVAS at $155,847.20.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "shipinski",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve Social Studies curriculum instructional materials for grades K-8 with TCI at $229,955.25.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the High School Benchmark Assessment Platform adoption for grades 9-12 with Horizon Education at $9,750.00.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the annual PowerSchool Subscription Renewal for the 2025-2026 School Year at $67,394.83.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve the proposed Band/Choir Colorado Trip.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 10,
+      "description": "Remove Report 9.6 Approval of the Financial Reports from the Consent Agenda.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 11,
+      "description": "Approve the revised Consent Agenda with the removal of Report 9.6 Approval of the Financial Reports.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "volpe",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 12,
+      "description": "Approve the Financial Reports as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "abstain",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

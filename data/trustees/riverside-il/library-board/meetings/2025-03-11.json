@@ -1,0 +1,61 @@
+{
+  "meetingDate": "2025-03-11",
+  "meetingDateLabel": "March 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:42:04.980Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the February 11, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 24123 through 24131 and check numbers 24142 through 24167 in the total amount of $83,085.94, which includes payroll through February 28, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for February 28, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the updated Library Board of Trustees bylaws.",
+      "outcome": "tabled",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "meetingDate": "2024-02-12",
+  "meetingDateLabel": "February 12 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:14:11.452Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "vicepresident",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "president"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the consent agenda including January 2024 Board Meeting Minutes, Payroll for March 2024, Medical Insurance for March 2024, Treasurer's report acknowledgement, IMRF check for February 2024, General Fund Disbursements February 2024, and the 2022-23 Audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {}
+    }
+  ]
+}

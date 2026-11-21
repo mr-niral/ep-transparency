@@ -1,0 +1,95 @@
+{
+  "meetingDate": "2025-01-08",
+  "meetingDateLabel": "Jan 8, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:31:18.162Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "capraro",
+      "ranallo",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "rivera"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the agenda as amended.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Remove Report 3.1 Action on Settlement Agreement and Release Action Item off the Agenda.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Convene to Executive Session to discuss employment, compensation, discipline, performance, or dismissal of specific employees; student discipline issues; collective negotiating matters; and probable or imminent litigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Adjourn the Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "volpe",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

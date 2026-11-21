@@ -1,0 +1,122 @@
+{
+  "meetingDate": "2024-05-14",
+  "meetingDateLabel": "May 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:39:35.643Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "treasurer",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the April 9, 2024 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 23763 through 23795, in the total amount of $94,248.11, which includes payroll through April 26, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for April 30, 2024, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hagins",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the amended CSAGSI amendment, deleting 'adequate and appropriate' from Section V, Item 2.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the special event use application to use the Library on September 14, 2024 for a wedding ceremony.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the following changes to the summer Library Board meeting schedule: June Board Meeting start time 7 pm; July Board Meeting cancelled due to lack of a quorum; August Board Meeting start time 7 pm.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Elect Ken Circo as President for the 2024-2025 year.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Elect Courtney Greve Hack as Vice President for the 2024-2025 year.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 9,
+      "description": "Elect Jane Birmingham as Treasurer for the 2024-2025 year.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 10,
+      "description": "Elect Christine Long as Secretary for the 2024-2025 year.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "meetingDate": "2024-01-08",
+  "meetingDateLabel": "January 8 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:14:05.599Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "monahan",
+      "fosco"
+    ],
+    "remote": [],
+    "absent": [
+      "gordon"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the consent agenda including December 2023 Board Meeting Minutes, Payroll for February 2024, Medical Insurance for February 2024, Treasurer's report, IMRF check for January 2024, and General Fund Disbursements January 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Un-table the hiring of an architect/planner.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "monahan",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Bring two architects/planners for consideration.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Adjourn to Executive Session to discuss personal matters.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "monahan",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Return from Executive Session and resume the board meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {}
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "meetingDate": "2025-05-07",
+  "meetingDateLabel": "May 7, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:33:04.611Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "capraro",
+      "ranallo",
+      "rivera",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the PE Waiver for Career Pathways for the 2025-26 through 2029-30 School Years.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "no",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the Administrator's Contract for Michael Goodman as Assistant Principal at Elm Middle School for the 2025-2026 School Year.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Administrator's Contract for Alyssa Petrino as Assistant Principal at John Mills School for the 2025-2026 School Year.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Administrator's Contract for Michaela Vasey as Dean of Students at Elmwood Park High School for the 2025-2026 School Year.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Settlement Agreement and Release between Jane Doe and the Board of Education.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the Consent Agenda as revised, including open and closed session minutes, personnel report, financial reports, and student discipline report.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "capraro",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Remove Report 7.2 Student Handbooks - Second Reading from the Consent Agenda and table it.",
+      "outcome": "tabled",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Adjourn the previous board to Sine Die.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "volpe",
+      "votes": {}
+    },
+    {
+      "order": 9,
+      "description": "Close nominations and elect Frank Parisi as Board President by acclamation.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "silver",
+      "votes": {}
+    },
+    {
+      "order": 10,
+      "description": "Close nominations and elect Peter Volpe as Board Vice President by acclamation.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "parisi",
+      "seconder": "shipinski",
+      "votes": {}
+    },
+    {
+      "order": 11,
+      "description": "Close nominations and elect Jennifer Ranallo as Board Secretary by acclamation.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "loughnane",
+      "votes": {}
+    },
+    {
+      "order": 12,
+      "description": "Approve the School Board Meeting Dates for the 2025-26 School Year.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "silver",
+      "votes": {}
+    }
+  ]
+}

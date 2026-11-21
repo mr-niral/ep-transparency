@@ -1,0 +1,131 @@
+{
+  "meetingDate": "2024-04-08",
+  "meetingDateLabel": "April 8 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:14:31.102Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "narayan",
+      "monahan"
+    ],
+    "remote": [],
+    "absent": [
+      "fosco",
+      "balundis",
+      "gordon"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve Trustee Santangelo to act as secretary for the April 2024 meeting.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "fosco": "absent",
+        "balundis": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the March 2024 Consent Agenda.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "fosco": "absent",
+        "balundis": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Table the approval of the BGPP policies until the May Board Meeting.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "fosco": "absent",
+        "balundis": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve closing the library for Staff Day on May 31, 2024.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "fosco": "absent",
+        "balundis": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Adjourn to Executive Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "fosco": "absent",
+        "balundis": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Return from Executive Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "monahan": "yes",
+        "fosco": "absent",
+        "balundis": "absent",
+        "gordon": "absent"
+      }
+    }
+  ]
+}

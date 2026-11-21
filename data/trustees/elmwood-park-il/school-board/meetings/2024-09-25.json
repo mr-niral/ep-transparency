@@ -1,0 +1,238 @@
+{
+  "meetingDate": "2024-09-25",
+  "meetingDateLabel": "Sept 25, 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:30:03.538Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "capraro",
+      "ranallo",
+      "rivera",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session for the purpose of discussing employment, student disciplinary cases, and litigation",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and Reconvene to Open Session",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Budget for the 2024-2025 School Year",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "absent",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve Susan Capraro's Nursing Service Stipend not to exceed $2,000",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "absent",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Expel Student #2425002 from Elmwood Park Community Unit School District 401 for the period from September 25, 2024 through September 24, 2026 and approve the written expulsion decision",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "absent",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the consent agenda with the omission of Report 11.5 Administrator and Teacher Salary and Benefits Report Approval",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "rivera",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "absent",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Table the Administrator and Teacher Salary and Benefits Report",
+      "outcome": "tabled",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "volpe",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "absent",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Convene to Executive Session for the purpose of discussing employment, student disciplinary cases, and litigation (October 1, 2024 Special Meeting)",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Adjourn Executive Session and Reconvene to Open Session (October 1, 2024 Special Meeting)",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 10,
+      "description": "Expel student #2425003 from Elmwood Park Community Unit School District 401 with outside placement educational service for two calendar years, from October 1, 2024 through September 30, 2026 and approve the written expulsion decision",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "rivera",
+      "seconder": "volpe",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 11,
+      "description": "Uphold the 10-day suspension of Student A and approve the written decision to that effect",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "rivera",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 12,
+      "description": "Approve the 2024 Administrator and Teacher Salary and Benefits Report",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

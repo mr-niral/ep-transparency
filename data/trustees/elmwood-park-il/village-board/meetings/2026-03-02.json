@@ -1,0 +1,52 @@
+{
+  "meetingDate": "2026-03-02",
+  "meetingDateLabel": "Village Board Meeting  - Mar 02, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:26:02.539Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve all items on the Consent Agenda, including minutes, bills and vouchers, license applications, and various resolutions and ordinances.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Receive and File the recommendation of approval from the Plan, Zoning and Development Commission for the facade Application submitted by Wiklanski's Bakery at 7717-19 W Belmont Ave.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "volpe",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve a Resolution Authorizing the Execution of a Facade Improvement Program Agreement between the Village of Elmwood Park and Waclaw Wiklanski.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "zivojnovic",
+      "votes": {}
+    }
+  ]
+}

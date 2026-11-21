@@ -1,0 +1,177 @@
+{
+  "meetingDate": "2025-05-28",
+  "meetingDateLabel": "May 28, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:33:26.758Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "ranallo",
+      "doyle",
+      "shipinski"
+    ],
+    "remote": [],
+    "absent": [
+      "loughnane",
+      "silver"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session for the purpose of discussing employment, student disciplinary cases, litigation, and collective negotiating matters.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "doyle",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn the Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "volpe",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the PSRP Council Agreement 2025-2029 as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Administrator's Contract for Elm Middle School Dean of Students to Rikki Schullo for the 2025-26 School Year, pending certification.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "volpe",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Appoint Dr. Mark Orszula as the Board Treasurer Officer starting July 1, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "doyle",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the Food Service Contract for 2025-26 School Year to Quest Food Management as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "shipinski",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the Transportation Services Agreement with Sams Transportation I, Inc., effective May 28, 2025 until June 30, 2028.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Terminate the employment of support staff employee Sabrina Kilpatrick, for cause, retroactively on May 2, 2025.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "shipinski",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve the Consent Agenda as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "loughnane",
+      "seconder": "ranallo",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "meetingDate": "2025-10-14",
+  "meetingDateLabel": "October 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:44:01.575Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "president"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the September 9, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "novak",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve accounts payable check numbers 24401 through 24436, including voided check numbers 24433, and payment of payroll checks for department numbers 01 through 04, including payroll through September 20, 2025, in the total amount of $89,827.22.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for September 30, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the revised 2025 Tax Levy.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the revised 2026 Operating Budget.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "bohrer",
+      "seconder": "novak",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the Special Event application for the wedding vow exchange on November 22, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "novak",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Convene in Executive Session to discuss the follow-up from last month's confidential employee matter.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Return to Regular Session at 8:43 pm.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "novak",
+      "seconder": "bohrer",
+      "votes": {}
+    }
+  ]
+}

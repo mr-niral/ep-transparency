@@ -1,0 +1,122 @@
+{
+  "meetingDate": "2026-09-14",
+  "meetingDateLabel": "September 14 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:21:30.216Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "balundis",
+      "santangelo",
+      "monahan",
+      "narayan",
+      "fosco",
+      "segura",
+      "foran"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the Consent Agenda as presented, including August 2026 board minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the Library's request to the Village of Elmwood Park for an advance of $210,480.00 to cover Library operating costs for October 2026, and authorize the Board President and Secretary to execute and submit the request.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Adopt Resolution No. 2027-06 dedicating the Gaming Lounge at the Elmwood Park Public Library in honor of former Board President and Trustee Chris Pesko in recognition of his 22 years of service.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "foran",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the appointment of Trustee Fosco as Vice President of the Board.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "abstain",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the staff promotions effective August 31, 2026, of Gregory McClain, Kate Moroney, and Yuli Melnick to Adult Services Librarian.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "foran",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Affirm the presence of the Naloxone (Narcan) vending machine in the Elmwood Park Public Library and direct legal counsel to place formal ratification of the Cook County Memorandum of Agreement on the agenda for the next regular Board meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "fosco",
+      "votes": {}
+    }
+  ]
+}

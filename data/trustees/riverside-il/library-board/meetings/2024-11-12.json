@@ -1,0 +1,123 @@
+{
+  "meetingDate": "2024-11-12",
+  "meetingDateLabel": "November 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:41:15.108Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "trustee"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the October 8, 2024 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 23976 through 23982, 23984 through 24012, and 24014 through 24020 in the total amount of $91,597.75, which includes payroll through October 25, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for October 31, 2024, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the Purchasing policy.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the Photography and Videography policy with the discussed edits.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the Library Board of Trustees meeting dates for 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve the Per Capita Grant application.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Approve the special event use application to use the Library on December 21, 2024 for a wedding celebration.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 9,
+      "description": "Convene in Executive Session to discuss the appointment, employment, compensation, discipline, performance or dismissal of specific employees of the public body (5 ILCS 120/2(c)(1)).",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 10,
+      "description": "Approve an increase to the Library Director's annual compensation of 3.60%, to take effect January 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "hack",
+      "votes": {}
+    }
+  ]
+}

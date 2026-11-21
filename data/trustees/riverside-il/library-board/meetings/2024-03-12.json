@@ -1,0 +1,74 @@
+{
+  "meetingDate": "2024-03-12",
+  "meetingDateLabel": "March 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:38:55.297Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "treasurer",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "president",
+      "director"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the February 13, 2024 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "long",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the payment of payroll checks for department numbers 01 through 04 and accounts payable check numbers 23689 through 23729, in the total amount of $98,957.13, which includes payroll through February 16, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for February 13, 2024, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hagins",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the quote from Johnson Floor Company, Inc. of $20,004 for replacing the carpet in the Great Room, AV Room and the book sale room, on the condition that the contract, including terms and conditions, will be provided and signed prior to the project start.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the closure of the Library on Friday, April 26, 2024 for an all staff in-service.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "long",
+      "seconder": "birmingham",
+      "votes": {}
+    }
+  ]
+}

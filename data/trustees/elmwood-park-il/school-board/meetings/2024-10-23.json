@@ -1,0 +1,257 @@
+{
+  "meetingDate": "2024-10-23",
+  "meetingDateLabel": "Oct 23, 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:30:47.906Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "capraro",
+      "ranallo",
+      "shipinski"
+    ],
+    "remote": [],
+    "absent": [
+      "rivera",
+      "silver"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session to discuss employment matters, student disciplinary cases, and imminent litigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Virtual Enterprises International (VEI) Trip to Saginaw, Michigan.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Virtual Enterprises International (VEI) Trip to New York City, New York.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Theatre Fest Trip at the University of Illinois Urbana-Champaign.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the Snowball CGTI Leadership Conference at Bloomington-Normal, Illinois.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "volpe",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "no",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the Model UN Conference in Chicago.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "shipinski",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the DECA International Competition Trip to Orlando, Florida.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve the School Maintenance Grant for SY 24-25.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 10,
+      "description": "Uphold the 4-day suspension of Student A and approve the written decision to that effect.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 11,
+      "description": "Uphold the 4-day suspension of Student B and approve the written decision to that effect.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 12,
+      "description": "Approve the Resolution Authorizing Notice to Remedy to Dennis Keizer.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 13,
+      "description": "Approve the Consent Agenda as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "volpe",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "abstain",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

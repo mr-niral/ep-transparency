@@ -1,0 +1,148 @@
+{
+  "meetingDate": "2025-10-15",
+  "meetingDateLabel": "Oct 15, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:34:59.467Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "ranallo",
+      "doyle",
+      "loughnane",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session to discuss appointment, employment, compensation, discipline, performance, or dismissal of specific employees; student disciplinary cases; and litigation that is probable or imminent.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "volpe",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn the Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Remove Report 9.1 Expulsion #2526002 from the Board Agenda.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "volpe",
+      "votes": {
+        "doyle": "no",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Resolution Authorizing Disposal of Surplus Personal Property as presented.",
+      "outcome": "failed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "parisi",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "no",
+        "ranallo": "yes",
+        "shipinski": "no",
+        "silver": "no",
+        "volpe": "no"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Air Conditioning at Elm Middle School and Elmwood Park High School with Midwest Mechanical for $947,700.00.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the Cooling Tower and Hot Water Heater at Elm Middle School and Elmwood Park High School with Midwest Mechanical for $806,604.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the Consent Agenda as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "volpe",
+      "seconder": "ranallo",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

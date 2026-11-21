@@ -1,0 +1,72 @@
+{
+  "meetingDate": "2025-04-08",
+  "meetingDateLabel": "April 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:42:20.693Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the March 11, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 24168 through 24188 and check numbers 24194 through 24212, in the total amount of $98,176.25 which includes payroll through March 28, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for March 31, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the updates to the Library Board of Trustee bylaws.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the exterior sign design submitted by Chicagold Sign Co. with the noted changes.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    }
+  ]
+}

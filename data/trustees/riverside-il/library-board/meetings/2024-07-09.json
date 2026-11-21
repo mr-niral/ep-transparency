@@ -1,0 +1,51 @@
+{
+  "meetingDate": "2024-07-09",
+  "meetingDateLabel": "July 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:40:11.750Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the June 11, 2024 regular meeting",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve payment of payroll checks for department numbers 01 through 04 and accounts payable check numbers 23830 through 23859 and 23861 through 23865 in the total amount of $118,974.53 including payroll through June 21, 2024",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for June 30, 2024, subject to audit",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "meetingDate": "2025-02-03",
+  "meetingDateLabel": "February 3 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:16:53.569Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "monahan",
+      "balundis"
+    ],
+    "remote": [],
+    "absent": [
+      "gordon",
+      "fosco",
+      "narayan"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the consent agenda including January 2025 Board Meeting Minutes, February 2025 Payroll, March 2025 Medical Insurance, Treasurer's report, March 2025 IMRF check, and January 2025 General Fund Disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {
+        "monahan": "yes",
+        "narayan": "absent",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "absent",
+        "pesko": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Hire William Carlton Foellmer, Architect, for an expenditure not to exceed $3,000 for the initial phase of the library improvement project investigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "monahan": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "absent",
+        "pesko": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Hire Brandon Covarrubias, Sarah Mahnke, Mya Calderon, Genesis Rocks, Katie Dunne, Donna Baalke, and Joe Chippetta for various part-time positions.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {
+        "monahan": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "absent",
+        "pesko": "yes",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Retire to Executive Session to consider the minutes of meetings lawfully closed under this act pursuant to 5/ILCS 120/2(c)21.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "monahan": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "absent",
+        "pesko": "yes",
+        "gordon": "absent"
+      }
+    }
+  ]
+}

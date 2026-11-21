@@ -1,0 +1,92 @@
+{
+  "meetingDate": "2025-05-05",
+  "meetingDateLabel": "Village Board Meeting  - May 05, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:23:31.552Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "conte",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve all items on the consent agenda including minutes, bills and vouchers, license applications, and various ordinances.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve two raffle applications submitted by John Machonga, Treasurer American Veteran Community Trust to hold raffles during the Taste of Elmwood Park and at Donny G's Ristorante.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve a raffle application submitted by Sandra Sugg, Secretary Grand Chamber by O'Hare to hold a 'Split the Pot' raffle at the Circle Car Show June 13, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Issue a Proclamation for 'Safe Boating Week' in the Village of Elmwood Park, May 17-23, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "volpe",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Issue a Proclamation for 'Motorcycle Awareness Month' in the Village of Elmwood Park for the month of May 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve a recommendation from the Traffic & Safety Commission to install two 'Stop' signs with flashing lights East & West bound on Westwood Drive at 78th Court with street striping if needed.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "estradavolpe",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve a recommendation from the Traffic & Safety Commission to increase the '2-Hour' Diagonal Parking spots on 78th Court at Belmont from two spots to four spots and change time on signage to read 'Between 12pm-10pm'.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    }
+  ]
+}

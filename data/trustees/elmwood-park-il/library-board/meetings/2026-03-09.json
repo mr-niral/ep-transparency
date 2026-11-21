@@ -1,0 +1,40 @@
+{
+  "meetingDate": "2026-03-09",
+  "meetingDateLabel": "March 9 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:19:27.128Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "monahan",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "pesko",
+      "segura",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda, including approval of February 9, 2026 Board Meeting Minutes, February 2026 Payroll, March 2026 Medical Insurance, Treasurer's Report, February 2026 IMRF Payment, and February 2026 General Fund Disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

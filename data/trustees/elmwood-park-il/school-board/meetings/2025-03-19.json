@@ -1,0 +1,149 @@
+{
+  "meetingDate": "2025-03-19",
+  "meetingDateLabel": "Mar 19, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:31:57.078Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "capraro",
+      "ranallo",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe",
+      "rivera"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session to discuss employment, compensation, discipline, performance, or dismissal of specific employees and collective negotiating matters.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn the Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the change from HMOI to Blue Advantage HMO insurance.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "shipinski",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the PE Waiver for Career Pathways for the 2025-26 through 2029-30 School Years for grades 6-12.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "silver",
+      "seconder": "ranallo",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Establish Dr. Leah Gauthier's salary for the 2025-2026 school year at 4% of her 2024-2025 salary.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "capraro",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the Administrator Agreements for multiple named administrators.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve the Consent Agenda as presented, including minutes, financial reports, personnel report, IHSA membership, and student discipline report.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "shipinski",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    }
+  ]
+}

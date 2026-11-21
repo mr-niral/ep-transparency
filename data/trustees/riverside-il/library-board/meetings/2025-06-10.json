@@ -1,0 +1,80 @@
+{
+  "meetingDate": "2025-06-10",
+  "meetingDateLabel": "June 2025",
+  "status": "not_available",
+  "reason": "Roll call size changed from 7 to 4 — too large a change to process automatically.",
+  "extractedAt": "2026-11-21T20:42:57.380Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the May 13, 2025 Sine Die meeting",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the minutes of the May 13, 2025 regular meeting",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve accounts payable check numbers 24251 through 24286 and payroll through May 31, 2025 in the total amount of $99,571.73",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the financial statements for May 31, 2025, subject to audit",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the updated Meeting Room Policy and Waiver with the discussed edits",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "circo",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the updated Non-Resident Library Card Fee Policy",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    }
+  ]
+}

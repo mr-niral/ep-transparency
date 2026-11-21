@@ -1,0 +1,59 @@
+{
+  "meetingDate": "2025-06-09",
+  "meetingDateLabel": "June 9 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:17:35.816Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "monahan",
+      "narayan",
+      "segura"
+    ],
+    "remote": [],
+    "absent": [
+      "fosco"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda, including approval of May 2025 Board Meeting Minutes, June 2025 Payroll, July 2025 Medical Insurance, Treasurer's Report, May 2025 IMRF Payment, and May 2025 General Fund Disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "pesko": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Accept Resolution 2025-01 for Adopting Prevailing Wage Rates.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes"
+      }
+    }
+  ]
+}

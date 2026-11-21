@@ -1,0 +1,42 @@
+{
+  "meetingDate": "2025-04-07",
+  "meetingDateLabel": "Village Board Meeting  - Apr 07, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:23:13.746Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "conte",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the consent agenda including meeting minutes, finance committee minutes, bills and vouchers for March 2025, license applications, and numerous ordinances and resolutions.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Advise and Consent to President Saviano's committee and commission re-appointments across Plan Zoning and Development Commission, Board of Fire and Police Commissioners, Safety Commission, Senior Advisory Board, Village Ethics Commission, and Youth Commission.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "zivojnovic",
+      "votes": {}
+    }
+  ]
+}

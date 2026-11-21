@@ -1,0 +1,43 @@
+{
+  "meetingDate": "2025-03-10",
+  "meetingDateLabel": "March 10 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:17:01.735Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "monahan",
+      "fosco"
+    ],
+    "remote": [],
+    "absent": [
+      "gordon",
+      "narayan"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the consent agenda including February 2025 Board Meeting Minutes with adjournment motion correction, Payroll for March 2025, Medical Insurance for April 2025, Treasurer's report acknowledgement, IMRF check for April 2025, and General Fund Disbursements February 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approval to hire William Carlton Foellmer, Architect, for Phase 1 of the library improvement project at a cost not to exceed $5,500.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {}
+    }
+  ]
+}

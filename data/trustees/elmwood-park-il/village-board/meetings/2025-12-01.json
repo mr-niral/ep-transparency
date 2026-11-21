@@ -1,0 +1,82 @@
+{
+  "meetingDate": "2025-12-01",
+  "meetingDateLabel": "Village Board Meeting Continuation - Dec 01, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:25:21.171Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve items on the consent agenda including meeting minutes, finance committee minutes, bills and vouchers for November 2025, license applications, and several ordinances and resolutions.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "lollino",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Receive and file a recommendation from the Plan, Zone and Development Commission to approve a facade improvement application submitted by Caroline's Hair Studio at 12 Conti Parkway.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve a Resolution Authorizing the Execution of a Facade Improvement Program Agreement between the Village of Elmwood Park and Kujtim Rumani (Caroline's Hair Studio).",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "volpe",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Recess the regular board meeting until the Public Hearing for the tax levy commences at 7:00pm.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conti",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Close the public hearing held pursuant to the Truth in Taxation Act.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve an Ordinance for the Levy and Assessment of Taxes for the Fiscal Year beginning May 1, 2025 and ending April 30, 2026 of the Village of Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    }
+  ]
+}

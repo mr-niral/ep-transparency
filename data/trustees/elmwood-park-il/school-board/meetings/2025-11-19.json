@@ -1,0 +1,113 @@
+{
+  "meetingDate": "2025-11-19",
+  "meetingDateLabel": "Nov 19, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:35:30.904Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "ranallo",
+      "doyle",
+      "loughnane",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session to discuss employment, student disciplinary cases, security procedures, and safety matters.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "doyle",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Model UN Conference at the Hyatt Regency in Chicago, Illinois.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the School Maintenance Grant as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "loughnane",
+      "seconder": "ranallo",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the Consent Agenda as presented, including minutes, board meeting schedule change, financial reports, personnel report, and student discipline report.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "ranallo",
+      "seconder": "silver",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "yes",
+        "volpe": "absent"
+      }
+    }
+  ]
+}

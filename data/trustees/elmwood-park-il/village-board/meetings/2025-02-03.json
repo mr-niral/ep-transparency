@@ -1,0 +1,82 @@
+{
+  "meetingDate": "2025-02-03",
+  "meetingDateLabel": "Village Board Meeting - Feb 03, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:22:45.562Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "conte",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the consent agenda items including minutes, finance committee recommendations, bills and vouchers for January 2025, license applications, and several ordinances.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "lollino",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Receive and file a recommendation to approve a text amendment application amending Section 1408 of the Elmwood Park Zoning Code submitted by Marissa Massey, Secretary of the Plan, Zoning and Development Commission.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the Village President's Trustee appointments as listed, including appointed positions, liaisons, and committee assignments.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Advise and consent to the Village President's appointments including James Parenti to the Police Pension Board and Fire Pension Board and WSSRA Board representatives.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve an Ordinance Amending Subsection 1408.01 of the Zoning Ordinance of the Village of Elmwood Park regarding Off-Street Parking Requirements in Certain B-1 Districts.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve a recommendation from the Traffic and Safety Commission to install Stop signs east and west bound Cortland Street at 75th Ct.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    }
+  ]
+}

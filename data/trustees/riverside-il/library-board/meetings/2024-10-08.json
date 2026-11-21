@@ -1,0 +1,102 @@
+{
+  "meetingDate": "2024-10-08",
+  "meetingDateLabel": "October 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:40:54.239Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the September 10, 2024 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve payment of payroll checks for department numbers 01 through 04 and accounts payable check numbers 23866 through 23937, 23939 through 23945, 23948 through 23963 and 23965 through 23975 in the total amount of $78,372.31, which includes payroll through September 27, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for September 30, 2024, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the 2025 Operating Budget.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve a staff in-service for January 2025, during which the Library will be closed.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Convene in Executive Session to discuss the minutes of meetings lawfully closed under the Open Meetings Act, whether for purposes of approval or semi-annual review, as mandated by Section 2.06 (5 ILCS 120/2(c)(21)).",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve the executive session minutes of April 9, 2024 with the noted modification.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Release to the public the executive session minutes of April 9, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "hack",
+      "votes": {}
+    }
+  ]
+}

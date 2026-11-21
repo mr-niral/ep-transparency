@@ -1,0 +1,53 @@
+{
+  "meetingDate": "2024-06-10",
+  "meetingDateLabel": "June 10 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:15:15.446Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "narayan",
+      "monahan",
+      "balundis",
+      "fosco"
+    ],
+    "remote": [],
+    "absent": [
+      "gordon"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the June 2024 Consent Agenda",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Hiring of Part-time Circulation Assistant/Shelver Esmeralda Martinez",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Hiring of Summer Intern Sara Coleman",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {}
+    }
+  ]
+}

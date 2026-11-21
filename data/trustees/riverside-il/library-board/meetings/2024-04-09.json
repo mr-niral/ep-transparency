@@ -1,0 +1,103 @@
+{
+  "meetingDate": "2024-04-09",
+  "meetingDateLabel": "April 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:39:14.658Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "treasurer",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "secretary"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the March 12, 2024 regular meeting",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 23730 through 23762, in the total amount of $110,018.18, which includes payroll through March 29, 2024",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for March 12, 2024, subject to audit",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the annual resolution authorizing the issuing of library cards to nonresidents",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Increase sick leave accrual from 6 days per year to 12 days per year for full time employees",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "birmingham",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Convene in Executive Session to discuss the minutes of meetings lawfully closed under the Open Meetings Act, whether for purposes of approval by the body or semi-annual review as mandated by Section 2.06 (5 ILCS 120/2(c)(21))",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve the executive session minutes of October 10, 2023 and November 14, 2023",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Release to the public the executive session minutes of October 10, 2023 and November 14, 2023, while all other executive session minutes remain confidential",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    }
+  ]
+}

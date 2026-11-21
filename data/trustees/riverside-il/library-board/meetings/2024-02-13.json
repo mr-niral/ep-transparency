@@ -1,0 +1,82 @@
+{
+  "meetingDate": "2024-02-13",
+  "meetingDateLabel": "February 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:38:36.250Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "treasurer",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the January 9, 2024 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "long",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the payment of payroll checks for department numbers 01 through 04, and accounts payable check numbers 23647 through 23688, in the total amount of $148,997.37, which includes payroll through January 19, 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "hagins",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for January 9, 2024, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the quote from ColorPro Painters / Don Schuetz Contracting of $3,840 for painting in the Great Room to cover water damage resulting from a masonry leak.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the 2023 Illinois Public Library Report (IPLAR) report with the noted edits / updates.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "birmingham",
+      "seconder": "long",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the proposed change to the Library's summer hours of closing one hour earlier on Mondays, Tuesdays, Wednesdays and Thursdays.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    }
+  ]
+}

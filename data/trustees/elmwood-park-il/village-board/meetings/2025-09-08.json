@@ -1,0 +1,83 @@
+{
+  "meetingDate": "2025-09-08",
+  "meetingDateLabel": "Village Board Meeting  - Sep 08, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:24:37.778Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": [
+      "lollino"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Motion to excuse Trustee Lollino from this evening's meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Motion to approve all items on the consent agenda, including minutes, bills and vouchers, license applications, and various ordinances and resolutions.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Motion to grant permission to Shari Mallard, Girl Scouts of America, for Fall product sales September-October 2025 and Cookie sales December 2025 to January 15, 2026 at various locations throughout the Village.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Motion to approve a raffle application submitted by Kevin Kumar, Aging Care Connections, for their fundraiser September 19th at Elmcrest Banquets.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Motion to receive and file a recommendation to approve the facade improvement application submitted by Nikki Mahon for Turning Point Studio.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Motion to approve a Resolution Authorizing the Execution of a Facade Improvement Program Agreement between the Village of Elmwood Park and Nicole Wilk Mahon.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    }
+  ]
+}

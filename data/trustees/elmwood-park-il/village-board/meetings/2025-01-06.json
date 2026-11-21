@@ -1,0 +1,52 @@
+{
+  "meetingDate": "2025-01-06",
+  "meetingDateLabel": "Village Board Meeting - Jan 06, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:22:30.168Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "conte",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the consent agenda items including minutes, finance committee minutes, bills and vouchers, license applications, ordinances, and resolutions.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "lollino",
+      "seconder": "estradavolpe",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve a raffle application submitted by James Caporusso, Leyden Township Community Foundation Director, for their Wild Game Dinner fundraiser at Elmcrest Banquets on January 20, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve a raffle application submitted by Katie Muellner, Grand Chamber by O'Hare President, for their Installation Dinner fundraiser at Elmcrest Banquets on January 31, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    }
+  ]
+}

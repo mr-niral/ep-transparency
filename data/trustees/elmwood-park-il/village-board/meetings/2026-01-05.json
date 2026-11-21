@@ -1,0 +1,82 @@
+{
+  "meetingDate": "2026-01-05",
+  "meetingDateLabel": "Village Board Meeting  - Jan 05, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:25:37.192Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Remove item (a) December minutes from the Consent Agenda and move to new business.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the remaining items on the Consent Agenda (items b through m).",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "volpe",
+      "seconder": "zivojnovic",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve a raffle application submitted by the Leyden Township Community Foundation for their Wild Game Dinner fundraiser at Elmcrest Banquets on January 19, 2026.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve recommendations from the Traffic & Safety Commission on traffic/parking improvements including resident parking signs, stop signs, a roundabout, and speed bumps.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the Minutes of the Meeting of the President and Board of Trustees held on December 1, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Amend the December 1, 2025 minutes to add language to page 5 under New Business specifying the time the meeting reconvened, roll call results, and presence of all members.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "lollino",
+      "votes": {}
+    }
+  ]
+}

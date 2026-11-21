@@ -1,0 +1,152 @@
+{
+  "meetingDate": "2026-05-04",
+  "meetingDateLabel": "Village Board Meeting  - May 04, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:28:25.759Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Remove item (x) from the consent agenda.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve the remaining items on the Consent Agenda (items a through w, excluding x).",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "lollino": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve an Ordinance authorizing and approving execution of a Real Estate Purchase Contract for the acquisition of the property at 7508 West Grand Avenue, Elmwood Park, Illinois.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "lollino",
+      "seconder": "volpe",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "lollino": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Amend the scrivener's error substituting North Avenue for Grand Avenue in the title, the first 'Whereas' clause and the title of 'Exhibit A' of the ordinance for 7508 West North Avenue.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "lollino": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Receive and file a recommendation to approve a map amendment and special use for 1613 N 76th Avenue and a special use for 7200 W North Avenue.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Ratify President Saviano's approval of a raffle application submitted by Melissa Bukovatz for 'Nicky's Road to Recovery' fundraiser held March 29th at the CRC.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Advise and Consent to President Saviano's re-appointments to various Committees and Commissions.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Approve an Ordinance to approve a map amendment rezoning the village-owned property at 1613 North 76th Avenue to B-2 General Business District and granting a special use permit for the construction of a public parking lot.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "volpe",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "lollino": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve an Ordinance to approve and grant a special use permit to operate an animal hospital and veterinarian office at 7230 West North Avenue, Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "kaminski",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "lollino": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes"
+      }
+    }
+  ]
+}

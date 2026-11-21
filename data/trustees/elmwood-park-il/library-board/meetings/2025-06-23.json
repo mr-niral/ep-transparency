@@ -1,0 +1,58 @@
+{
+  "meetingDate": "2025-06-23",
+  "meetingDateLabel": "June 23 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:17:44.184Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "monahan",
+      "narayan",
+      "segura"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Enter Executive Session per 5/ILCS 120/2(c)11 to discuss probable or pending litigation in appointment of special agent counsel and employment of specific employees of the library.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {
+        "monahan": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "pesko": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Appoint a special counsel from ECB&S to independently investigate a matter brought by one of the library's colleagues, with a reporting threshold of $6,000 in expenses.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {
+        "monahan": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes"
+      }
+    }
+  ]
+}

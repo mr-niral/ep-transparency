@@ -1,0 +1,130 @@
+{
+  "meetingDate": "2025-11-10",
+  "meetingDateLabel": "November 10 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:18:53.464Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "monahan",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "narayan",
+      "pesko",
+      "segura"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda (with amendment to delay approving the October Board Meeting Minutes due to Trustee Pesko's absence).",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "fosco",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the October 13, 2025 Board Meeting Minutes.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "abstain"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Recommend a temporary moratorium on all meeting room fees pending further review.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "fosco",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Close the library at 5:00 PM on Friday, December 26, for the staff Holiday Party.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve a resolution requesting the village of Elmwood Park to issue tax anticipation warrants and approve an intergovernmental agreement between the village of Elmwood Park and the Elmwood Park Public Library regarding the issuance of tax anticipation warrants.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(1) for the appointment, employment, compensation, discipline, performance, or dismissal of specific employees, specific individuals who serve as independent contractors in a park, recreational, or educational setting, or particular volunteers of the public body or legal counsel for the public body.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

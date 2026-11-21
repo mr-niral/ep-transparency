@@ -1,0 +1,59 @@
+{
+  "meetingDate": "2025-02-05",
+  "meetingDateLabel": "Feb 5, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:31:38.698Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "capraro",
+      "ranallo",
+      "shipinski"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe",
+      "rivera",
+      "silver"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene into Executive Session to discuss appointment, employment, compensation, discipline, performance, or dismissal of specific employees; student disciplinary cases; and collective negotiating matters.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "ranallo",
+      "seconder": "capraro",
+      "votes": {
+        "capraro": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "rivera": "absent",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "absent"
+      }
+    }
+  ]
+}

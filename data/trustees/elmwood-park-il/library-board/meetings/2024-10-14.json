@@ -1,0 +1,61 @@
+{
+  "meetingDate": "2024-10-14",
+  "meetingDateLabel": "October 14 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:16:15.996Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "narayan",
+      "balundis",
+      "monahan",
+      "fosco",
+      "santangelo"
+    ],
+    "remote": [],
+    "absent": [
+      "gordon"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the consent agenda (excluding September 2024 Board Meeting Minutes), including Payroll for October 2024, Medical Insurance for November 2024, Acknowledgement of the Treasurer's Report, Approval of the IMRF Check for November 2024, and Approval of the General Fund Disbursements for September 2024.",
+      "outcome": "unknown",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Recommend a reversal of the library director's initial verbal denial of request by Donna Clesen for a reservation for the library's meeting room for use by the League of Women Voters of Oak Park.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the Study Room Policy as previously approved with the addition of library cards checked at time of reservation and space heaters to be unplugged by staff in unused rooms.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": null,
+      "votes": {
+        "pesko": "yes",
+        "narayan": "yes",
+        "balundis": "yes",
+        "monahan": "yes",
+        "fosco": "yes",
+        "santangelo": "yes",
+        "gordon": "absent"
+      }
+    }
+  ]
+}

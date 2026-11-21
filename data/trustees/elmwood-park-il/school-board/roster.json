@@ -1,0 +1,132 @@
+{
+  "village": "elmwood-park-il",
+  "board": "school-board",
+  "trustees": [
+    {
+      "id": "parisi",
+      "displayName": "Parisi",
+      "nameAliases": [
+        "Frank Parisi",
+        "President Frank Parisi",
+        "Mr. Parisi"
+      ],
+      "role": "President",
+      "firstSeenDate": "2024-08-14",
+      "lastSeenDate": "2026-09-02",
+      "isCurrent": true
+    },
+    {
+      "id": "volpe",
+      "displayName": "Volpe",
+      "nameAliases": [
+        "Peter Volpe",
+        "Mr. Volpe",
+        "Vice President Peter Volpe"
+      ],
+      "role": "Vice President",
+      "firstSeenDate": "2024-08-14",
+      "lastSeenDate": "2026-09-02",
+      "isCurrent": true
+    },
+    {
+      "id": "capraro",
+      "displayName": "Capraro",
+      "nameAliases": [
+        "Susan Capraro",
+        "Sue Capraro",
+        "Secretary Susan Capraro",
+        "Mrs. Capraro"
+      ],
+      "role": "Secretary",
+      "firstSeenDate": "2024-08-14",
+      "lastSeenDate": "2025-05-07",
+      "isCurrent": false
+    },
+    {
+      "id": "ranallo",
+      "displayName": "Ranallo",
+      "nameAliases": [
+        "Jennifer Ranallo",
+        "Mrs. Ranallo",
+        "Ms. Ranallo",
+        "Secretary Jennifer Ranallo"
+      ],
+      "role": "Secretary",
+      "firstSeenDate": "2024-08-14",
+      "lastSeenDate": "2026-09-02",
+      "isCurrent": true
+    },
+    {
+      "id": "doyle",
+      "displayName": "Doyle",
+      "nameAliases": [
+        "Ms. Doyle",
+        "Monica Doyle"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-05-07",
+      "lastSeenDate": "2026-09-02",
+      "isCurrent": true
+    },
+    {
+      "id": "loughanen",
+      "displayName": "Loughanen",
+      "nameAliases": [
+        "Mr. Loughanen"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-10-21",
+      "lastSeenDate": "2025-10-21",
+      "isCurrent": false
+    },
+    {
+      "id": "loughnane",
+      "displayName": "Loughnane",
+      "nameAliases": [
+        "Mr. Loughnane",
+        "Timothy Loughnane"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-05-07",
+      "lastSeenDate": "2026-09-02",
+      "isCurrent": true
+    },
+    {
+      "id": "rivera",
+      "displayName": "Rivera",
+      "nameAliases": [
+        "Jonathan Rivera",
+        "Mr. Rivera"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-08-14",
+      "lastSeenDate": "2025-05-07",
+      "isCurrent": false
+    },
+    {
+      "id": "shipinski",
+      "displayName": "Shipinski",
+      "nameAliases": [
+        "Jason Shipinski",
+        "Mr. Shipinski"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-08-14",
+      "lastSeenDate": "2026-09-02",
+      "isCurrent": true
+    },
+    {
+      "id": "silver",
+      "displayName": "Silver",
+      "nameAliases": [
+        "Michelle Silver",
+        "Ms. Silver"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2024-08-14",
+      "lastSeenDate": "2026-09-02",
+      "isCurrent": true
+    }
+  ],
+  "lastUpdated": "2026-11-21T20:38:02.674Z"
+}

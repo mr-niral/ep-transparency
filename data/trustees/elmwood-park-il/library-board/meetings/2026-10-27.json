@@ -1,0 +1,113 @@
+{
+  "meetingDate": "2026-10-27",
+  "meetingDateLabel": "October 27 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:22:15.807Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "santangelo",
+      "monahan",
+      "narayan",
+      "segura",
+      "foran"
+    ],
+    "remote": [],
+    "absent": [
+      "balundis",
+      "fosco"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(1) for the appointment, employment, compensation, discipline, performance, or dismissal of specific employees of the Library.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "foran",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "absent",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Accept and approve the resignation and release agreement submitted by Michael Consiglio.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "foran",
+      "votes": {
+        "balundis": "absent",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve Alex Wiseman as Interim Director.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "foran",
+      "votes": {
+        "balundis": "absent",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Create a special committee for programming for six months to increase board awareness of library programming.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "foran",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "absent",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "yes",
+        "fosco": "absent",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Amend the request for funds from the Village of Elmwood Park for $40,000.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "foran",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "absent",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "foran": "yes",
+        "segura": "yes"
+      }
+    }
+  ]
+}

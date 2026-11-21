@@ -1,0 +1,122 @@
+{
+  "meetingDate": "2025-04-14",
+  "meetingDateLabel": "April 14 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:17:16.829Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "gordon",
+      "monahan",
+      "fosco",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda, including approval of March 2025 Board Meeting Minutes, April 2025 payroll, May 2025 medical insurance, Treasurer's report, May 2025 IMRF check, and March 2025 General Fund Disbursements, with a strike of an item under the By-Laws/Goals/Policy/Personnel Committee and mention of anonymous correspondence from the minutes.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "gordon",
+      "seconder": "santangelo",
+      "votes": {
+        "monahan": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Accept the FY 2023-2024 Audit Report as presented by John Wysocki of GW and Associates.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "narayan",
+      "votes": {
+        "monahan": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Table the motion to accept the Policy Review and Approval Policy as presented in the meeting packet, pending further review.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "gordon",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Accept the Intergovernmental Agreement renewal between LIMRiCC and the Elmwood Park Public Library for unemployment insurance.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {
+        "monahan": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Accept the Library Bill Payment Policy as presented in the meeting packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "balundis",
+      "votes": {
+        "monahan": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Accept the Staff Day Closing on July 10, 2025, coinciding with the village/library Summer Bash 2025 event.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "santangelo",
+      "votes": {
+        "monahan": "yes",
+        "gordon": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

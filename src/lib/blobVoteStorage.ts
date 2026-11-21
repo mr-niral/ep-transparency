@@ -1,4 +1,4 @@
-import { put, list } from '@vercel/blob'
+import { put, head } from '@vercel/blob'
 import type { MeetingVotes } from '@/types'
 
 function blobPath(village: string, board: string, date: string) {
@@ -11,10 +11,13 @@ export async function getBlobVotes(
   date: string
 ): Promise<MeetingVotes | null> {
   try {
-    const { blobs } = await list({ prefix: blobPath(village, board, date) })
-    if (blobs.length === 0) return null
-    const res = await fetch(blobs[0].url, {
-      headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
+    const blob = await head(blobPath(village, board, date))
+    const res = await fetch(blob.url, {
+      headers: {
+        Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`,
+        'Cache-Control': 'no-cache',
+      },
+      cache: 'no-store',
     })
     if (!res.ok) return null
     return (await res.json()) as MeetingVotes
@@ -32,6 +35,7 @@ export async function saveBlobVotes(
   await put(blobPath(village, board, date), JSON.stringify(data), {
     access: 'private',
     addRandomSuffix: false,
+    allowOverwrite: true,
     contentType: 'application/json',
   })
 }

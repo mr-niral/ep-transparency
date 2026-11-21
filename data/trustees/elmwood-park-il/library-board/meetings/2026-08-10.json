@@ -1,0 +1,107 @@
+{
+  "meetingDate": "2026-08-10",
+  "meetingDateLabel": "August 10 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:21:10.860Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "balundis",
+      "monahan",
+      "narayan",
+      "fosco",
+      "segura",
+      "pesko"
+    ],
+    "remote": [],
+    "absent": [
+      "santangelo"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Appoint Trustee Balundis to act as Board Secretary for the remainder of the meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "segura",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Accept the Consent Agenda as presented, including approval of July 2026 meeting minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "fosco",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "absent",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Library's request to the Village of Elmwood Park for an advance of $237,915 to cover Library operating costs for September 2026, and authorize the Board President and Secretary to execute and submit the request.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "absent",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "abstain"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Accept the resignation of Trustee Pesko and declare a vacancy on the Board of Trustees.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "absent",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(3) and 5 ILCS 120/2(c)(1) to discuss filling the board vacancy and employee matters.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Appoint Patrick Foran to fill the declared vacancy left by Trustee Pesko on the Board of Trustees.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "balundis",
+      "votes": {}
+    }
+  ]
+}

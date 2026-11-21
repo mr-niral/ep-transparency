@@ -1,0 +1,73 @@
+{
+  "meetingDate": "2025-06-02",
+  "meetingDateLabel": "Village Board Meeting  - Jun 02, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:23:49.141Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "volpe",
+      "conte",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": [
+      "kaminski",
+      "lollino"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Motion to excuse Trustee Kaminski and Trustee Lollino from the evening's meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Motion to remove item (d) from the consent agenda and move it to New Business.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Motion to approve the remaining items on the consent agenda (items a, b, c, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w).",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Motion to approve a raffle application submitted by Ms. Bina Conte, President of the Women's Auxiliary of the Republican Voters League of Leyden Township, for their annual Chicken Bingo fundraiser at Elmcrest Banquets on June 3, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "volpe",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Motion to approve payment of the Bills and Vouchers for the Month of May 2025 in the amount of $3,325,764.50, subject to approval of the Finance Committee.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "sargent",
+      "votes": {}
+    }
+  ]
+}

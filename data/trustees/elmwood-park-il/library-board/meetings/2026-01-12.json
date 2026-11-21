@@ -1,0 +1,13 @@
+{
+  "meetingDate": "2026-01-12",
+  "meetingDateLabel": "January 12 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:19:13.718Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [],
+    "remote": [],
+    "absent": []
+  },
+  "motions": []
+}

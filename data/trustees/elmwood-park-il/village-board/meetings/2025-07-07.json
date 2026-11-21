@@ -1,0 +1,43 @@
+{
+  "meetingDate": "2025-07-07",
+  "meetingDateLabel": "Village Board Meeting  - Jul 07, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:23:58.608Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": [
+      "conte"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Motion to excuse Trustee Conte from the evening's meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approval of all items on the consent agenda including minutes, bills and vouchers, license applications, appropriation ordinance, property tax resolution, Axon agreement, Grand Avenue engineering resolution, vehicle lease ordinance, holiday decorations ordinance, firefighters collective bargaining agreement, Alverson Sound contract, police sergeant promotion motion, and Metro Paramedic Services agreement.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "lollino",
+      "seconder": "kaminski",
+      "votes": {}
+    }
+  ]
+}

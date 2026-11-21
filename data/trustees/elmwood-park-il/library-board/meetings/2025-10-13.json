@@ -1,0 +1,69 @@
+{
+  "meetingDate": "2025-10-13",
+  "meetingDateLabel": "October 13 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:18:36.063Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "monahan",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": [
+      "pesko",
+      "segura"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Appoint Trustee Alice Balundis as temporary secretary.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Accept the Consent Agenda, including approval of board meeting minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "balundis",
+      "seconder": "santangelo",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "absent",
+        "segura": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Accept a set of library policies including the Local History Policy and multiple personnel and operational policies.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "absent",
+        "segura": "absent"
+      }
+    }
+  ]
+}

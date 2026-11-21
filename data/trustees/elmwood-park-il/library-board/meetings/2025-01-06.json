@@ -1,0 +1,41 @@
+{
+  "meetingDate": "2025-01-06",
+  "meetingDateLabel": "January 6 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:16:38.517Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "narayan",
+      "santangelo",
+      "monahan",
+      "fosco",
+      "balundis"
+    ],
+    "remote": [],
+    "absent": [
+      "gordon"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the consent agenda including December 2024 Board Meeting Minutes, January 2025 Payroll, February 2025 Medical Insurance, Treasurer's report acknowledgment, February 2025 IMRF check, and December 2024 General Fund Disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "monahan": "yes",
+        "narayan": "yes",
+        "santangelo": "yes",
+        "balundis": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "gordon": "absent"
+      }
+    }
+  ]
+}

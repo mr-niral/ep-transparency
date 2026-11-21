@@ -1,0 +1,41 @@
+{
+  "meetingDate": "2025-11-05",
+  "meetingDateLabel": "Nov 5, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:35:17.662Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "ranallo",
+      "doyle",
+      "loughnane",
+      "shipinski"
+    ],
+    "remote": [],
+    "absent": [
+      "silver"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene into Executive Session to discuss employee matters, security procedures, school building safety and security, use of personnel and equipment for safety threats, matters relating to individual students, and imminent litigation.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "doyle",
+      "seconder": "shipinski",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    }
+  ]
+}

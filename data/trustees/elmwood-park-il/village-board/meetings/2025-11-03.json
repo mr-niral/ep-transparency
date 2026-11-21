@@ -1,0 +1,52 @@
+{
+  "meetingDate": "2025-11-03",
+  "meetingDateLabel": "Village Board Meeting  - Nov 03, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:25:05.458Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve all items on the consent agenda including minutes, finance committee minutes, bills and vouchers for October 2025, license applications, and various resolutions and ordinances (items a through p).",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve a raffle application submitted by Andrew Hock/Post 52 Charitable Veterans Foundation for the 'Boccin for the Red, White and Blue' bocce tournament on November 9, 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Authorize ratification of President Saviano's approval of a 'Queen of Hearts' raffle application submitted by Sheila Klich, Principal St. Celestines School, to be held weekly until a winner is drawn in 2026.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "estradavolpe",
+      "seconder": "conte",
+      "votes": {}
+    }
+  ]
+}

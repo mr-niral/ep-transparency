@@ -1,0 +1,149 @@
+{
+  "meetingDate": "2026-04-13",
+  "meetingDateLabel": "April 13 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:19:46.179Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "monahan",
+      "santangelo",
+      "balundis",
+      "pesko",
+      "segura",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": [
+      "fosco"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda, amended to strike the Director Succession Policy and Policy/Program.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "absent",
+        "fosco": "absent",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Accept the Meeting Room Policy after its final review in the BGPP Committee.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "yes",
+        "fosco": "absent",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Hotspot Policy, amended to state that hotspots must be returned to library staff 'during normal operating hours' instead of listing specific days and times.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Amend the previously approved start time for regular meetings from 5:30 p.m. to 7:00 p.m. for all meetings held on the second Monday of each month.",
+      "outcome": "failed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "no",
+        "santangelo": "no",
+        "monahan": "yes",
+        "narayan": "no",
+        "fosco": "absent",
+        "segura": "no",
+        "pesko": "no"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Amend the Friday operating hours from 9:00 a.m. to 9:00 p.m. to 9:00 a.m. to 6:00 p.m.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Table the adjustment of Monday through Thursday hours from 9:00 a.m. to 9:00 p.m. down to 9:00 a.m. to 8:00 p.m. to request additional data.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "no",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "absent",
+        "segura": "yes",
+        "pesko": "no"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approve Resolution 2026-02 for the revised Personnel Manual.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "yes",
+        "fosco": "absent",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

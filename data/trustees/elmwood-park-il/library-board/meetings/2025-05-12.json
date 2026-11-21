@@ -1,0 +1,52 @@
+{
+  "meetingDate": "2025-05-12",
+  "meetingDateLabel": "May 12 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:17:26.276Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "monahan",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": [
+      "fosco"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Move the election of officers to the following item on the agenda.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Accept the Consent Agenda, including approval of April 2025 Board Meeting Minutes, Payroll for May 2025, Medical Insurance for June 2025, the Treasurer's report, IMRF check for June 2025, and General Fund Disbursements for April 2025.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "segura",
+      "seconder": "santangelo",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Reschedule the Board Meetings for the remainder of 2025 to a start time of 5:00 p.m.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "segura",
+      "votes": {}
+    }
+  ]
+}

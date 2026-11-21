@@ -1,0 +1,63 @@
+{
+  "meetingDate": "2026-01-13",
+  "meetingDateLabel": "January 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:44:54.934Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "treasurer",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "president"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the December 9, 2025 regular meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve accounts payable check numbers 24510 through 24551, including voided check numbers 24513, and the payment of payroll checks for department numbers 01 through 04, through December 27, 2025, in the total amount of $84,954.66.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "novak",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for December 31, 2025, subject to audit.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve the Per Capita grant application, with the edits mentioned.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "novak",
+      "seconder": "loucks",
+      "votes": {}
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "meetingDate": "2024-03-11",
+  "meetingDateLabel": "March 11 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:14:18.012Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "secretary",
+      "trustee",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "vicepresident"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the consent agenda including February 2024 board meeting minutes, payroll, medical insurance, treasurer's report, IMRF check, and general fund disbursements for March 2024.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "gordon",
+      "seconder": "narayan",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Move to recess to Executive Session to discuss employee matters and minutes of lawfully closed meetings.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "gordon",
+      "votes": {}
+    }
+  ]
+}

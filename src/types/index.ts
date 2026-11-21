@@ -49,6 +49,59 @@ export interface BudgetYear {
   lines: { category: string; budgeted: number; actual?: number }[]
 }
 
+// ── Trustee feature ──────────────────────────────────────────────────────────
+
+export type TrusteeRole = 'President' | 'Vice President' | 'Secretary' | 'Treasurer' | 'Trustee'
+
+export interface TrusteeRecord {
+  id: string            // slug, e.g. "balundis"
+  displayName: string   // last name as shown, e.g. "Balundis"
+  nameAliases: string[] // all raw spellings seen in minutes
+  role: TrusteeRole     // from most recent mention
+  firstSeenDate: string // ISO "2024-01-08"
+  lastSeenDate: string  // ISO date of last meeting where they appeared
+  isCurrent: boolean
+}
+
+export interface BoardRoster {
+  village: string
+  board: string
+  trustees: TrusteeRecord[]
+  lastUpdated: string   // ISO timestamp
+}
+
+export type MotionVote = 'yes' | 'no' | 'abstain' | 'absent'
+export type VoteType = 'roll_call' | 'voice'
+export type ExtractionStatus = 'ok' | 'not_available'
+
+export interface MotionRecord {
+  order: number
+  description: string
+  outcome: 'passed' | 'failed' | 'tabled' | 'unknown'
+  voteType: VoteType
+  isConsentAgenda: boolean
+  mover: string | null    // trustee ID or null
+  seconder: string | null // trustee ID or null
+  votes: { [trusteeId: string]: MotionVote }
+}
+
+export interface MeetingExtraction {
+  meetingDate: string        // ISO "2026-01-12"
+  meetingDateLabel: string   // "January 12, 2026"
+  status: ExtractionStatus
+  reason?: string
+  extractedAt: string        // ISO timestamp
+  hiddenByAdmin: boolean
+  rollCall: {
+    present: string[]    // trustee IDs
+    remote: string[]
+    absent: string[]
+  }
+  motions: MotionRecord[]
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+
 export interface FinancialSnapshot {
   meetingDate: string
   meetingDateLabel: string

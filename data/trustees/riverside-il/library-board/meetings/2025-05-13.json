@@ -1,0 +1,102 @@
+{
+  "meetingDate": "2025-05-13",
+  "meetingDateLabel": "May 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:42:41.237Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "secretary",
+      "treasurer",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Nominate and elect Ken Circo as President for 2025-2026",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Nominate and elect Courtney Greve Hack as Vice President for 2025-2026",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "circo",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Nominate and elect Nancy DeFauw as Treasurer for 2025-2026",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Nominate and elect Dan Loucks as Secretary for 2025-2026",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "hack",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve the minutes of the April 8, 2025 regular meeting",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "loucks",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve accounts payable check numbers 24213 through 24250 and payroll checks for department numbers 01 through 04 including payroll through April 25, 2025 in the total amount of $103,701.98",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve the financial statements for April 30, 2025, subject to audit",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "loucks",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Approve the Circulation Policy with discussed edits, replacing the Patron Services policy",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    }
+  ]
+}

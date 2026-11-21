@@ -1,0 +1,238 @@
+{
+  "meetingDate": "2026-07-13",
+  "meetingDateLabel": "July 13 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:20:54.966Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "balundis",
+      "santangelo",
+      "monahan",
+      "narayan",
+      "fosco",
+      "segura",
+      "pesko"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda as presented, including approval of June 2026 meeting minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "segura",
+      "seconder": "fosco",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adopt Resolution No. 2027-01 authorizing the Board President to request that the Village of Elmwood Park amend the Intergovernmental Agreement to extend the repayment date of the advance from October 31, 2026, to February 28, 2027.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve the Library's request to the Village of Elmwood Park for an advance of $210,480 to cover Library operating costs for August 2026, and authorize the Board President and Secretary to execute and submit the request.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Adopt a Resolution Authorizing Phase 1 of the Library Expansion Project, the renovation of the Ferrentino Room, consisting of carpet replacement and painting through direct vendor selection in an amount not to exceed $25,000.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "no",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approve the release of minutes from specified executive sessions identified as candidates for release upon determination that the need for confidentiality no longer exists.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approve the staff promotions of Halea Maurer to Teen Services Librarian and Katelyn Dunne to Babies & Toddler Librarian, effective July 15, 2026.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Return the HR Procedures & Issue Resolution Policy to the By-Laws/Goals/Policy/Personnel Committee for further review.",
+      "outcome": "failed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "monahan",
+      "votes": {
+        "balundis": "no",
+        "santangelo": "no",
+        "monahan": "yes",
+        "narayan": "no",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "no"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Amend the HR Procedures & Issue Resolution Policy by removing the name 'Jessica Ruiz' and replacing it with the title 'HR Associate' throughout the policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "yes",
+        "fosco": "no",
+        "segura": "yes",
+        "pesko": "no"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Approve the HR Procedures & Issue Resolution Policy as amended (with individual's name replaced by 'HR Associate') as an addendum to the Personnel Policy Manual.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "yes",
+        "fosco": "no",
+        "segura": "yes",
+        "pesko": "no"
+      }
+    },
+    {
+      "order": 10,
+      "description": "Approve the addition of a new subsection to Section 2 of the Personnel Policy Manual establishing a mandatory activity time reporting requirement in ADP for Youth Services and Adult Services staff.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 11,
+      "description": "Approve the addition of wording to the Personnel Policy Manual allowing staff to be assigned to report to their designated public service area up to 30 minutes before the library opens to prepare for patron service.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "monahan",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 12,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(1) to discuss the appointment, employment, compensation, discipline, performance, or dismissal of specific employees.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

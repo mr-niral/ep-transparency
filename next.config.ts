@@ -1,6 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    '/api/trustees': ['./data/trustees/**/*'],
+    '/api/trustees/extract': ['./data/trustees/**/*'],
+  },
   async redirects() {
     return [
       {

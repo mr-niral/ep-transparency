@@ -1,0 +1,113 @@
+{
+  "meetingDate": "2025-11-11",
+  "meetingDateLabel": "November 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:44:23.209Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "president",
+      "president",
+      "treasurer",
+      "trustee",
+      "trustee",
+      "trustee"
+    ],
+    "remote": [],
+    "absent": [
+      "secretary"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the minutes of the October 14, 2025 regular meeting",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "novak",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve accounts payable check numbers 24437 through 24479, including voided check numbers 24473, and payroll checks for department numbers 01 through 04 through October 18, 2025, totaling $96,985.25",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the financial statements for October 31, 2025, subject to audit",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve Berneche2 architecture, pc design proposal of $7,495 for the exterior ramp project",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve Special Event application for the wedding vow exchange on December 14, 2025",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the proposed Board of Trustee meeting dates for 2026",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "bilow",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Approve a Library closure on January 23, 2026 for an all staff in-service day",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "bohrer",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Convene in Executive Session to discuss the appointment, employment, compensation, discipline, performance or dismissal of specific employees of the public body (5 ILCS 120/2(c)(1))",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "hack",
+      "seconder": "defauw",
+      "votes": {}
+    },
+    {
+      "order": 9,
+      "description": "Return to Regular Session at 9:22 pm",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "defauw",
+      "seconder": "novak",
+      "votes": {}
+    }
+  ]
+}

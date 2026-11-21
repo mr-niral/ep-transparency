@@ -1,0 +1,22 @@
+{
+  "meetingDate": "2025-12-03",
+  "meetingDateLabel": "Dec 3, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:35:33.670Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "ranallo",
+      "doyle",
+      "loughnane",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe"
+    ]
+  },
+  "motions": []
+}

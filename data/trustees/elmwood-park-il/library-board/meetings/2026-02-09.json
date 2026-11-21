@@ -1,0 +1,58 @@
+{
+  "meetingDate": "2026-02-09",
+  "meetingDateLabel": "February 9 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:19:22.205Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "monahan",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "pesko",
+      "segura",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda, which included approval of January 2026 board meeting minutes, payroll, medical insurance, IGA payment, annual financial audit, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Amend the previously approved regular meeting start time from 5:00 p.m. to 5:30 p.m. for all regular meetings held on the second Monday of each month.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

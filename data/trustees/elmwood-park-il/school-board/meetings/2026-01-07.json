@@ -1,0 +1,22 @@
+{
+  "meetingDate": "2026-01-07",
+  "meetingDateLabel": "Jan 7, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:35:47.236Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "ranallo",
+      "doyle",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe",
+      "loughnane",
+      "shipinski"
+    ]
+  },
+  "motions": []
+}

@@ -1,0 +1,77 @@
+{
+  "meetingDate": "2025-10-01",
+  "meetingDateLabel": "Oct 1, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:34:41.382Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "volpe",
+      "ranallo",
+      "doyle",
+      "shipinski"
+    ],
+    "remote": [],
+    "absent": [
+      "loughnane",
+      "silver"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Convene to Executive Session for the purpose of discussing student disciplinary cases.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "shipinski",
+      "seconder": "doyle",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "absent",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Adjourn the Executive Session and reconvene to Open Session.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "shipinski",
+      "votes": {
+        "doyle": "yes",
+        "loughnane": "yes",
+        "parisi": "yes",
+        "ranallo": "yes",
+        "shipinski": "yes",
+        "silver": "absent",
+        "volpe": "yes"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve agreement resolving student matter between parents and the Board of Education, as presented in closed session.",
+      "outcome": "failed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "volpe",
+      "seconder": "loughnane",
+      "votes": {
+        "doyle": "no",
+        "loughnane": "no",
+        "parisi": "no",
+        "ranallo": "no",
+        "shipinski": "no",
+        "silver": "absent",
+        "volpe": "no"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "meetingDate": "2025-03-03",
+  "meetingDateLabel": "Village Board Meeting  - Mar 03, 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:23:03.811Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "conte",
+      "zivojnovic",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve the consent agenda items including minutes, bills and vouchers, license applications, and various ordinances and resolutions.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Approve a proclamation issued by President Saviano proclaiming April 25, 2025 Arbor Day in the Village of Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": null,
+      "seconder": null,
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve a request from Lois Gates, Misericordia Executive Director, for permission to hold 'Jelly Belly Days' on April 25th and 26th, 2025 at various locations in the village.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "lollino",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Receive and file a recommendation to approve a text amendment application amending the Elmwood Park Zoning Code and a Special Use application for a Bakery at 7717-19 W Belmont Avenue.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "estradavolpe",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve an Ordinance Amending Section 1407.03, Entitled 'Permitted and Special Uses in Business, Commercial and Mixed Use Districts,' of the Zoning Code of the Village of Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve an Ordinance to Approve and Grant a Special Use Permit to Operate a Bakery with Processing for On-Premises Sales only at the Property Commonly known as 7717-7719 Belmont Avenue, Elmwood Park, Illinois.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "lollino",
+      "seconder": "kaminski",
+      "votes": {}
+    }
+  ]
+}

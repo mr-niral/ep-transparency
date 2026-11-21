@@ -1,0 +1,185 @@
+{
+  "meetingDate": "2025-09-08",
+  "meetingDateLabel": "September 8 2025",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:18:27.377Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "narayan",
+      "segura"
+    ],
+    "remote": [],
+    "absent": [
+      "monahan"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda with the exception of the removal of the August 11, 2025 Board Meeting Minutes for approval in October.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approve the 2024 Revised Programming Policy, as presented.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approve an amendment to the 2024 Revised Programming Policy establishing registration priority for Elmwood Park Public Library cardholders and requiring non-residents be placed on a waiting list with notification provided at least 24 hours before the program if space becomes available.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approve the Mobile Hot Spot Policy as a product of the recent BGPP meeting.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Accept the Board of Trustees Bylaws as presented in the Board packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "santangelo",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Accept the Contract and Agreement Authorization Policy.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Accept the Time Reporting and Clock in Procedures (Personnel Policy Manual).",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "balundis",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Approve the Paid Time Off Policy for Full-time Staff (Personnel Policy Manual), combining sick time and vacation time into one category.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Enter Executive Session pursuant to 5 ILCS 120/2(c)(1) for the appointment, employment, compensation, discipline, performance, or dismissal of specific employees or legal counsel for the public body.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "pesko": "yes",
+        "segura": "yes",
+        "monahan": "absent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "village": "elmwood-park-il",
+  "board": "village-board",
+  "trustees": [
+    {
+      "id": "saviano",
+      "displayName": "Saviano",
+      "nameAliases": [
+        "President Saviano"
+      ],
+      "role": "President",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2026-09-14",
+      "isCurrent": true
+    },
+    {
+      "id": "conte",
+      "displayName": "Conte",
+      "nameAliases": [
+        "Bina Conte",
+        "Trustee Conte"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2026-09-14",
+      "isCurrent": true
+    },
+    {
+      "id": "conti",
+      "displayName": "Conti",
+      "nameAliases": [
+        "Trustee Conti"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-12-01",
+      "lastSeenDate": "2025-12-01",
+      "isCurrent": false
+    },
+    {
+      "id": "estradavolpe",
+      "displayName": "Estrada-Volpe",
+      "nameAliases": [
+        "Trustee Estrada-Volpe",
+        "Elsa Estrada-Volpe",
+        "Eisa Estrada-Volpe"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2025-01-06",
+      "isCurrent": false
+    },
+    {
+      "id": "kaminski",
+      "displayName": "Kaminski",
+      "nameAliases": [
+        "Alan Kaminski",
+        "Trustee Kaminski"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2026-09-14",
+      "isCurrent": true
+    },
+    {
+      "id": "lollino",
+      "displayName": "Lollino",
+      "nameAliases": [
+        "Angelo Lollino",
+        "Trustee Lollino",
+        "Angela Lollino"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2026-09-14",
+      "isCurrent": true
+    },
+    {
+      "id": "sargent",
+      "displayName": "Sargent",
+      "nameAliases": [
+        "Jeff Sargent",
+        "Trustee Sargent"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2026-09-14",
+      "isCurrent": true
+    },
+    {
+      "id": "volpe",
+      "displayName": "Volpe",
+      "nameAliases": [
+        "Elsa Estrada Volpe",
+        "Eisa Estrada Volpe",
+        "Trustee Estrada Volpe"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2026-09-14",
+      "isCurrent": true
+    },
+    {
+      "id": "zivojnovic",
+      "displayName": "Zivojnovic",
+      "nameAliases": [
+        "Jonathan Zivojnovic",
+        "Trustee Zivojnovic",
+        "Trusted Zivojnovic"
+      ],
+      "role": "Trustee",
+      "firstSeenDate": "2025-01-06",
+      "lastSeenDate": "2026-09-14",
+      "isCurrent": true
+    }
+  ],
+  "lastUpdated": "2026-11-21T20:29:15.715Z"
+}

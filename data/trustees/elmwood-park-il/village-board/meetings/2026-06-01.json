@@ -1,0 +1,90 @@
+{
+  "meetingDate": "2026-06-01",
+  "meetingDateLabel": "Village Board Meeting  - Jun 01, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:28:42.374Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "lollino",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approve all items on the Consent Agenda (items a through x, excluding item y which was removed).",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "lollino",
+      "seconder": "kaminski",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "lollino": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Recuse Trustee Conte from voting on the raffle application submitted by the Women's Auxiliary of the Regular Republican Voters League of Leyden Township.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "zivojnovic",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the raffle application submitted by the Women's Auxiliary of the Regular Republican Voters League of Leyden Township for their Chicken Bingo fundraiser at Elmcrest Banquets on June 2, 2026.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "lollino",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Approve a raffle application submitted by Sandy Sugg, Secretary of the Grand Chamber by O'Hare, to hold a Split the Pot fundraiser at the Circle Car Show on June 12th.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 5,
+      "description": "Approve a proclamation submitted by President Saviano for the 100th Anniversary of Frank's Barbershop at 7308 W Grand Ave, Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "volpe",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Approve the recommendation from the Traffic and Safety Commission to designate diagonal spots on 76th Avenue and 76th Court as Staff Parking School Days 7am-4pm at John Mills School.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "lollino",
+      "seconder": "conte",
+      "votes": {}
+    }
+  ]
+}

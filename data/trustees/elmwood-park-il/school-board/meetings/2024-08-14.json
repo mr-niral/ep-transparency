@@ -1,0 +1,22 @@
+{
+  "meetingDate": "2024-08-14",
+  "meetingDateLabel": "Aug 14, 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:29:22.644Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "parisi",
+      "capraro",
+      "ranallo",
+      "shipinski",
+      "silver"
+    ],
+    "remote": [],
+    "absent": [
+      "volpe",
+      "rivera"
+    ]
+  },
+  "motions": []
+}

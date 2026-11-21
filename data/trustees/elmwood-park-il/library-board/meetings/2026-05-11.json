@@ -1,0 +1,86 @@
+{
+  "meetingDate": "2026-05-11",
+  "meetingDateLabel": "May 11 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:19:57.441Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "monahan",
+      "santangelo",
+      "balundis",
+      "fosco",
+      "pesko",
+      "segura",
+      "narayan"
+    ],
+    "remote": [],
+    "absent": []
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Accept the Consent Agenda as presented, including approval of April 2026 board minutes, payroll, medical insurance, treasurer's report, IMRF payment, and general fund disbursements.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "fosco",
+      "seconder": "narayan",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Move the Special Recognition of Helen Gelis's 107th birthday (Resolution 2026-04) until later in the meeting.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "segura",
+      "seconder": "narayan",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Approve the 2026-2027 Levy Appropriation request to present to the Village.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Adjust the library's closing time from 9:00 p.m. to 8:00 p.m., Monday through Thursday.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "segura",
+      "votes": {
+        "balundis": "yes",
+        "santangelo": "yes",
+        "monahan": "no",
+        "narayan": "yes",
+        "fosco": "yes",
+        "segura": "yes",
+        "pesko": "yes"
+      }
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "meetingDate": "2026-07-13",
+  "meetingDateLabel": "Village Board Meeting  - Jul 13, 2026",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:29:04.477Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "sargent",
+      "kaminski",
+      "volpe",
+      "zivojnovic",
+      "conte",
+      "saviano"
+    ],
+    "remote": [],
+    "absent": [
+      "lollino"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Motion to excuse the absence of Trustee Lollino.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 2,
+      "description": "Motion to open a public hearing for the proposed appropriation ordinance for fiscal year 2026-2027.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 3,
+      "description": "Motion to close the public hearing on the proposed appropriation ordinance.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "conte",
+      "votes": {}
+    },
+    {
+      "order": 4,
+      "description": "Motion to approve all items on the Consent Agenda, including minutes, bills and vouchers for June 2026, license applications, and various ordinances and resolutions.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "zivojnovic",
+      "seconder": "estradavolpe",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes",
+        "lollino": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Motion to receive and file a recommendation of approval from the Plan, Zoning and Development Commission for two Special Use applications and a Final Plat of Subdivision application for 1640 N Harlem Ave.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {}
+    },
+    {
+      "order": 6,
+      "description": "Motion to approve a proclamation for National Payroll Week, September 6-12, 2026 in the Village of Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "volpe",
+      "votes": {}
+    },
+    {
+      "order": 7,
+      "description": "Motion to approve a raffle application for Oak Leyden Developmental Services fundraiser at the Community and Recreation Center on August 22nd.",
+      "outcome": "passed",
+      "voteType": "voice",
+      "isConsentAgenda": false,
+      "mover": "kaminski",
+      "seconder": "sargent",
+      "votes": {}
+    },
+    {
+      "order": 8,
+      "description": "Motion to approve an Ordinance to Approve and Grant a Special Use Permit to Operate an Automobile Laundry at 1640 North Harlem Avenue, Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes",
+        "lollino": "absent"
+      }
+    },
+    {
+      "order": 9,
+      "description": "Motion to approve an Ordinance to Approve and Grant a Special Use Permit to Operate a Restaurant with a Drive-In Lane at 1640 North Harlem Avenue, Elmwood Park.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "conte",
+      "seconder": "volpe",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes",
+        "lollino": "absent"
+      }
+    },
+    {
+      "order": 10,
+      "description": "Motion to approve an Ordinance Approving a Preliminary and Final Plat of Subdivision for the National Express Wash II Subdivision.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "zivojnovic",
+      "seconder": "kaminski",
+      "votes": {
+        "sargent": "yes",
+        "kaminski": "yes",
+        "volpe": "yes",
+        "zivojnovic": "yes",
+        "conte": "yes",
+        "saviano": "yes",
+        "lollino": "absent"
+      }
+    }
+  ]
+}

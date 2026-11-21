@@ -1,0 +1,167 @@
+{
+  "meetingDate": "2024-08-12",
+  "meetingDateLabel": "August 12 2024",
+  "status": "ok",
+  "extractedAt": "2026-11-21T20:15:47.018Z",
+  "hiddenByAdmin": false,
+  "rollCall": {
+    "present": [
+      "pesko",
+      "monahan",
+      "narayan",
+      "fosco",
+      "balundis"
+    ],
+    "remote": [],
+    "absent": [
+      "santangelo",
+      "gordon"
+    ]
+  },
+  "motions": [
+    {
+      "order": 1,
+      "description": "Approval of the July 2024 Board Meeting Minutes, Payroll for August 2024, Medical Insurance for September 2024, Acknowledgement of the Treasurer's Report, Approval of the IMRF Check for September 2024, and Approval of the General Fund Disbursements for August 2024.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": true,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 2,
+      "description": "Approval of the Part-Time Reporting Personnel Policy as presented in the packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 3,
+      "description": "Approval of the 2025 Holiday Schedule as presented in the packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 4,
+      "description": "Approval of the 2024-25 Salary Scale as presented in the packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "monahan",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 5,
+      "description": "Approval of the Volunteer Policy as presented in the packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 6,
+      "description": "Approval of the Hiring of Adult Services Part-Time Librarian Associate as presented in the packet.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "balundis",
+      "seconder": "narayan",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 7,
+      "description": "Approval of the Closing of the Library on Friday, September 27.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "narayan",
+      "seconder": "fosco",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    },
+    {
+      "order": 8,
+      "description": "Motion to enter closed session to consider appointment, employment, compensation, discipline, performance, or dismissal of certain specific employees pursuant to 5/ILCS 120/2(c)1 and to consider minutes of meetings lawfully closed under the Open Meetings Act.",
+      "outcome": "passed",
+      "voteType": "roll_call",
+      "isConsentAgenda": false,
+      "mover": "fosco",
+      "seconder": "balundis",
+      "votes": {
+        "pesko": "yes",
+        "monahan": "yes",
+        "narayan": "yes",
+        "fosco": "yes",
+        "balundis": "yes",
+        "santangelo": "absent",
+        "gordon": "absent"
+      }
+    }
+  ]
+}
