@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import type { MeetingVotes } from '@/types'
-import { getBlobVotes, saveBlobVotes } from '@/lib/blobVoteStorage'
 
 const client = new Anthropic()
 
@@ -13,10 +12,7 @@ export async function GET(req: NextRequest) {
 
   if (!date) return NextResponse.json({ error: 'Missing date' }, { status: 400 })
 
-  const cached = await getBlobVotes(village, board, date)
-  if (!cached) return NextResponse.json({ cached: false }, { status: 404 })
-
-  return NextResponse.json(cached)
+  return NextResponse.json({ cached: false }, { status: 404 })
 }
 
 export async function POST(req: NextRequest) {
@@ -141,11 +137,6 @@ Rules:
       )
     }
 
-    try {
-      await saveBlobVotes(village, board, meetingDate, parsed)
-    } catch (cacheErr) {
-      console.error('Failed to cache votes to Blob:', cacheErr)
-    }
     return NextResponse.json(parsed)
   } catch (err) {
     console.error('Claude API error:', err)

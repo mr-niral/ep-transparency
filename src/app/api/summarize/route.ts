@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import * as cheerio from 'cheerio'
-import { head, put } from '@vercel/blob'
-import { createHash } from 'crypto'
 
 export const maxDuration = 60
 
@@ -70,48 +68,6 @@ function extractJsonFromText(text: string): string {
   return s
 }
 
-function blobCacheKey(pdfUrl: string, structured: boolean): string {
-  const hash = createHash('sha256').update(pdfUrl).digest('hex').slice(0, 40)
-  return `summaries/${structured ? 'structured' : 'plain'}/${hash}.txt`
-}
-
-async function getFromCache(key: string): Promise<string | null> {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) return null
-  try {
-    const blob = await head(key)
-    const res = await fetch(blob.url, {
-      headers: {
-        Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`,
-        'Cache-Control': 'no-cache',
-      },
-      cache: 'no-store',
-    })
-    if (res.ok) {
-      console.log('[cache] hit:', key)
-      return await res.text()
-    }
-  } catch {
-    // head() throws if blob doesn't exist — treat as cache miss
-  }
-  return null
-}
-
-async function saveToCache(key: string, content: string): Promise<string | null> {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    console.warn('[cache] saveToCache skipped: no BLOB_READ_WRITE_TOKEN')
-    return 'no token'
-  }
-  try {
-    const blob = await put(key, content, { access: 'private', addRandomSuffix: false, allowOverwrite: true })
-    console.log('[cache] saved:', key, blob.url)
-    return null
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[cache] saveToCache error:', msg)
-    return msg
-  }
-}
-
 const STRUCTURED_PROMPT = `Respond with a single raw JSON object and nothing else — no markdown fences, no explanation, no text before or after the JSON. Use this exact shape:
 {"key_figures":[{"label":"...","value":"..."}],"decisions":[{"status":"approved","motion":"...","notes":"..."}],"sections":[{"heading":"...","body":"..."}]}
 Rules:
@@ -125,13 +81,6 @@ export async function POST(req: NextRequest) {
 
   if (!pdfUrl || typeof pdfUrl !== 'string') {
     return NextResponse.json({ error: 'Missing pdfUrl' }, { status: 400 })
-  }
-
-  // Check blob cache first
-  const cacheKey = blobCacheKey(pdfUrl, !!structured)
-  const cached = await getFromCache(cacheKey)
-  if (cached) {
-    return NextResponse.json({ summary: cached, fromCache: true })
   }
 
   const boardLabel = boardType === 'village' ? 'village board' : boardType === 'school' ? 'school board' : 'public library board'
@@ -199,8 +148,7 @@ export async function POST(req: NextRequest) {
       const raw = message.content[0].type === 'text' ? message.content[0].text : ''
       if (structured) console.log('[summarize] raw structured output:', raw.slice(0, 500))
       const summary = structured ? extractJsonFromText(raw) : raw
-      const cacheErr = await saveToCache(cacheKey, summary)
-      return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
+      return NextResponse.json({ summary })
     } catch (err) {
       console.error('Claude API error (Granicus):', err)
       const msg = err instanceof Error ? err.message : String(err)
@@ -262,8 +210,7 @@ export async function POST(req: NextRequest) {
           })
           const raw = message.content[0].type === 'text' ? message.content[0].text : ''
           const summary = structured ? extractJsonFromText(raw) : raw
-          const cacheErr = await saveToCache(cacheKey, summary)
-          return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
+          return NextResponse.json({ summary })
         } catch (err) {
           console.error('Claude API error (BoardBook PDF):', err)
           const msg = err instanceof Error ? err.message : String(err)
@@ -289,8 +236,7 @@ export async function POST(req: NextRequest) {
       })
       const raw = message.content[0].type === 'text' ? message.content[0].text : ''
       const summary = structured ? extractJsonFromText(raw) : raw
-      const cacheErr = await saveToCache(cacheKey, summary)
-      return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
+      return NextResponse.json({ summary })
     } catch (err) {
       console.error('Claude API error (BoardBook):', err)
       const msg = err instanceof Error ? err.message : String(err)
@@ -352,8 +298,7 @@ export async function POST(req: NextRequest) {
     const raw = message.content[0].type === 'text' ? message.content[0].text : ''
     if (structured) console.log('[summarize] raw PDF structured output:', raw.slice(0, 500))
     const summary = structured ? extractJsonFromText(raw) : raw
-    const cacheErr = await saveToCache(cacheKey, summary)
-    return NextResponse.json({ summary, ...(cacheErr ? { cacheError: cacheErr } : {}) })
+    return NextResponse.json({ summary })
   } catch (err) {
     console.error('Claude API error:', err)
     return NextResponse.json(
