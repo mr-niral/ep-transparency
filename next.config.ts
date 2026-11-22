@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     '/api/trustees': ['./data/trustees/**/*'],
     '/api/trustees/extract': ['./data/trustees/**/*'],
+    '/api/trustees/all': ['./data/trustees/**/*'],
   },
   async redirects() {
     return [

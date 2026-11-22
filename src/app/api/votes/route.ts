@@ -29,10 +29,33 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Missing meetingDate or meetingDateLabel' }, { status: 400 })
   }
 
+  // Resolve the actual PDF URL — BoardBook Minutes pages serve an HTML viewer,
+  // not a PDF directly. We need to extract the document ID and hit DownloadPDF.
+  let resolvedUrl = minutesUrl
+  if (minutesUrl.includes('meetings.boardbook.org/Public/Minutes/')) {
+    try {
+      const htmlRes = await fetch(minutesUrl, { headers: { 'User-Agent': 'village-hall-record/1.0' } })
+      if (!htmlRes.ok) throw new Error(`HTTP ${htmlRes.status}`)
+      const html = await htmlRes.text()
+      const docIdMatch = html.match(/id="NewDocumentViewerDocumentID"[^>]*value="(\d+)"/)
+      if (!docIdMatch) throw new Error('Could not find document ID in BoardBook viewer page.')
+      const docId = docIdMatch[1]
+      const orgMatch = new URL(minutesUrl).pathname.match(/\/(\d+)(?:\/|$)/)
+      const orgId = orgMatch ? orgMatch[1] : ''
+      resolvedUrl = `https://meetings.boardbook.org/Documents/DownloadPDF/${docId}?org=${orgId}`
+    } catch (err) {
+      console.error('Failed to resolve BoardBook PDF URL:', err)
+      return NextResponse.json(
+        { error: 'Could not retrieve the minutes PDF. It may no longer be available.' },
+        { status: 502 }
+      )
+    }
+  }
+
   // Fetch the PDF
   let pdfBuffer: Buffer
   try {
-    const res = await fetch(minutesUrl, { headers: { 'User-Agent': 'ep-transparency/1.0' } })
+    const res = await fetch(resolvedUrl, { headers: { 'User-Agent': 'ep-transparency/1.0' } })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     pdfBuffer = Buffer.from(await res.arrayBuffer())
   } catch (err) {
@@ -118,7 +141,11 @@ Rules:
       )
     }
 
-    await saveBlobVotes(village, board, meetingDate, parsed)
+    try {
+      await saveBlobVotes(village, board, meetingDate, parsed)
+    } catch (cacheErr) {
+      console.error('Failed to cache votes to Blob:', cacheErr)
+    }
     return NextResponse.json(parsed)
   } catch (err) {
     console.error('Claude API error:', err)

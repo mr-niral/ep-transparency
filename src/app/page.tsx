@@ -183,48 +183,37 @@ function LandingInner() {
                 </div>
                 <div className="flex flex-col border-t border-rule-soft divide-y divide-rule-soft">
                   {village.hasLibraryBoard && (
-                    <Link
-                      href={`/village/${village.slug}`}
-                      className="flex items-center justify-between gap-3 py-3.5 px-6"
-                      style={{ textDecoration: 'none', color: '#15201B' }}
-                    >
-                      <span className="flex flex-col gap-0.5">
-                        <span className="font-semibold text-[16px]">Library Board</span>
-                        <span className="text-[13px] text-muted">Meetings · Summaries</span>
+                    <div className="flex flex-col gap-1.5 py-3.5 px-6">
+                      <Link href={`/village/${village.slug}`} className="font-semibold text-[16px]" style={{ textDecoration: 'none', color: '#15201B' }}>
+                        Library Board
+                      </Link>
+                      <span className="flex flex-wrap gap-x-4 gap-y-1 text-[14px] font-medium">
+                        <Link href={`/village/${village.slug}`}>Meetings</Link>
+                        {village.slug !== 'riverside-il' && <Link href={`/village/${village.slug}?section=trustees`}>Trustees</Link>}
                       </span>
-                      <ArrowRightIcon />
-                    </Link>
+                    </div>
                   )}
                   {village.hasSchoolBoard && (
-                    <Link
-                      href={`/village/${village.slug}?board=school`}
-                      className="flex items-center justify-between gap-3 py-3.5 px-6"
-                      style={{ textDecoration: 'none', color: '#15201B' }}
-                    >
-                      <span className="flex flex-col gap-0.5">
-                        <span className="font-semibold text-[16px]">School Board</span>
-                        <span className="text-[13px] text-muted">Meetings · Summaries</span>
+                    <div className="flex flex-col gap-1.5 py-3.5 px-6">
+                      <Link href={`/village/${village.slug}?board=school`} className="font-semibold text-[16px]" style={{ textDecoration: 'none', color: '#15201B' }}>
+                        School Board
+                      </Link>
+                      <span className="flex flex-wrap gap-x-4 gap-y-1 text-[14px] font-medium">
+                        <Link href={`/village/${village.slug}?board=school`}>Meetings</Link>
+                        {village.slug !== 'riverside-il' && <Link href={`/village/${village.slug}?board=school&section=trustees`}>Trustees</Link>}
                       </span>
-                      <ArrowRightIcon />
-                    </Link>
+                    </div>
                   )}
                   {village.hasVillageBoard && (
-                    <Link
-                      href={`/village/${village.slug}?board=village`}
-                      className="flex items-center justify-between gap-3 py-3.5 px-6"
-                      style={{ textDecoration: 'none', color: '#15201B' }}
-                    >
-                      <span className="flex flex-col gap-0.5">
-                        <span className="font-semibold text-[16px]">Village Board</span>
-                        <span className="text-[13px] text-muted">
-                          {[
-                            'Meetings',
-                            village.features.includes('summaries') && 'Summaries',
-                          ].filter(Boolean).join(' · ')}
-                        </span>
+                    <div className="flex flex-col gap-1.5 py-3.5 px-6">
+                      <Link href={`/village/${village.slug}?board=village`} className="font-semibold text-[16px]" style={{ textDecoration: 'none', color: '#15201B' }}>
+                        Village Board
+                      </Link>
+                      <span className="flex flex-wrap gap-x-4 gap-y-1 text-[14px] font-medium">
+                        <Link href={`/village/${village.slug}?board=village`}>Meetings</Link>
+                        {village.slug !== 'riverside-il' && <Link href={`/village/${village.slug}?board=village&section=trustees`}>Trustees</Link>}
                       </span>
-                      <ArrowRightIcon />
-                    </Link>
+                    </div>
                   )}
                 </div>
               </div>
@@ -240,7 +229,7 @@ function LandingInner() {
           <div className="flex flex-col gap-3 md:flex-[1_1_340px]">
             <h2 className="m-0 font-display font-semibold text-[28px] tracking-[-0.01em]">Don&apos;t see your town?</h2>
             <p className="m-0 text-[16px] leading-[1.6] text-ink-2">
-              We&apos;re adding new municipalities regularly. Submit a request and we&apos;ll let you know when yours is live.
+              Submit a request to include your municipality.
             </p>
             {noMatch && (
               <p className="m-0 text-[14px] text-muted">
@@ -382,7 +371,7 @@ function LandingInner() {
         <h2 id="how-h" className="m-0 font-display font-semibold text-[30px] tracking-[-0.01em]">
           What&apos;s in the record
         </h2>
-        <div className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(230px, 100%), 1fr))' }}>
+        <div className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(180px, 100%), 1fr))' }}>
           <div className="flex flex-col gap-2.5 border-t-2 border-ink pt-5">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E4D36" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
@@ -420,6 +409,17 @@ function LandingInner() {
             <h3 className="m-0 text-[18px] font-semibold">Plain-English summaries</h3>
             <p className="m-0 text-[15px] leading-[1.55] text-ink-2">
               AI-generated explanations of long documents, always linked to the original.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2.5 border-t-2 border-ink pt-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E4D36" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="9" cy="7" r="4" />
+              <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87" />
+            </svg>
+            <h3 className="m-0 text-[18px] font-semibold">Attendance and votes</h3>
+            <p className="m-0 text-[15px] leading-[1.55] text-ink-2">
+              How each trustee voted and how often they attended, from the approved minutes.
             </p>
           </div>
         </div>
