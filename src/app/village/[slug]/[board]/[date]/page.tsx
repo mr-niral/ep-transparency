@@ -519,7 +519,7 @@ function SummaryPageInner({
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 8v5M12 16.5v.01" />
               </svg>
-              <span>AI-generated from the official {source}. See original {source} for official source.</span>
+              <span>Summaries based on the official {source}. See originals for official source.</span>
               {docUrl && (
                 <a href={docUrl} target="_blank" rel="noopener noreferrer" className="font-semibold">
                   Read the {source}
